@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data — keep data/raw/ structure but ignore processed and large
+data/processed/*
+!data/processed/.gitkeep
+data/models/*
+!data/models/.gitkeep
+logs/*
+
+# OSM raw data (already versioned via SHA256SUMS + reproducible from Geofabrik)
+# Keep the .zip (303 MB) for reproducibility, ignore the extracted shapefiles (1.2 GB)
+data/raw/*/osm/*.zip
+data/raw/*/osm/extracted/
+data/raw/*/ign/*
+data/raw/*/sentinel2/*
+data/raw/*/worldpop/*
+data/raw/*/openbuildings/*
+data/raw/*/indi/*
+data/raw/*/mopc/*
+data/raw/*/chirps/*
+data/raw/*/SHA256SUMS
+data/raw/*/.fetched
+
+# Secrets (CRITICAL — never commit credentials)
+secrets/creds.json
+secrets/*.key
+secrets/*.pem
+secrets/*.p12
+secrets/*.age
+secrets/.env
+
+# Local config
+.env
+.env.local
+*.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OSM raw data (already versioned via SHA256SUMS)
+# Keep it for reproducibility — only ignore the unpacked extract if huge
+# data/raw/*/extracted/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Build artifacts
+dist/
+build/
+*.tar.gz
+
+# Ollama models
+ollama_models/
+
+# Trained model checkpoints
+checkpoints/
+*.safetensors
+*.bin
+runs/
+wandb/
+
+# OS noise
+Thumbs.db
+.DS_Store
