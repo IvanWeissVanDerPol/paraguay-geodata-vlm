@@ -311,6 +311,24 @@ git-branch-feat:  ## Create new feature branch (use NAME=my-feature)
 	@echo "✅ Branched: feat/$(NAME)"
 	@echo "   Work here, then merge to main with: git checkout main && git merge feat/$(NAME)"
 
+
+.PHONY: heartbeat
+heartbeat:  ## Touch the heartbeat file (call after any work)
+	bash scripts/thesis-heartbeat.sh "manual heartbeat"
+
+.PHONY: watchdog
+watchdog:  ## Check if thesis work is recent; trigger resume if stale
+	. .venv/bin/activate && python3 scripts/thesis_watchdog.py
+
+.PHONY: watchdog-check
+watchdog-check:  ## Just report watchdog status, no action
+	. .venv/bin/activate && python3 scripts/thesis_watchdog.py --check-only
+
+.PHONY: heartbeat-install
+heartbeat-install:  ## Touch heartbeat once to initialize
+	bash scripts/thesis-heartbeat.sh "first heartbeat"
+
+
 .PHONY: git-install-hooks
 git-install-hooks:  ## Install pre-commit hook
 	cp scripts/pre-commit-hook.sh .git/hooks/pre-commit
