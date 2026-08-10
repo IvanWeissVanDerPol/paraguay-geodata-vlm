@@ -277,6 +277,10 @@ git-sync:  ## Sync local with remote (fetch + rebase + status). Safe.
 git-fetch:  ## Only fetch from remote, no push
 	bash scripts/git_sync.sh --fetch
 
+.PHONY: git-first-push
+git-first-push:  ## First-time push to empty GitHub repo (uses GH_TOKEN env or prompts)
+	bash scripts/first_push.sh
+
 .PHONY: git-push
 git-push:  ## Push local commits to remote
 	bash scripts/git_sync.sh --push

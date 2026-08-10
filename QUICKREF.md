@@ -31,6 +31,7 @@ If `make sanity` shows all green, you're good.
 | `make web-dev` | Start Next.js dev server |
 | `make compose-up` | Start all services via Docker |
 | `make commit` | Atomic commit (Erebus runs this) |
+| `make git-first-push` | First push to empty GitHub repo (Ivan runs once) |
 | `make git-sync` | Sync local with GitHub (Ivan runs this) |
 
 ---

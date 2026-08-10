@@ -2,6 +2,8 @@
 
 **This is how Erebus commits work and how Iván syncs with GitHub.**
 
+**GitHub repo:** https://github.com/IvanWeissVanDerPol/paraguay-geodata-vlm (created 2026-08-10, public)
+
 ---
 
 ## TL;DR
@@ -11,6 +13,17 @@
 - **Sync when you want** with `make git-sync` (safe) or `make git-push` (when ready)
 
 ---
+
+## Repo on GitHub
+
+**URL:** https://github.com/IvanWeissVanDerPol/paraguay-geodata-vlm
+**Created:** 2026-08-10 (initial state: empty)
+**Visibility:** public
+
+The first push seeds the repo with all local commits (4 atomic conventional commits ready to go). After that, the workflow is:
+- Erebus auto-commits locally (never pushes)
+- Ivan triggers sync with `make git-sync` (fetch + rebase + status)
+- Ivan pushes with `make git-push` when ready
 
 ## Architecture
 
@@ -86,6 +99,9 @@ make commit-dry            # show what would be committed
 ## Iván's commands (manual)
 
 ```bash
+# First-time setup (one-time)
+make git-first-push           # push the local repo to the empty GitHub repo
+
 # Status check (run anytime)
 make git-status            # working tree state + branch info
 make git-log               # last 20 commits

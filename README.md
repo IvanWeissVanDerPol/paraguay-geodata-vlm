@@ -194,9 +194,10 @@ make git-log      # commits recientes
 **Para sincronizar con GitHub:**
 
 ```bash
-make git-sync          # fetch + rebase + status (safe, sin push)
-make git-push          # push tus commits a GitHub
-make git-resolve       # auto-resolver conflictos (PROGRESS/TASK_QUEUE/RISK)
+make git-first-push      # primer push (solo la primera vez)
+make git-sync            # fetch + rebase + status (safe, sin push)
+make git-push            # push tus commits a GitHub
+make git-resolve         # auto-resolver conflictos (PROGRESS/TASK_QUEUE/RISK)
 ```
 
 **Para intervenir en el queue:**
