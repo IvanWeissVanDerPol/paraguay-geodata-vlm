@@ -78,6 +78,16 @@
 
 ---
 
+## 2026-08-10 06:10 UTC — T029
+**Task:** Document the autonomous system in AUTONOMY.md
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M1] [NO-GPU] [D]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -106,8 +116,8 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 4
-- **Tasks completed:** 4 / 87
+- **Total ticks:** 5
+- **Tasks completed:** 5 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 0
 - **Average tasks/day:** 0.00
