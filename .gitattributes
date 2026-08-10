@@ -53,5 +53,6 @@ Makefile text eol=lf
 *.py filter=lfs diff=lfs merge=lfs -text
 *.sh filter=lfs diff=lfs merge=lfs -text
 *.json filter=lfs diff=lfs merge=lfs -text
+*.log filter=lfs diff=lfs merge=lfs -text
 * !text !filter !merge !diff
 data/raw/google_open_buildings/* filter=lfs diff=lfs merge=lfs -text

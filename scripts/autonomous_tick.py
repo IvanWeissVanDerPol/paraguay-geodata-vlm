@@ -409,6 +409,13 @@ def main():
     # Auto-commit if work was done (best-effort)
     if status == "x":
         auto_commit(task, status)
+        # Touch heartbeat
+        try:
+            subprocess.run(["bash", "scripts/thesis-heartbeat.sh",
+                             f"tick {task['id']}: {task['text'][:40]}"],
+                           cwd=str(ROOT), timeout=15)
+        except Exception:
+            pass
 
     se = {"x": "✅", "~": "⏸️", "!": "❌"}.get(status, "?")
     print(f"\n{se} Task {task['id']}: {status}")
