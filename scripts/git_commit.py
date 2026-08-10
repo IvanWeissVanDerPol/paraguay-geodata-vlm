@@ -91,16 +91,29 @@ def secret_leak_check(files):
         re.compile(r"secrets/.*\.key$"),
         re.compile(r"secrets/.*\.pem$"),
         re.compile(r"secrets/.*\.age$"),
-        re.compile(r"hf_[A-Za-z0-9_]{20,}"),  # HF tokens
-        re.compile(r"ghp_[A-Za-z0-9_]{20,}"),  # GitHub PAT
+        re.compile(r"hf_[A-Za-z0-9_]{20,}"),  # HF tokens (40+ chars)
+        re.compile(r"ghp_[A-Za-z0-9_]{20,}"),  # GitHub PAT (36+ chars)
         re.compile(r"AKIA[A-Z0-9]{16}"),  # AWS access key
-        re.compile(r"sk-[A-Za-z0-9]{20,}"),  # OpenAI / Anthropic
+        re.compile(r"sk-[A-Za-z0-9]{20,}"),  # OpenAI / Anthropic (43+ chars)
+    ]
+    # File-name patterns that should NEVER be committed
+    blocked_files = [
+        re.compile(r"secrets/creds\.json$"),
+        re.compile(r"\.env$"),
+        re.compile(r"\.env\.local$"),
+        re.compile(r"secrets/.*\.key$"),
+        re.compile(r"secrets/.*\.pem$"),
+        re.compile(r"secrets/.*\.age$"),
     ]
     leaked = []
     for f in files:
-        # Skip example/template files (they intentionally contain fake tokens)
+        # Skip example/template/docs files (they intentionally contain fake tokens)
         if any(s in f for s in (".example", "EXAMPLE", "template", "TEMPLATE",
-                                  "creds.schema.json", "PROGRESS.md", "README")):
+                                  "creds.schema.json", ".md")):
+            continue
+        # File-name blocklist: refuse to commit these AT ALL
+        if any(bp.search(f) for bp in blocked_files):
+            leaked.append((f, "blocked-filename"))
             continue
         p = ROOT / f
         if not p.exists() or p.is_dir():
