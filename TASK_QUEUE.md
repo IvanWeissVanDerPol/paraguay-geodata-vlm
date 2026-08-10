@@ -27,7 +27,7 @@
 - [x] [P0][M1][NO-GPU][A] Create thesis-active-autonomy skill for fresh-session resume
 - [x] [P0][M1][NO-GPU][A] Test autonomous tick dry-run end-to-end (pick task → execute → mark done → log)
 - [x] [P0][M1][NO-GPU][D] Document the autonomous system in AUTONOMY.md
-- [ ] [P0][M1][NO-GPU][A] Add `make tick` (single tick), `make tick-dry`, `make weekly` targets to Makefile
+- [x] [P0][M1][NO-GPU][A] Add `make tick` (single tick), `make tick-dry`, `make weekly` targets to Makefile
 
 ## Phase 1 — Data pipeline [M1-M2]
 
