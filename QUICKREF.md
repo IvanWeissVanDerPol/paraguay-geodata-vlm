@@ -20,7 +20,7 @@ If `make sanity` shows all green, you're good.
 
 | Command | What it does |
 |---|---|
-| `make sanity` | Health check (packages, data, creds, pipeline) |
+| `make status` | Health check (packages, data, creds, pipeline) |
 | `make data-osm` | Download OSM Paraguay |
 | `make annotate-sample` | Run annotation on 1K buildings sample |
 | `make data-status` | Show what's downloaded |
@@ -30,6 +30,8 @@ If `make sanity` shows all green, you're good.
 | `make api` | Start FastAPI backend |
 | `make web-dev` | Start Next.js dev server |
 | `make compose-up` | Start all services via Docker |
+| `make commit` | Atomic commit (Erebus runs this) |
+| `make git-sync` | Sync local with GitHub (Ivan runs this) |
 
 ---
 
