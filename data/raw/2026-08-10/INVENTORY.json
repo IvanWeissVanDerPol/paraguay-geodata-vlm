@@ -1,0 +1,701 @@
+{
+  "generated_at": "2026-08-10T07:40:15.036344+00:00",
+  "snapshot": "2026-08-10",
+  "datasets": {
+    "chirps": {
+      "path": "data/raw/2026-08-10/chirps",
+      "file_count": 0,
+      "total_size_bytes": 0,
+      "total_size_human": "0.00 B",
+      "license": "Public Domain",
+      "attribution": "UCSB Climate Hazards Center",
+      "share_alike": false,
+      "files": []
+    },
+    "ign": {
+      "path": "data/raw/2026-08-10/ign",
+      "file_count": 0,
+      "total_size_bytes": 0,
+      "total_size_human": "0.00 B",
+      "license": "Public Domain (Paraguayan government)",
+      "attribution": "IGN Paraguay",
+      "share_alike": false,
+      "files": []
+    },
+    "indi": {
+      "path": "data/raw/2026-08-10/indi",
+      "file_count": 0,
+      "total_size_bytes": 0,
+      "total_size_human": "0.00 B",
+      "license": "Public Domain (Paraguayan government)",
+      "attribution": "INDI Paraguay",
+      "share_alike": false,
+      "files": []
+    },
+    "mopc": {
+      "path": "data/raw/2026-08-10/mopc",
+      "file_count": 0,
+      "total_size_bytes": 0,
+      "total_size_human": "0.00 B",
+      "license": "Public Domain (Ley 5282/2014)",
+      "attribution": "MOPC Paraguay",
+      "share_alike": false,
+      "files": []
+    },
+    "openbuildings": {
+      "path": "data/raw/2026-08-10/openbuildings",
+      "file_count": 0,
+      "total_size_bytes": 0,
+      "total_size_human": "0.00 B",
+      "license": "CC-BY-4.0",
+      "attribution": "Google Open Buildings",
+      "share_alike": false,
+      "files": []
+    },
+    "osm": {
+      "path": "data/raw/2026-08-10/osm",
+      "file_count": 102,
+      "total_size_bytes": 1282923452,
+      "total_size_human": "1.19 GB",
+      "license": "ODbL-1.0",
+      "attribution": "\u00a9 OpenStreetMap contributors",
+      "share_alike": true,
+      "files": [
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/README",
+          "size_bytes": 662,
+          "size_human": "662.00 B",
+          "sha256": "8799d901e8aa4c5fef194c5a15c9bb6c1b3ec7d3375eebfe22d3f3fd908c32cf"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_adminareas_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_adminareas_a_free_1.dbf",
+          "size_bytes": 188517,
+          "size_human": "184.10 KB",
+          "sha256": "484a4446f33649cdddb7ce84e2bdd9727ede70fb4dc109a8bcfd233632cfdffa"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_adminareas_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_adminareas_a_free_1.shp",
+          "size_bytes": 14789860,
+          "size_human": "14.10 MB",
+          "sha256": "db3ceb2ddcd2251f2fd799677eb792b351695cf17290f72a529a7cfb504ff9d0"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_adminareas_a_free_1.shx",
+          "size_bytes": 10492,
+          "size_human": "10.25 KB",
+          "sha256": "52582350930be9cd1c9f78abc9311b7024dcf9e8a00a511bf4a3911bad652d75"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_buildings_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_buildings_a_free_1.dbf",
+          "size_bytes": 285272654,
+          "size_human": "272.06 MB",
+          "sha256": "2ef4112e7f9537c8cb99ab60e72b4b61060e5cf1696e3fea91c0df7a6a3f5a67"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_buildings_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_buildings_a_free_1.shp",
+          "size_bytes": 260239768,
+          "size_human": "248.18 MB",
+          "sha256": "678b374b089a3df5335c7b837e4a9be3b418df2f26bea417a692c01385138423"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_buildings_a_free_1.shx",
+          "size_bytes": 13831492,
+          "size_human": "13.19 MB",
+          "sha256": "2c849e9c734b64b1aacb98f56b893f8ae7cfac9ce45cd2581cac20dce237fea0"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_landuse_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_landuse_a_free_1.dbf",
+          "size_bytes": 38958907,
+          "size_human": "37.15 MB",
+          "sha256": "e9594225eef003c7ed03748a6d6aad9db36b01fb042ed4fa9b10add6e1fd347f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_landuse_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_landuse_a_free_1.shp",
+          "size_bytes": 132799376,
+          "size_human": "126.65 MB",
+          "sha256": "57bf114c93334f850e7ae077941c88c9efe797e0441342d1269dc2de0defc2a4"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_landuse_a_free_1.shx",
+          "size_bytes": 2149548,
+          "size_human": "2.05 MB",
+          "sha256": "de7174b175307d0728ba16448c9794cefafd12d0e8fb03bcb9a489856aa33108"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_a_free_1.dbf",
+          "size_bytes": 28437,
+          "size_human": "27.77 KB",
+          "sha256": "c546193ca3241fa84a11cb60271a6b36846e689277ea6632b9467ba604f93837"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_a_free_1.shp",
+          "size_bytes": 150932,
+          "size_human": "147.39 KB",
+          "sha256": "ec885faae76a2fdac4c2641ccae18510fb7bb5df0898dbf5766d31950ae66a4c"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_a_free_1.shx",
+          "size_bytes": 1660,
+          "size_human": "1.62 KB",
+          "sha256": "1a1f25ceb32b0035033e23f2fbafbb701e747092e70925d64c8693ae2d988f86"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_free_1.dbf",
+          "size_bytes": 4127007,
+          "size_human": "3.94 MB",
+          "sha256": "83e989ba72fa7b79b7d8307ca06d03bd2e23e57678b29670b573652f39426ba4"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_free_1.shp",
+          "size_bytes": 797008,
+          "size_human": "778.33 KB",
+          "sha256": "f0692bebb566a2c6acb5325efba3caef0f6283315507a6e1245e93bf3e60a4dd"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_natural_free_1.shx",
+          "size_bytes": 227788,
+          "size_human": "222.45 KB",
+          "sha256": "c1dc94b539fe2a6226630859bfe33b6f6741246df5c76e6141f91093bd16068b"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_a_free_1.dbf",
+          "size_bytes": 264004,
+          "size_human": "257.82 KB",
+          "sha256": "fc3d66bf851cb541a0abefd4426db07d043cdc612766b140722b11a35ccd8a20"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_a_free_1.shp",
+          "size_bytes": 1765620,
+          "size_human": "1.68 MB",
+          "sha256": "00a7da1b33b2fdbc8ae0d8b6077862949b128c5cb651a769cef55ecc80e08036"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_a_free_1.shx",
+          "size_bytes": 13716,
+          "size_human": "13.39 KB",
+          "sha256": "76d856b8a606c3cc77ffb615479918aae0776e77c627fde2a0e06e80660be4c2"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_free_1.dbf",
+          "size_bytes": 379789,
+          "size_human": "370.89 KB",
+          "sha256": "f1d73ee5595afdac0bf10b95f0b708f73fc5afe350e38346cd8de791646ae6e8"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_free_1.shp",
+          "size_bytes": 68672,
+          "size_human": "67.06 KB",
+          "sha256": "d267dbf0e0a795dbbe77d00ea28b7dd4da8fc3ded0ba42d2ee8baa9b87fce593"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_places_free_1.shx",
+          "size_bytes": 19692,
+          "size_human": "19.23 KB",
+          "sha256": "2382a12550963502888914a7f7e54b4d01475c6cd1c6df1f17cb8b2c73395f9e"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_a_free_1.dbf",
+          "size_bytes": 97457,
+          "size_human": "95.17 KB",
+          "sha256": "1b23399c706365c78555c472edb393846a1665aafb3ce2cb0925fa77f2ec13a0"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_a_free_1.shp",
+          "size_bytes": 113636,
+          "size_human": "110.97 KB",
+          "sha256": "e3d42b8bef81d2c63f97bfb74fc50ac41f715b0312725abcf60b39b8f80b490e"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_a_free_1.shx",
+          "size_bytes": 5468,
+          "size_human": "5.34 KB",
+          "sha256": "1ad68eac61b9324d7ede1702b4258af40084c0751be933b5b44b937e6d3a1cda"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_free_1.dbf",
+          "size_bytes": 82667,
+          "size_human": "80.73 KB",
+          "sha256": "e2a41db4e04052dff9507ae5096fc30a6b81ba2fd105b26a15dc6e8877d2e17a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_free_1.shp",
+          "size_bytes": 16032,
+          "size_human": "15.66 KB",
+          "sha256": "3d43d207f2a7425d82ae6c57738e4f75e095b885eeefbbb9e07d093205e73fb4"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pofw_free_1.shx",
+          "size_bytes": 4652,
+          "size_human": "4.54 KB",
+          "sha256": "cca0d0d4deadd2b369bb26005abc1e4928437203b3b83a0d684df23f61f442f2"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_a_free_1.dbf",
+          "size_bytes": 3271507,
+          "size_human": "3.12 MB",
+          "sha256": "e90e3b54a7cb2f8fa6b537d9d1ee58109a911da930cd502848eee2958f683b6f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_a_free_1.shp",
+          "size_bytes": 3870552,
+          "size_human": "3.69 MB",
+          "sha256": "f07d05ec3bc2e89292ba784121164f6dbe95b4e361a48f9f6aedcc23b219541d"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_a_free_1.shx",
+          "size_bytes": 180588,
+          "size_human": "176.36 KB",
+          "sha256": "8e9932770ab21d800848c9b777a7926fd5211fa26105bcb1dfcd27478b81862f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_free_1.dbf",
+          "size_bytes": 3724777,
+          "size_human": "3.55 MB",
+          "sha256": "77a8d953a3cc59b98fc203562c0e9e3a0a00bb509340b458f4a7512d78676551"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_free_1.shp",
+          "size_bytes": 719336,
+          "size_human": "702.48 KB",
+          "sha256": "3067c07a05ead9278b96e1308daf2e117bb14c3585334d1a67c24a054643a7b8"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_pois_free_1.shx",
+          "size_bytes": 205596,
+          "size_human": "200.78 KB",
+          "sha256": "784ea696e25244a13be489a478e51ae8e0c35b5487089a06d0b212f67c49493c"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_protected_areas_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_protected_areas_a_free_1.dbf",
+          "size_bytes": 4855,
+          "size_human": "4.74 KB",
+          "sha256": "34e8b4fad00263ec9077cd565c5c261d4d64582dfb680708403eb6fb3c9ceeba"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_protected_areas_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_protected_areas_a_free_1.shp",
+          "size_bytes": 679072,
+          "size_human": "663.16 KB",
+          "sha256": "c93a36f68a1b74100a0067ac9d650e5cbc0b1ed841bb650a3299a0d3a75badb9"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_protected_areas_a_free_1.shx",
+          "size_bytes": 940,
+          "size_human": "940.00 B",
+          "sha256": "6ab7bf3975ee9bcd02751daa7f61dbbcfc831d637b45fbb425d67a007d3b37e0"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_railways_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_railways_free_1.dbf",
+          "size_bytes": 6777,
+          "size_human": "6.62 KB",
+          "sha256": "1309b4c35304e5a12acb9735608b6bc0568a5cd1dc655ab09d2671c82b6aaa3b"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_railways_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_railways_free_1.shp",
+          "size_bytes": 7564,
+          "size_human": "7.39 KB",
+          "sha256": "7b4f7b68f5b41c439c3721da1ab2b406aeb1da49cc1af1c3bea1bea661fc48fc"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_railways_free_1.shx",
+          "size_bytes": 428,
+          "size_human": "428.00 B",
+          "sha256": "6e8fcfb76ef52217068603869a960be84e56bc9bc48262af4b7dbd8585f31e24"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_roads_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_roads_free_1.dbf",
+          "size_bytes": 51087915,
+          "size_human": "48.72 MB",
+          "sha256": "76e275135469ef1c7e6e319cac3323633c936da0020a0460c5aeeadbee5eec11"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_roads_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_roads_free_1.shp",
+          "size_bytes": 63948828,
+          "size_human": "60.99 MB",
+          "sha256": "74f916f5dfb916db43ebc6ee564b129362c82535e302d33692f3bf3aa328dea0"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_roads_free_1.shx",
+          "size_bytes": 2233436,
+          "size_human": "2.13 MB",
+          "sha256": "18dd14f508a50d52fa6fde80a2d8f2482498b78dcb4a1b2399eccab83965fa8a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_a_free_1.dbf",
+          "size_bytes": 500169,
+          "size_human": "488.45 KB",
+          "sha256": "59e84133e028436ca50e3faf02373d533dd18aa896bca517a0aeed12655ab233"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_a_free_1.shp",
+          "size_bytes": 544912,
+          "size_human": "532.14 KB",
+          "sha256": "428f02d04bc5dc18a0d8e2a866f251661bfe824fb1bc392ff934ab03c1233333"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_a_free_1.shx",
+          "size_bytes": 22956,
+          "size_human": "22.42 KB",
+          "sha256": "93b11627858f5da723772c86d2d97672bed9e1514b8c3d8f36f0136494788c2f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_free_1.dbf",
+          "size_bytes": 2979569,
+          "size_human": "2.84 MB",
+          "sha256": "b1cd9f70f5ff91d4944f31b05464209e1f5bf8f2758a8ebd474b017bd5a13e1f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_free_1.shp",
+          "size_bytes": 476800,
+          "size_human": "465.62 KB",
+          "sha256": "e9693110f8f2de5030384bb0a940aa7c3d30ccb69b4ed6d35915a7f6a0cf387c"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_traffic_free_1.shx",
+          "size_bytes": 136300,
+          "size_human": "133.11 KB",
+          "sha256": "a2661900569f83232fed95d50dcc69e6920fd8dad62110b6777140b6b5b0d4a5"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_a_free_1.dbf",
+          "size_bytes": 45982,
+          "size_human": "44.90 KB",
+          "sha256": "a07425ef65fdd1aa157ce2ba0daed956620b035470b7c29e20793018dd881d5b"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_a_free_1.shp",
+          "size_bytes": 75520,
+          "size_human": "73.75 KB",
+          "sha256": "dc2627e2119b42cb7c2965472c512229caf0743819935981cc780c183409e46f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_a_free_1.shx",
+          "size_bytes": 2628,
+          "size_human": "2.57 KB",
+          "sha256": "130980c4ab407d7ad669cb8f905147d3037240dd80bc0f58cf52b1b6543c0141"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_free_1.dbf",
+          "size_bytes": 339897,
+          "size_human": "331.93 KB",
+          "sha256": "bfe29e6db87174fa896501a94c718d2f807493c196958247dd2bd2178c2fc36a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_free_1.shp",
+          "size_bytes": 65704,
+          "size_human": "64.16 KB",
+          "sha256": "94bbabb390e737cd85dde66a58b3c83529ede1e40ddd79ba56db45bab2289dc7"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_transport_free_1.shx",
+          "size_bytes": 18844,
+          "size_human": "18.40 KB",
+          "sha256": "6eab2b5fe19c9d51a15107b2889c4d55f5733b3a396fcde3da6a037e18460125"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_water_a_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_water_a_free_1.dbf",
+          "size_bytes": 5845257,
+          "size_human": "5.57 MB",
+          "sha256": "d727a66c05be747b061cd915696ad45b4e6108e0329a491ff83ca92706ca05ee"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_water_a_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_water_a_free_1.shp",
+          "size_bytes": 31519788,
+          "size_human": "30.06 MB",
+          "sha256": "cc35dac11f076d7990591b34bab5ed74519d658451d29316742c362f118bb816"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_water_a_free_1.shx",
+          "size_bytes": 322588,
+          "size_human": "315.03 KB",
+          "sha256": "1843b3f3690bf5e256ba997834ef606873fd9265b1fd8132babebabbe165e90f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_waterways_free_1.cpg",
+          "size_bytes": 6,
+          "size_human": "6.00 B",
+          "sha256": "146d6789ffe033a5297c1ad046e6a62ee35319b86b021444f05b6ea2aa8a1f4a"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_waterways_free_1.dbf",
+          "size_bytes": 5192294,
+          "size_human": "4.95 MB",
+          "sha256": "8f1d9f3116d4aed7f1915c5ab667f29c7a3a17609a6e49761502e200a08035b3"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_waterways_free_1.prj",
+          "size_bytes": 144,
+          "size_human": "144.00 B",
+          "sha256": "ffc9162903c37f0867d1e7f36c20036a165f7aa555dda24c1ae0ee4328d2977f"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_waterways_free_1.shp",
+          "size_bytes": 30886052,
+          "size_human": "29.46 MB",
+          "sha256": "443952eced36e3162ef1e422ba7436dfe8145ad029295d04e3ee899cc7ca3784"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/extracted/gis_osm_waterways_free_1.shx",
+          "size_bytes": 277012,
+          "size_human": "270.52 KB",
+          "sha256": "31f9605fb570640280a7630eab7e0a6eeb273884225832459ac8fdc7f95dcab3"
+        },
+        {
+          "path": "data/raw/2026-08-10/osm/paraguay-latest-free.shp.zip",
+          "size_bytes": 317320496,
+          "size_human": "302.62 MB",
+          "sha256": "f05cde640cf0cf7f51f28d27f441f49a831517ab6d007f0c864c06f5456e59f1"
+        }
+      ]
+    },
+    "sentinel2": {
+      "path": "data/raw/2026-08-10/sentinel2",
+      "file_count": 0,
+      "total_size_bytes": 0,
+      "total_size_human": "0.00 B",
+      "license": "Copernicus Free & Open",
+      "attribution": "European Space Agency (ESA)",
+      "share_alike": false,
+      "files": []
+    },
+    "worldpop": {
+      "path": "data/raw/2026-08-10/worldpop",
+      "file_count": 0,
+      "total_size_bytes": 0,
+      "total_size_human": "0.00 B",
+      "license": "CC-BY-4.0",
+      "attribution": "WorldPop",
+      "share_alike": false,
+      "files": []
+    }
+  },
+  "total_size_bytes": 1282923452,
+  "total_size_human": "1.19 GB"
+}
