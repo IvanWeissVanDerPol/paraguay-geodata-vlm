@@ -29,6 +29,7 @@ PUSH=false
 DRY_RUN=false
 BRANCH="main"
 NO_FETCH=false
+YES=false
 
 for arg in "$@"; do
     case "$arg" in
@@ -36,6 +37,7 @@ for arg in "$@"; do
         --push) PUSH=true ;;
         --dry-run) DRY_RUN=true ;;
         --no-fetch) NO_FETCH=true ;;
+        --yes) YES=true ;;
         --branch=*) BRANCH="${arg#--branch=}" ;;
         *) echo "Unknown arg: $arg"; exit 1 ;;
     esac

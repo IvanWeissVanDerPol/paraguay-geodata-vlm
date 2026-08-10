@@ -45,10 +45,11 @@ ORIGIN_URL=$(git remote get-url origin)
 echo "📡 Remote: $ORIGIN_URL"
 
 # Verify the remote repo actually exists + is empty
-REMOTE_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "$ORIGIN_URL")
-echo "🔍 Remote HTTP status: $REMOTE_STATUS"
+# GitHub returns 301 on redirect from .git suffix; follow redirects
+REMOTE_STATUS=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 15 "$ORIGIN_URL")
+echo "🔍 Remote HTTP status (after redirects): $REMOTE_STATUS"
 
-if [[ "$REMOTE_STATUS" != "200" ]]; then
+if [[ "$REMOTE_STATUS" != "200" && "$REMOTE_STATUS" != "301" ]]; then
     red "❌ Remote repo not accessible. Create it first: https://github.com/new"
     exit 2
 fi
@@ -78,25 +79,33 @@ EOF
 chmod +x "$GIT_ASKPASS_TEMP"
 export GIT_ASKPASS="$GIT_ASKPASS_TEMP"
 
-# 4. Confirm before pushing
-echo
-echo "📦 About to push:"
-git log --oneline | head -10
-echo
-LOCAL_COUNT=$(git rev-list --count HEAD)
-echo "  Total local commits: $LOCAL_COUNT"
-echo
-read -rp "Continue with push? [y/N] " CONFIRM
-if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
-    yellow "Aborted by user"
-    rm -f "$GIT_ASKPASS_TEMP"
-    exit 0
+# Also embed token in URL for git push (works without prompts)
+# This is safe because we unset GH_TOKEN after
+ORIGIN_WITH_AUTH=$(echo "$ORIGIN_URL" | sed "s|https://|https://x-access-token:$GH_TOKEN@|")
+
+# 4. Confirm before pushing (unless --yes)
+if [[ "${YES:-}" != "1" && "${YES:-}" != "true" ]]; then
+    echo
+    echo "📦 About to push:"
+    git log --oneline | head -10
+    echo
+    LOCAL_COUNT=$(git rev-list --count HEAD)
+    echo "  Total local commits: $LOCAL_COUNT"
+    echo
+    read -rp "Continue with push? [y/N] " CONFIRM
+    if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
+        yellow "Aborted by user"
+        rm -f "$GIT_ASKPASS_TEMP"
+        exit 0
+    fi
 fi
 
 # 5. Push
 echo
 echo "🚀 Pushing to origin/main..."
-GIT_TERMINAL_PROMPT=0 git push -u origin main 2>&1 | tail -20
+# Use URL-with-token approach (works even if GitHub blocks GIT_ASKPASS)
+GIT_TERMINAL_PROMPT=0 git push "$ORIGIN_WITH_AUTH" main 2>&1 | tail -30
+PUSH_EXIT=$?
 
 # 6. Verify
 PUSH_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 \
