@@ -176,7 +176,10 @@ Erebus trabaja 24/7 sin que tengas que pedirle. El sistema:
 
 1. **Daily tick (06:00 UTC)** — corre `scripts/autonomous_tick.py`, elige la próxima tarea P0 de `TASK_QUEUE.md`, la ejecuta, la marca como done, escribe a `PROGRESS.md` y `data/progress.jsonl`.
 2. **Weekly review (Domingo 18:00 UTC)** — corre `scripts/weekly_review.py`, calcula stats, identifica blockers, escribe resumen semanal.
-3. **Skill `thesis-active-autonomy`** — cuando iniciás una sesión nueva, Erebus carga el contexto completo y sigue donde quedó.
+3. **Git maintenance (Domingo 23:00 UTC)** — corre `scripts/git_maintenance.sh`, gc + prune + reflog + fsck.
+4. **Skill `thesis-active-autonomy`** — cuando iniciás una sesión nueva, Erebus carga el contexto completo y sigue donde quedó.
+
+**Auto-commit:** cada tick se commitea atómicamente con conventional commits. Erebus **nunca pushea** — vos decidís cuándo.
 
 **Para chequear progreso:**
 
@@ -185,9 +188,18 @@ cd /opt/data/thesis-active
 make status       # estado actual de las 87 tasks
 make tick-dry     # ver qué task elegiría el próximo tick
 make weekly       # resumen estratégico (Domingos)
+make git-log      # commits recientes
 ```
 
-**Para intervenir:**
+**Para sincronizar con GitHub:**
+
+```bash
+make git-sync          # fetch + rebase + status (safe, sin push)
+make git-push          # push tus commits a GitHub
+make git-resolve       # auto-resolver conflictos (PROGRESS/TASK_QUEUE/RISK)
+```
+
+**Para intervenir en el queue:**
 
 ```bash
 make tick-claim TASK_ID=T042       # claim una task específica
@@ -195,7 +207,7 @@ make tick-complete TASK_ID=T042 OUTPUT="..." NOTES="..."  # marcar done
 make tick-blocked TASK_ID=T042 OUTPUT="..." NOTES="..."   # marcar bloqueada
 ```
 
-Ver `AUTONOMY.md` para el sistema completo.
+Ver `AUTONOMY.md` para el sistema autónomo completo, `GIT_WORKFLOW.md` para git.
 
 ---
 
