@@ -230,7 +230,7 @@ Ver `AUTONOMY.md` para el sistema autónomo completo, `GIT_WORKFLOW.md` para git
 1. Llenar `secrets/creds.json` con valores reales
 2. `make validate-creds` para verificar
 3. `make lock-perms` para asegurar permisos
-4. Pegar el JSON en WhatsApp a Erebus
+4. Pegar el JSON en Mensaje a Erebus
 
 Ver `secrets/README.md` para detalles completos.
 

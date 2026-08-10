@@ -7,7 +7,7 @@ Logic:
 - If < 15 min old: do nothing (someone is working)
 - If 15 min - 6 hours: log warning
 - If > 6 hours: trigger a tick (start a fresh session)
-- If > 24 hours: trigger urgent resume via WhatsApp
+- If > 24 hours: trigger urgent resume via Mensaje
 
 The watchdog itself doesn't do work — it just signals. The actual work
 happens in a separate cron job (thesis-auto-resume) that runs when the
