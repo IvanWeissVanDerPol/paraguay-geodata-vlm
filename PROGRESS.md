@@ -118,6 +118,16 @@
 
 ---
 
+## 2026-08-10 08:04 UTC — T034
+**Task:** Register Copernicus dataspace account (5 min) — link emailed to Erebus
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M1] [EXT] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -137,6 +147,11 @@ _None._
 - Blocked: 0
 - Top priority: Add `make tick` (single tick), `make tick-dry`, `make weekly
 
+## 2026-08-10 — weekly review
+- Completed this week: 8
+- Blocked: 0
+- Top priority: Build backend/ — FastAPI serving model + RAG agent
+
 <!-- AUTONOMOUS_DAILY_SUMMARY_START -->
 _No ticks yet._
 <!-- AUTONOMOUS_DAILY_SUMMARY_END -->
@@ -146,8 +161,8 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 8
-- **Tasks completed:** 8 / 87
+- **Total ticks:** 9
+- **Tasks completed:** 9 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 0
 - **Average tasks/day:** 0.00

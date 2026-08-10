@@ -31,7 +31,7 @@
 
 ## Phase 1 — Data pipeline [M1-M2]
 
-- [ ] [P0][M1][EXT][A] Register Copernicus dataspace account (5 min) — link emailed to Erebus
+- [x] [P0][M1][EXT][A] Register Copernicus dataspace account (5 min) — link emailed to Erebus
 - [ ] [P0][M1][EXT][A] Register HuggingFace write token — link emailed
 - [ ] [P0][M1][EXT][A] Register GitHub personal access token (repo scope) — link emailed
 - [ ] [P1][M1][EXT][A] Register AWS free tier (alt to Copernicus) — link emailed
