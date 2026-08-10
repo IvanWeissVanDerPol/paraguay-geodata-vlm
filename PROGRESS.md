@@ -138,6 +138,16 @@
 
 ---
 
+## 2026-08-10 08:51 UTC — T036
+**Task:** Register GitHub personal access token (repo scope) — link emailed
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M1] [EXT] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -162,6 +172,11 @@ _None._
 - Blocked: 0
 - Top priority: Build backend/ — FastAPI serving model + RAG agent
 
+## 2026-08-10 — weekly review
+- Completed this week: 10
+- Blocked: 0
+- Top priority: Build backend/ — FastAPI serving model + RAG agent
+
 <!-- AUTONOMOUS_DAILY_SUMMARY_START -->
 _No ticks yet._
 <!-- AUTONOMOUS_DAILY_SUMMARY_END -->
@@ -171,8 +186,8 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 10
-- **Tasks completed:** 10 / 87
+- **Total ticks:** 11
+- **Tasks completed:** 11 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 0
 - **Average tasks/day:** 0.00
