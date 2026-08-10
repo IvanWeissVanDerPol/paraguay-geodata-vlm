@@ -1,0 +1,49 @@
+# .gitattributes — file handling rules for git
+
+# Auto-detect text files (cross-platform)
+* text=auto
+
+# Force LF line endings for shell scripts (even on Windows)
+*.sh text eol=lf
+*.py text eol=lf
+Makefile text eol=lf
+
+# Markdown: keep as text
+*.md text eol=lf
+*.bib text eol=lf
+
+# JSON / YAML / TOML: text with LF
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+
+# Binary: explicit
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.shp binary
+*.shx binary
+*.dbf binary
+*.prj binary
+*.cpg binary
+*.safetensors binary
+*.bin binary
+*.pt binary
+*.pth binary
+*.gguf binary
+*.parquet binary
+
+# Git LFS — for files that would otherwise bloat the repo.
+# Requires `git lfs install` on the client. If LFS isn't installed,
+# these files will be committed as regular git objects (still tracked).
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.gguf filter=lfs diff=lfs merge=lfs -text
+*.parquet filter=lfs diff=lfs merge=lfs -text

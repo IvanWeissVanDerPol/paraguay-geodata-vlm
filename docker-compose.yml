@@ -1,0 +1,173 @@
+# docker-compose.yml — P1 GeoData v2 full stack
+# Usage:
+#   docker compose up -d            # start all services
+#   docker compose logs -f          # tail logs
+#   docker compose down             # stop
+#
+# Services:
+#   - ollama          : local LLM (Llama-3.1-8B-Instruct)
+#   - label-studio    : annotation UI at :8080
+#   - chroma          : vector DB for RAG at :8000
+#   - backend (api)   : FastAPI serving model + agent at :8001
+#   - frontend (web)  : Next.js at :3000
+#   - postgres        : for label-studio persistence
+#
+# All services bind to 127.0.0.1 only (local dev). Expose via reverse-proxy
+# (nginx/caddy/traefik) when deploying publicly.
+
+version: "3.9"
+
+x-restart: &restart_policy
+  restart: unless-stopped
+
+services:
+  # ==========================================================
+  # Local LLM (Llama-3.1-8B-Instruct for the conversational agent)
+  # ==========================================================
+  ollama:
+    image: ollama/ollama:latest
+    container_name: thesis-ollama
+    hostname: ollama
+    <<: *restart_policy
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+      - OLLAMA_HOST=0.0.0.0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    # GPU passthrough — uncomment when running on GPU host
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - capabilities: [gpu]
+
+  # ==========================================================
+  # Vector DB (RAG index over the annotated cartographic corpus)
+  # ==========================================================
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: thesis-chroma
+    hostname: chroma
+    <<: *restart_policy
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma
+      - ANONYMIZED_TELEMETRY=False
+      - ALLOW_RESET=TRUE
+
+  # ==========================================================
+  # PostgreSQL for Label Studio persistence
+  # ==========================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: thesis-postgres
+    hostname: postgres
+    <<: *restart_policy
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_DB: labelstudio
+      POSTGRES_USER: labelstudio
+      POSTGRES_PASSWORD: ${LABELSTUDIO_DB_PASSWORD:-changeme}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # ==========================================================
+  # Label Studio (annotation UI)
+  # ==========================================================
+  label-studio:
+    image: heartexlabs/label-studio:latest
+    container_name: thesis-label-studio
+    hostname: label-studio
+    <<: *restart_policy
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      - LABEL_STUDIO_HOST=http://localhost:8080
+      - LABEL_STUDIO_PORT=8080
+      - DJANGO_DB=postgresql
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=labelstudio
+      - POSTGRES_PASSWORD=${LABELSTUDIO_DB_PASSWORD:-changeme}
+      - POSTGRES_DB=labelstudio
+      - LABEL_STUDIO_USERNAME=${LABELSTUDIO_USER:-ivan}
+      - LABEL_STUDIO_PASSWORD=${LABELSTUDIO_PASS:-changeme}
+    volumes:
+      - label_studio_data:/label-studio/data
+
+  # ==========================================================
+  # Backend (FastAPI serving model + RAG agent)
+  # Built from ./backend/Dockerfile (created by 'make init-backend')
+  # ==========================================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: thesis-backend
+    hostname: backend
+    <<: *restart_policy
+    ports:
+      - "127.0.0.1:8001:8001"
+    depends_on:
+      ollama:
+        condition: service_healthy
+      chroma:
+        condition: service_started
+    env_file:
+      - .env
+    environment:
+      - MODEL_NAME=${MODEL_NAME:-HuggingFaceTB/SmolVLM-256M-Instruct}
+      - LLM_MODEL=${LLM_MODEL:-llama3.1:8b-instruct-q4_K_M}
+      - OLLAMA_HOST=http://ollama:11434
+      - CHROMA_HOST=http://chroma:8000
+      - DATA_DIR=/data
+    volumes:
+      - ./data:/data
+      - ./models:/models
+    # GPU passthrough
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - capabilities: [gpu]
+
+  # ==========================================================
+  # Frontend (Next.js web app — "Pregúntale al mapa")
+  # Built from ./web/Dockerfile (created by 'make init-web')
+  # ==========================================================
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: thesis-web
+    hostname: web
+    <<: *restart_policy
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - backend
+    env_file:
+      - .env
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8001
+      - BACKEND_URL=http://backend:8001
+
+volumes:
+  ollama_data:
+  chroma_data:
+  postgres_data:
+  label_studio_data:
