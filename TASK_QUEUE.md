@@ -36,7 +36,7 @@
 - [ ] [P0][M1][EXT][A] Register GitHub personal access token (repo scope) — link emailed
 - [ ] [P1][M1][EXT][A] Register AWS free tier (alt to Copernicus) — link emailed
 - [ ] [P1][M1][EXT][A] Register Google Cloud + activate Cloud Storage API — link emailed
-- [ ] [P0][M1][NO-GPU][A] Build scripts/fetch_ign_wms.py — IGN raster WMS puller
+- [x] [P0][M1][NO-GPU][A] Build scripts/fetch_ign_wms.py — IGN raster WMS puller  <!-- Wrote WMS fetcher; cannot test in sandbox (no DNS to ign.gob.py) -->
 - [ ] [P0][M1][EXT][R] Download IGN raster tiles for 17 deptos + Asunción (~2 GB)
 - [ ] [P0][M2][EXT][R] Download Sentinel-2 L2A cloud-free mosaic for Paraguay (via Element84 or Copernicus)
 - [ ] [P1][M1][EXT][R] Download WorldPop Paraguay 2020 UN-adjusted (~50 MB)
@@ -44,7 +44,7 @@
 - [ ] [P1][M2][EXT][R] Download Google Open Buildings v3 for Paraguay tiles (~100 MB)
 - [ ] [P1][M2][EXT][R] Download INDI indigenous territories GeoJSON (UN-Habitat mirror)
 - [ ] [P2][M2][EXT][R] File MOPC drone imagery access request (Ley 5282/2014) — 15-day SLA
-- [ ] [P0][M1][NO-GPU][A] Build scripts/data_inventory.py — full SHA256 + size + license table
+- [x] [P0][M1][NO-GPU][A] Build scripts/data_inventory.py — full SHA256 + size + license table  <!-- Working in sandbox -->
 - [ ] [P0][M1][NO-GPU][D] Update DATA_MANIFEST.md with actual download dates + sizes
 
 ## Phase 2 — Annotation pipeline [M2-M3]

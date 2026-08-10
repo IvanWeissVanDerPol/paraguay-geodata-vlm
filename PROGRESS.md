@@ -98,6 +98,26 @@
 
 ---
 
+## 2026-08-10 07:40 UTC — T039
+**Task:** Build scripts/fetch_ign_wms.py — IGN raster WMS puller
+**Status:** ✅ done
+**Output:** fetch_ign_wms.py written: 9.5KB, 18 deptos, WMS endpoint probing, manifest.json output
+**Notes:** Wrote WMS fetcher; cannot test in sandbox (no DNS to ign.gob.py)
+**Time spent:** ~5 min
+**Tags:** [P0] [M1] [NO-GPU] [A]
+
+---
+
+## 2026-08-10 07:40 UTC — T047
+**Task:** Build scripts/data_inventory.py — full SHA256 + size + license table
+**Status:** ✅ done
+**Output:** data_inventory.py built and ran: INVENTORY.json + INVENTORY.md generated for 8 datasets / 102 files / 1.19 GB
+**Notes:** Working in sandbox
+**Time spent:** ~5 min
+**Tags:** [P0] [M1] [NO-GPU] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -126,8 +146,8 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 6
-- **Tasks completed:** 6 / 87
+- **Total ticks:** 8
+- **Tasks completed:** 8 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 0
 - **Average tasks/day:** 0.00
