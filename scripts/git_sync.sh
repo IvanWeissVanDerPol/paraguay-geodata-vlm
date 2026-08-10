@@ -28,12 +28,14 @@ FETCH_ONLY=false
 PUSH=false
 DRY_RUN=false
 BRANCH="main"
+NO_FETCH=false
 
 for arg in "$@"; do
     case "$arg" in
         --fetch) FETCH_ONLY=true ;;
         --push) PUSH=true ;;
         --dry-run) DRY_RUN=true ;;
+        --no-fetch) NO_FETCH=true ;;
         --branch=*) BRANCH="${arg#--branch=}" ;;
         *) echo "Unknown arg: $arg"; exit 1 ;;
     esac
@@ -79,9 +81,16 @@ if ! git diff-index --quiet HEAD -- 2>/dev/null; then
 fi
 
 # Fetch
-echo "📥 Fetching from origin/$BRANCH..."
-if [[ $DRY_RUN == false ]]; then
-    git fetch origin "$BRANCH" 2>&1 | tail -5
+if [[ $NO_FETCH == true ]]; then
+    echo "⏭️  Skipping fetch (--no-fetch)"
+else
+    echo "📥 Fetching from origin/$BRANCH..."
+    if [[ $DRY_RUN == false ]]; then
+        if ! git fetch origin "$BRANCH" 2>&1 | tail -5; then
+            yellow "⚠️  Fetch failed (network or auth). Continuing without remote info."
+            NO_FETCH=true
+        fi
+    fi
 fi
 echo
 
