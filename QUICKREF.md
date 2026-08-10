@@ -67,7 +67,7 @@ docker-compose.yml              ← full stack
 
 1. `make sanity` — runs diagnostics
 2. Read `SETUP_GUIDE.md` troubleshooting section
-3. Ask Erebus via WhatsApp (paste the error)
+3. Ask Erebus via Mensaje (paste the error)
 
 ---
 

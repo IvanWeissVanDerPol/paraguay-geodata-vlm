@@ -37,7 +37,7 @@ python3 scripts/validate_creds.py
 
 Two options:
 
-**Option A (recommended): paste into WhatsApp DM to Erebus.**
+**Option A (recommended): paste into Mensaje DM to Erebus.**
 
 Open `secrets/creds.json` and paste the contents as one code block. Erebus will:
 1. Save it to `/opt/data/thesis-active/secrets/creds.json` on his end (sandbox already isolated).
@@ -50,7 +50,7 @@ Open `secrets/creds.json` and paste the contents as one code block. Erebus will:
 ```bash
 # Iván's machine
 age -r erebus_public_key.txt secrets/creds.json > secrets/creds.json.age
-# Send the .age file via WhatsApp / email
+# Send the .age file via Mensaje / email
 ```
 
 Erebus decrypts with his private key. Same end result, but the file is encrypted in transit.
@@ -102,7 +102,7 @@ To wipe Erebus's access at any point:
 ```bash
 # Iván's command
 echo "Erebus, wipe credentials" > /tmp/msg.txt
-# send via WhatsApp
+# send via Mensaje
 ```
 
 Erebus will:

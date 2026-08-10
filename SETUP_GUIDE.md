@@ -288,11 +288,11 @@ This sets `chmod 700` on `secrets/` and `chmod 600` on `secrets/creds.json` so o
 
 Two options:
 
-#### Option A: WhatsApp paste (simplest)
+#### Option A: Mensaje paste (simplest)
 
 1. Open `secrets/creds.json`
 2. Copy the entire file contents (Ctrl+A, Ctrl+C)
-3. Open WhatsApp chat with Erebus
+3. Open Mensaje chat with Erebus
 4. Paste as one code block, prefixed with:
 
 ```
@@ -314,7 +314,7 @@ Erebus, load these credentials:
 # On Iván's machine, encrypt with Erebus's public age key
 age -r erebus_public_key.txt secrets/creds.json > secrets/creds.json.age
 
-# Send the .age file via WhatsApp
+# Send the .age file via Mensaje
 ```
 
 Erebus decrypts with his private key. Same end result.
@@ -480,7 +480,7 @@ After running through this guide, you have:
 - ✅ Makefile with 30+ commands for daily work
 - ✅ SETUP_GUIDE (this file) for future reference
 
-**Next step:** fill in `secrets/creds.json`, validate with `make validate-creds`, and paste to Erebus via WhatsApp.
+**Next step:** fill in `secrets/creds.json`, validate with `make validate-creds`, and paste to Erebus via Mensaje.
 
 ---
 

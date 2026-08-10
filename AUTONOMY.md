@@ -52,7 +52,7 @@ Mark as [~] (in-progress) in TASK_QUEUE.md
 Execute:
   - LLM-driven: write code, draft paper, design system
   - Tool-driven: run fetch_data.sh, run auto_annotate.py
-  - Manual-ext: ask Iván for credentials via WhatsApp
+  - Manual-ext: ask Iván for credentials via Mensaje
   ↓
 Mark as [x] (done) or [!] (blocked)
   ↓
@@ -177,7 +177,7 @@ The next tick will read the new text.
 Resolve the blocker manually (e.g. create the account yourself), then:
 
 ```bash
-make tick-blocked TASK_ID=T034 OUTPUT="Created Copernicus account" NOTES="user/pass sent via WhatsApp"
+make tick-blocked TASK_ID=T034 OUTPUT="Created Copernicus account" NOTES="user/pass sent via Mensaje"
 ```
 
 Then `make tick` picks the next pending task.
@@ -261,7 +261,7 @@ The cron job is `no_agent=True` — it just runs the script. The script does the
 | Cron stops | No new ticks in PROGRESS.md | `hermes cron list`, restart |
 | Tick picks wrong task | PROGRESS.md shows off-track work | Edit TASK_QUEUE.md, remove bad entries |
 | Task takes too long | Tick marks incomplete | Subdivide task into smaller tasks |
-| Iván misses credentials | Tasks blocked | Pass creds via WhatsApp, `make tick-blocked` then `make tick` |
+| Iván misses credentials | Tasks blocked | Pass creds via Mensaje, `make tick-blocked` then `make tick` |
 | Disk fills | Pipeline errors | `make clean` to remove processed data |
 
 ---

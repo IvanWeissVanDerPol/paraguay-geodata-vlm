@@ -11,7 +11,7 @@ You need 3 P0 services to start:
 2. **HuggingFace** — for uploading dataset + model (mes 3+)
 3. **Copernicus** — for downloading Sentinel-2 (mes 1-2, optional)
 
-Get them in ~10 min total. Then paste them to Erebus via WhatsApp or edit `secrets/creds.json`.
+Get them in ~10 min total. Then paste them to Erebus via Mensaje or edit `secrets/creds.json`.
 
 ---
 
@@ -45,7 +45,7 @@ hf_model_name: paraguay-cartography-florence-2
 
 **Why:** Push code to your repo. You already created https://github.com/IvanWeissVanDerPol/paraguay-geodata-vlm.
 
-**You already passed:** a Personal Access Token (PAT) via WhatsApp to Erebus.
+**You already passed:** a Personal Access Token (PAT) via Mensaje to Erebus.
 
 **If you want to rotate:**
 1. https://github.com/settings/tokens
@@ -131,7 +131,7 @@ aws_region: us-east-1
 6. Save the downloaded JSON file as `gcp-service-account.json`
 
 **Pass to Erebus:**
-- Either paste the JSON content via WhatsApp (small file)
+- Either paste the JSON content via Mensaje (small file)
 - Or save it to `/opt/data/thesis-active/secrets/gcp-service-account.json` yourself
 - And pass: `gcp_billing_project_id: your-project-id`
 
@@ -273,7 +273,7 @@ anthropic_api_key: <your Anthropic API key, starts with sk-ant-, ~100 chars>
 ## 🛡️ Security
 
 - **Never** paste tokens in public channels
-- **WhatsApp DM to Erebus** is acceptable (the conversation is private)
+- **Mensaje DM to Erebus** is acceptable (the conversation is private)
 - **Don't commit** `secrets/creds.json` to git (auto-blocked by `.gitignore` + pre-commit hook)
 - **Rotate** tokens every 90 days (set a calendar reminder)
 - **Use scope:** always use the minimum scope needed (write for HF, repo for GH)
