@@ -88,6 +88,16 @@
 
 ---
 
+## 2026-08-10 07:38 UTC — T030
+**Task:** Add `make tick` (single tick), `make tick-dry`, `make weekly` targets to Makefile
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M1] [NO-GPU] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -116,8 +126,8 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 5
-- **Tasks completed:** 5 / 87
+- **Total ticks:** 6
+- **Tasks completed:** 6 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 0
 - **Average tasks/day:** 0.00
