@@ -33,7 +33,7 @@
 
 - [x] [P0][M1][EXT][A] Register Copernicus dataspace account (5 min) — link emailed to Erebus
 - [x] [P0][M1][EXT][A] Register HuggingFace write token — link emailed
-- [ ] [P0][M1][EXT][A] Register GitHub personal access token (repo scope) — link emailed
+- [x] [P0][M1][EXT][A] Register GitHub personal access token (repo scope) — link emailed
 - [ ] [P1][M1][EXT][A] Register AWS free tier (alt to Copernicus) — link emailed
 - [ ] [P1][M1][EXT][A] Register Google Cloud + activate Cloud Storage API — link emailed
 - [x] [P0][M1][NO-GPU][A] Build scripts/fetch_ign_wms.py — IGN raster WMS puller  <!-- Wrote WMS fetcher; cannot test in sandbox (no DNS to ign.gob.py) -->
