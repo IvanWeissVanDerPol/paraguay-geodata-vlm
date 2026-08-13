@@ -57,7 +57,7 @@
 - [x] [P0][M2][GPU][R] Run auto-annotation on 10K landuse features
 - [x] [P0][M2][GPU][R] Run auto-annotation on 5K water features
 - [x] [P0][M2][GPU][R] Run auto-annotation on 5K natural features
-- [ ] [P0][M3][NO-GPU][A] Set up Label Studio (Docker) + import 50K auto-annotated features
+- [x] [P0][M3][NO-GPU][A] Set up Label Studio (Docker) + import 50K auto-annotated features
 - [ ] [P0][M3][NO-GPU][R] Human review pass on 5K low-confidence features (1-3 categories)
 - [ ] [P0][M3][NO-GPU][W] Export reviewed annotations to data/processed/annotations_v1.geojson
 - [ ] [P0][M3][NO-GPU][A] Build scripts/inter_annotator_agreement.py — Cohen's κ + bootstrap CI
