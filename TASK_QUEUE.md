@@ -45,7 +45,7 @@
 - [ ] [P1][M2][EXT][R] Download INDI indigenous territories GeoJSON (UN-Habitat mirror)
 - [ ] [P2][M2][EXT][R] File MOPC drone imagery access request (Ley 5282/2014) — 15-day SLA
 - [x] [P0][M1][NO-GPU][A] Build scripts/data_inventory.py — full SHA256 + size + license table  <!-- Working in sandbox -->
-- [ ] [P0][M1][NO-GPU][D] Update DATA_MANIFEST.md with actual download dates + sizes
+- [x] [P0][M1][NO-GPU][D] Update DATA_MANIFEST.md with actual download dates + sizes
 
 ## Phase 2 — Annotation pipeline [M2-M3]
 
