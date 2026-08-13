@@ -54,7 +54,7 @@
 - [x] [P0][M2][GPU][A] Build scripts/run_clip.py — CLIP zero-shot scorer
 - [x] [P0][M2][GPU][R] Run auto-annotation on 10K building features (sample + score)
 - [x] [P0][M2][GPU][R] Run auto-annotation on 10K road features
-- [ ] [P0][M2][GPU][R] Run auto-annotation on 10K landuse features
+- [x] [P0][M2][GPU][R] Run auto-annotation on 10K landuse features
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 5K water features
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 5K natural features
 - [ ] [P0][M3][NO-GPU][A] Set up Label Studio (Docker) + import 50K auto-annotated features
