@@ -148,6 +148,16 @@
 
 ---
 
+## 2026-08-13 17:29 UTC — T040
+**Task:** Download IGN raster tiles for 17 deptos + Asunción (~2 GB)
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M1] [EXT] [R]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -186,10 +196,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 11
-- **Tasks completed:** 11 / 87
+- **Total ticks:** 12
+- **Tasks completed:** 12 / 87
 - **Tasks blocked:** 0
-- **Days since start:** 0
-- **Average tasks/day:** 0.00
-- **Estimated completion (current pace):** —
+- **Days since start:** 3
+- **Average tasks/day:** 4.00
+- **Estimated completion (current pace):** 2026-09-01
 <!-- AUTONOMOUS_STATS_END -->

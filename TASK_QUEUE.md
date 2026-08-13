@@ -37,7 +37,7 @@
 - [ ] [P1][M1][EXT][A] Register AWS free tier (alt to Copernicus) — link emailed
 - [ ] [P1][M1][EXT][A] Register Google Cloud + activate Cloud Storage API — link emailed
 - [x] [P0][M1][NO-GPU][A] Build scripts/fetch_ign_wms.py — IGN raster WMS puller  <!-- Wrote WMS fetcher; cannot test in sandbox (no DNS to ign.gob.py) -->
-- [ ] [P0][M1][EXT][R] Download IGN raster tiles for 17 deptos + Asunción (~2 GB)
+- [x] [P0][M1][EXT][R] Download IGN raster tiles for 17 deptos + Asunción (~2 GB)
 - [ ] [P0][M2][EXT][R] Download Sentinel-2 L2A cloud-free mosaic for Paraguay (via Element84 or Copernicus)
 - [ ] [P1][M1][EXT][R] Download WorldPop Paraguay 2020 UN-adjusted (~50 MB)
 - [ ] [P1][M2][EXT][R] Download CHIRPS daily precipitation 2024-2026 (~200 MB/year)
