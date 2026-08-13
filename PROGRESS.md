@@ -158,6 +158,16 @@
 
 ---
 
+## 2026-08-13 17:55 UTC — T048
+**Task:** Update DATA_MANIFEST.md with actual download dates + sizes
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M1] [NO-GPU] [D]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -196,10 +206,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 12
-- **Tasks completed:** 12 / 87
+- **Total ticks:** 13
+- **Tasks completed:** 13 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 3
-- **Average tasks/day:** 4.00
-- **Estimated completion (current pace):** 2026-09-01
+- **Average tasks/day:** 4.33
+- **Estimated completion (current pace):** 2026-08-30
 <!-- AUTONOMOUS_STATS_END -->

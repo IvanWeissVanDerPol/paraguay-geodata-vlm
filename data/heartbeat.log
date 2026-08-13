@@ -5,3 +5,6 @@
 2026-08-10T08:23:19Z  tick T035: Register HuggingFace write token — link 
 2026-08-10T08:44:05Z  watchdog: warn
 2026-08-10T08:51:21Z  tick T036: Register GitHub personal access token (r
+2026-08-13T17:29:55Z  tick T040: Download IGN raster tiles for 17 deptos 
+2026-08-13T17:39:18Z  watchdog: ok
+2026-08-13T17:55:06Z  watchdog: warn
