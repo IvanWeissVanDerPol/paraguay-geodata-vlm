@@ -55,7 +55,7 @@
 - [x] [P0][M2][GPU][R] Run auto-annotation on 10K building features (sample + score)
 - [x] [P0][M2][GPU][R] Run auto-annotation on 10K road features
 - [x] [P0][M2][GPU][R] Run auto-annotation on 10K landuse features
-- [ ] [P0][M2][GPU][R] Run auto-annotation on 5K water features
+- [x] [P0][M2][GPU][R] Run auto-annotation on 5K water features
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 5K natural features
 - [ ] [P0][M3][NO-GPU][A] Set up Label Studio (Docker) + import 50K auto-annotated features
 - [ ] [P0][M3][NO-GPU][R] Human review pass on 5K low-confidence features (1-3 categories)
