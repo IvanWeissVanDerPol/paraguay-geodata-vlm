@@ -53,7 +53,7 @@
 - [x] [P0][M2][GPU][A] Build scripts/run_grounding_dino.py — GroundingDINO detector with text prompts
 - [x] [P0][M2][GPU][A] Build scripts/run_clip.py — CLIP zero-shot scorer
 - [x] [P0][M2][GPU][R] Run auto-annotation on 10K building features (sample + score)
-- [ ] [P0][M2][GPU][R] Run auto-annotation on 10K road features
+- [x] [P0][M2][GPU][R] Run auto-annotation on 10K road features
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 10K landuse features
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 5K water features
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 5K natural features
