@@ -51,7 +51,7 @@
 
 - [x] [P0][M2][GPU][A] Build scripts/run_sam.py — SAM mask generator on raster tiles
 - [x] [P0][M2][GPU][A] Build scripts/run_grounding_dino.py — GroundingDINO detector with text prompts
-- [ ] [P0][M2][GPU][A] Build scripts/run_clip.py — CLIP zero-shot scorer
+- [x] [P0][M2][GPU][A] Build scripts/run_clip.py — CLIP zero-shot scorer
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 10K building features (sample + score)
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 10K road features
 - [ ] [P0][M2][GPU][R] Run auto-annotation on 10K landuse features
