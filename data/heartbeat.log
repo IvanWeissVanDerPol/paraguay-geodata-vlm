@@ -11,3 +11,5 @@
 2026-08-13T17:55:16Z  tick T048: Update DATA_MANIFEST.md with actual down
 2026-08-13T17:56:20Z  tick T041: Download Sentinel-2 L2A cloud-free mosai
 2026-08-13T18:13:06Z  watchdog: warn
+2026-08-13T18:13:09Z  tick T052: Build scripts/run_sam.py — SAM mask gene
+2026-08-13T18:30:58Z  watchdog: warn
