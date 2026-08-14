@@ -64,7 +64,7 @@
 
 ## Phase 3 — Fine-tuning [M4-M5]
 
-- [ ] [P0][M4][GPU][A] Build scripts/train.py — generic QLoRA fine-tune loop (transformers + peft)
+- [x] [P0][M4][GPU][A] Build scripts/train.py — generic QLoRA fine-tune loop (transformers + peft)
 - [ ] [P0][M4][GPU][R] Fine-tune SmolVLM-256M-Instruct with QLoRA (3 epochs, batch 8)
 - [ ] [P0][M4][GPU][R] Fine-tune Florence-2-base with QLoRA (5 epochs, batch 4)
 - [ ] [P0][M4][GPU][R] Evaluate models on held-out test set (F1 macro, accuracy top-1)
