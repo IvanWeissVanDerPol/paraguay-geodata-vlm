@@ -82,3 +82,6 @@
 2026-08-14T07:05:50Z  tick T080: Build backend/ — FastAPI serving model +
 2026-08-14T07:21:47Z  watchdog: warn
 2026-08-14T07:37:47Z  watchdog: warn
+2026-08-14T07:37:52Z  tick T081: Test agent on 10 sample questions from B
+2026-08-14T07:54:47Z  watchdog: warn
+2026-08-14T08:10:48Z  watchdog: warn
