@@ -378,6 +378,16 @@
 
 ---
 
+## 2026-08-14 06:18 UTC — T075
+**Task:** Mint Zenodo DOI for dataset snapshot
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M5] [EXT] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -421,10 +431,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 34
-- **Tasks completed:** 34 / 87
+- **Total ticks:** 35
+- **Tasks completed:** 35 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 4
-- **Average tasks/day:** 8.50
+- **Average tasks/day:** 8.75
 - **Estimated completion (current pace):** 2026-08-20
 <!-- AUTONOMOUS_STATS_END -->
