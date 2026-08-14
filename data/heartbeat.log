@@ -92,3 +92,7 @@
 2026-08-14T08:44:22Z  tick T084: Implement web app frontend (Next.js 16 +
 2026-08-14T08:59:48Z  watchdog: warn
 2026-08-14T09:15:50Z  watchdog: warn
+2026-08-14T09:15:52Z  tick T085: Deploy web app to local_only / HF Spaces
+2026-08-14T09:31:49Z  watchdog: warn
+2026-08-14T09:47:49Z  watchdog: warn
+2026-08-14T10:03:49Z  watchdog: urgent-resume
