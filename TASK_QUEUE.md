@@ -88,7 +88,7 @@
 
 - [x] [P0][M6][NO-GPU][W] Draft paper Section 2 (Related Work) — 30 refs minimum
 - [x] [P0][M6][NO-GPU][W] Draft paper Section 3 (Method) — pipeline + RAG detail
-- [ ] [P0][M6][NO-GPU][W] Draft paper Section 4 (Experiments) — all tables + figures
+- [x] [P0][M6][NO-GPU][W] Draft paper Section 4 (Experiments) — all tables + figures
 - [ ] [P0][M6][NO-GPU][W] Draft paper Section 5 (Discussion) — limitations + future work
 - [ ] [P0][M6][NO-GPU][W] Draft paper Section 1 (Introduction) — context + gap + contributions
 - [ ] [P0][M6][NO-GPU][W] Draft paper Abstract (250 words) — problem + method + results
