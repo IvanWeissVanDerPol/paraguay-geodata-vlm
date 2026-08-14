@@ -77,7 +77,7 @@
 ## Phase 4 — Conversational agent [M5-M6]
 
 - [x] [P0][M5][GPU][A] Build scripts/build_rag_index.py — Chroma vector index over annotated features
-- [ ] [P0][M5][GPU][A] Build backend/ — FastAPI serving model + RAG agent
+- [x] [P0][M5][GPU][A] Build backend/ — FastAPI serving model + RAG agent
 - [ ] [P0][M5][GPU][R] Test agent on 10 sample questions from BENCHMARK_QUESTIONS.md
 - [ ] [P0][M6][GPU][R] Run full 100-question benchmark (record answers + latencies)
 - [ ] [P0][M6][NO-GPU][R] Have 2 external reviewers score all 100 answers (Cohen's κ)

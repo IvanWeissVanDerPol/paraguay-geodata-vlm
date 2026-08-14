@@ -77,3 +77,5 @@
 2026-08-14T06:18:19Z  tick T075: Mint Zenodo DOI for dataset snapshot
 2026-08-14T06:33:47Z  watchdog: warn
 2026-08-14T06:49:47Z  watchdog: warn
+2026-08-14T06:49:52Z  tick T079: Build scripts/build_rag_index.py — Chrom
+2026-08-14T07:05:48Z  watchdog: warn
