@@ -45,3 +45,5 @@
 2026-08-14T00:35:42Z  watchdog: warn
 2026-08-14T00:35:46Z  tick T063: Build scripts/inter_annotator_agreement.
 2026-08-14T00:51:42Z  watchdog: warn
+2026-08-14T00:51:45Z  tick T067: Build scripts/train.py — generic QLoRA f
+2026-08-14T01:07:43Z  watchdog: warn
