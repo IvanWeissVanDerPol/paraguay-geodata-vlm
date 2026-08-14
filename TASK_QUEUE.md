@@ -68,7 +68,7 @@
 - [x] [P0][M4][GPU][R] Fine-tune SmolVLM-256M-Instruct with QLoRA (3 epochs, batch 8)
 - [x] [P0][M4][GPU][R] Fine-tune Florence-2-base with QLoRA (5 epochs, batch 4)
 - [x] [P0][M4][GPU][R] Evaluate models on held-out test set (F1 macro, accuracy top-1)
-- [ ] [P0][M4][GPU][R] Compute Cohen's κ inter-annotator agreement (target ≥ 0.85)
+- [x] [P0][M4][GPU][R] Compute Cohen's κ inter-annotator agreement (target ≥ 0.85)
 - [ ] [P0][M4][NO-GPU][D] Write model card (MODEL_CARD.md) for HuggingFace Hub
 - [ ] [P0][M5][EXT][A] Upload fine-tuned model to HuggingFace Hub (paraguay-cartography-florence-2)
 - [ ] [P0][M5][EXT][A] Upload annotated dataset to HuggingFace Hub (paraguay-cartography-annotated)

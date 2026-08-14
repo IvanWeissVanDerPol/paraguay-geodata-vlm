@@ -57,3 +57,5 @@
 2026-08-14T02:59:43Z  watchdog: warn
 2026-08-14T03:15:44Z  watchdog: warn
 2026-08-14T03:15:48Z  tick T069: Fine-tune Florence-2-base with QLoRA (5 
+2026-08-14T03:15:49Z  tick T070: Evaluate models on held-out test set (F1
+2026-08-14T03:31:44Z  watchdog: warn
