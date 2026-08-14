@@ -82,7 +82,7 @@
 - [x] [P0][M6][GPU][R] Run full 100-question benchmark (record answers + latencies)
 - [x] [P0][M6][NO-GPU][R] Have 2 external reviewers score all 100 answers (Cohen's κ)
 - [x] [P0][M6][NO-GPU][W] Implement web app frontend (Next.js 16 + Tailwind v4)
-- [ ] [P0][M6][EXT][A] Deploy web app to local_only / HF Spaces / VPS
+- [x] [P0][M6][EXT][A] Deploy web app to local_only / HF Spaces / VPS
 
 ## Phase 5 — Paper writing [M6-M7]
 

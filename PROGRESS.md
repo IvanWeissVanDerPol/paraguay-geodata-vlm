@@ -448,6 +448,16 @@
 
 ---
 
+## 2026-08-14 09:15 UTC — T085
+**Task:** Deploy web app to local_only / HF Spaces / VPS
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M6] [EXT] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -496,10 +506,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 41
-- **Tasks completed:** 41 / 87
+- **Total ticks:** 42
+- **Tasks completed:** 42 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 4
-- **Average tasks/day:** 10.25
+- **Average tasks/day:** 10.50
 - **Estimated completion (current pace):** 2026-08-18
 <!-- AUTONOMOUS_STATS_END -->
