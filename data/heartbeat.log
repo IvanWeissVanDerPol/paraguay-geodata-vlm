@@ -59,3 +59,9 @@
 2026-08-14T03:15:48Z  tick T069: Fine-tune Florence-2-base with QLoRA (5 
 2026-08-14T03:15:49Z  tick T070: Evaluate models on held-out test set (F1
 2026-08-14T03:31:44Z  watchdog: warn
+2026-08-14T03:31:50Z  tick T071: Compute Cohen's κ inter-annotator agreem
+2026-08-14T03:47:43Z  watchdog: warn
+2026-08-14T04:03:43Z  watchdog: warn
+2026-08-14T04:19:46Z  watchdog: warn
+2026-08-14T04:35:45Z  watchdog: warn
+2026-08-14T04:51:46Z  watchdog: urgent-resume
