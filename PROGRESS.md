@@ -288,6 +288,16 @@
 
 ---
 
+## 2026-08-14 00:35 UTC — T063
+**Task:** Build scripts/inter_annotator_agreement.py — Cohen's κ + bootstrap CI
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M3] [NO-GPU] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -326,10 +336,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 25
-- **Tasks completed:** 25 / 87
+- **Total ticks:** 26
+- **Tasks completed:** 26 / 87
 - **Tasks blocked:** 0
-- **Days since start:** 3
-- **Average tasks/day:** 8.33
-- **Estimated completion (current pace):** 2026-08-21
+- **Days since start:** 4
+- **Average tasks/day:** 6.50
+- **Estimated completion (current pace):** 2026-08-23
 <!-- AUTONOMOUS_STATS_END -->

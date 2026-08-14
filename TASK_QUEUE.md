@@ -60,7 +60,7 @@
 - [x] [P0][M3][NO-GPU][A] Set up Label Studio (Docker) + import 50K auto-annotated features
 - [x] [P0][M3][NO-GPU][R] Human review pass on 5K low-confidence features (1-3 categories)
 - [x] [P0][M3][NO-GPU][W] Export reviewed annotations to data/processed/annotations_v1.geojson
-- [ ] [P0][M3][NO-GPU][A] Build scripts/inter_annotator_agreement.py — Cohen's κ + bootstrap CI
+- [x] [P0][M3][NO-GPU][A] Build scripts/inter_annotator_agreement.py — Cohen's κ + bootstrap CI
 
 ## Phase 3 — Fine-tuning [M4-M5]
 
