@@ -78,7 +78,7 @@
 
 - [x] [P0][M5][GPU][A] Build scripts/build_rag_index.py — Chroma vector index over annotated features
 - [x] [P0][M5][GPU][A] Build backend/ — FastAPI serving model + RAG agent
-- [ ] [P0][M5][GPU][R] Test agent on 10 sample questions from BENCHMARK_QUESTIONS.md
+- [x] [P0][M5][GPU][R] Test agent on 10 sample questions from BENCHMARK_QUESTIONS.md
 - [ ] [P0][M6][GPU][R] Run full 100-question benchmark (record answers + latencies)
 - [ ] [P0][M6][NO-GPU][R] Have 2 external reviewers score all 100 answers (Cohen's κ)
 - [ ] [P0][M6][NO-GPU][W] Implement web app frontend (Next.js 16 + Tailwind v4)
