@@ -47,3 +47,12 @@
 2026-08-14T00:51:42Z  watchdog: warn
 2026-08-14T00:51:45Z  tick T067: Build scripts/train.py — generic QLoRA f
 2026-08-14T01:07:43Z  watchdog: warn
+2026-08-14T01:07:46Z  tick T068: Fine-tune SmolVLM-256M-Instruct with QLo
+2026-08-14T01:23:42Z  watchdog: warn
+2026-08-14T01:39:43Z  watchdog: warn
+2026-08-14T01:55:43Z  watchdog: warn
+2026-08-14T02:11:42Z  watchdog: warn
+2026-08-14T02:27:45Z  watchdog: warn
+2026-08-14T02:43:43Z  watchdog: warn
+2026-08-14T02:59:43Z  watchdog: warn
+2026-08-14T03:15:44Z  watchdog: warn

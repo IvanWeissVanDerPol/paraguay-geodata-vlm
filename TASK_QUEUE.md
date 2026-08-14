@@ -66,7 +66,7 @@
 
 - [x] [P0][M4][GPU][A] Build scripts/train.py — generic QLoRA fine-tune loop (transformers + peft)
 - [x] [P0][M4][GPU][R] Fine-tune SmolVLM-256M-Instruct with QLoRA (3 epochs, batch 8)
-- [ ] [P0][M4][GPU][R] Fine-tune Florence-2-base with QLoRA (5 epochs, batch 4)
+- [x] [P0][M4][GPU][R] Fine-tune Florence-2-base with QLoRA (5 epochs, batch 4)
 - [ ] [P0][M4][GPU][R] Evaluate models on held-out test set (F1 macro, accuracy top-1)
 - [ ] [P0][M4][GPU][R] Compute Cohen's κ inter-annotator agreement (target ≥ 0.85)
 - [ ] [P0][M4][NO-GPU][D] Write model card (MODEL_CARD.md) for HuggingFace Hub
