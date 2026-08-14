@@ -71,7 +71,7 @@
 - [x] [P0][M4][GPU][R] Compute Cohen's κ inter-annotator agreement (target ≥ 0.85)
 - [x] [P0][M4][NO-GPU][D] Write model card (MODEL_CARD.md) for HuggingFace Hub
 - [x] [P0][M5][EXT][A] Upload fine-tuned model to HuggingFace Hub (paraguay-cartography-florence-2)
-- [ ] [P0][M5][EXT][A] Upload annotated dataset to HuggingFace Hub (paraguay-cartography-annotated)
+- [x] [P0][M5][EXT][A] Upload annotated dataset to HuggingFace Hub (paraguay-cartography-annotated)
 - [ ] [P0][M5][EXT][A] Mint Zenodo DOI for dataset snapshot
 
 ## Phase 4 — Conversational agent [M5-M6]
