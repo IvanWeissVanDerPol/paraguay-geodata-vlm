@@ -92,7 +92,7 @@
 - [x] [P0][M6][NO-GPU][W] Draft paper Section 5 (Discussion) — limitations + future work
 - [x] [P0][M6][NO-GPU][W] Draft paper Section 1 (Introduction) — context + gap + contributions
 - [x] [P0][M6][NO-GPU][W] Draft paper Abstract (250 words) — problem + method + results
-- [ ] [P0][M6][NO-GPU][W] Draft paper Section 6 (Conclusion) — recap + release statement
+- [x] [P0][M6][NO-GPU][W] Draft paper Section 6 (Conclusion) — recap + release statement
 - [ ] [P0][M6][NO-GPU][D] Generate all figures (pipeline diagram, confusion matrix, benchmark chart)
 - [ ] [P0][M6][NO-GPU][D] Generate all tables (dataset summary, model comparison, benchmark)
 - [ ] [P0][M6][NO-GPU][W] Compile final 8-page paper (ICA format)
