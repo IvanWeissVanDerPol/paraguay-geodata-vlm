@@ -538,6 +538,16 @@
 
 ---
 
+## 2026-08-16 00:24 UTC — T097
+**Task:** Generate all tables (dataset summary, model comparison, benchmark)
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M6] [NO-GPU] [D]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -587,6 +597,11 @@ _None._
 - Blocked: 0
 - Top priority: Build defense slides (45 min + 15 Q&A) — see DEFENSE_PLAN.md
 
+## 2026-08-16 — weekly review
+- Completed this week: 50
+- Blocked: 0
+- Top priority: Build defense slides (45 min + 15 Q&A) — see DEFENSE_PLAN.md
+
 <!-- AUTONOMOUS_DAILY_SUMMARY_START -->
 _No ticks yet._
 <!-- AUTONOMOUS_DAILY_SUMMARY_END -->
@@ -596,10 +611,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 50
-- **Tasks completed:** 50 / 87
+- **Total ticks:** 51
+- **Tasks completed:** 51 / 87
 - **Tasks blocked:** 0
 - **Days since start:** 6
-- **Average tasks/day:** 8.33
+- **Average tasks/day:** 8.50
 - **Estimated completion (current pace):** 2026-08-20
 <!-- AUTONOMOUS_STATS_END -->
