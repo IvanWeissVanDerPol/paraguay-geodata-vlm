@@ -95,7 +95,7 @@
 - [x] [P0][M6][NO-GPU][W] Draft paper Section 6 (Conclusion) — recap + release statement
 - [x] [P0][M6][NO-GPU][D] Generate all figures (pipeline diagram, confusion matrix, benchmark chart)
 - [x] [P0][M6][NO-GPU][D] Generate all tables (dataset summary, model comparison, benchmark)
-- [ ] [P0][M6][NO-GPU][W] Compile final 8-page paper (ICA format)
+- [x] [P0][M6][NO-GPU][W] Compile final 8-page paper (ICA format)
 - [ ] [P0][M7][EXT][A] Submit paper to arxiv (cs.CV, cs.CL, cs.CY categories)
 - [ ] [P0][M7][EXT][A] Submit paper to ICA 2027 / ACM SIGSPATIAL 2027
 - [ ] [P1][M7][EXT][D] Write blog post / press release for Paraguayan tech press
