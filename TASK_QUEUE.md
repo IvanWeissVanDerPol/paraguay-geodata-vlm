@@ -103,7 +103,7 @@
 
 ## Phase 6 — Thesis manuscript (Cap. 1-6) [M7]
 
-- [ ] [P0][M7][NO-GPU][W] Write Cap. 1 (Introducción) — UNA format, ~20 pages
+- [x] [P0][M7][NO-GPU][W] Write Cap. 1 (Introducción) — UNA format, ~20 pages
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 2 (Marco Teórico) — ~40 pages, expand from paper Section 2
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 3 (Marco Metodológico) — already in METHODOLOGY.md, expand to ~30 pages
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 4 (Resultados) — ~40 pages, expand from paper Section 4
