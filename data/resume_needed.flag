@@ -1,6 +1,6 @@
 {
-  "flagged_at": "2026-08-17T00:23:23.769410+00:00",
-  "reason": "stale 18h 30m \u2014 resume needed (threshold: 6h)",
-  "last_work": "2026-08-16T05:53:06+00:00",
-  "age_seconds": 66617.749569
+  "flagged_at": "2026-08-20T01:18:09.664342+00:00",
+  "reason": "very stale 1d \u2014 urgent resume (threshold: 24h)",
+  "last_work": "2026-08-18T02:47:01+00:00",
+  "age_seconds": 167468.656532
 }
