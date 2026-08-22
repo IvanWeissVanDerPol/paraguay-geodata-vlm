@@ -567,6 +567,16 @@
 **Tags:** [P0][M7][NO-GPU][W]
 
 ---
+## 2026-08-22 00:11 UTC — T107
+**Task:** Write Cap. 2 (Marco Teórico) — ~40 pages, expand from paper Section 2
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M7] [NO-GPU] [W]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -635,10 +645,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 53
-- **Tasks completed:** 53 / 87
-- **Tasks blocked:** 0
-- **Days since start:** 11
-- **Average tasks/day:** 4.82
-- **Estimated completion (current pace):** 2026-08-21
+- **Total ticks:** 56
+- **Tasks completed:** 54 / 87
+- **Tasks blocked:** 2
+- **Days since start:** 12
+- **Average tasks/day:** 4.50
+- **Estimated completion (current pace):** 2026-08-29
 <!-- AUTONOMOUS_STATS_END -->

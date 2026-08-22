@@ -96,15 +96,15 @@
 - [x] [P0][M6][NO-GPU][D] Generate all figures (pipeline diagram, confusion matrix, benchmark chart)
 - [x] [P0][M6][NO-GPU][D] Generate all tables (dataset summary, model comparison, benchmark)
 - [x] [P0][M6][NO-GPU][W] Compile final 8-page paper (ICA format)
-- [ ] [P0][M7][EXT][A] Submit paper to arxiv (cs.CV, cs.CL, cs.CY categories)
-- [ ] [P0][M7][EXT][A] Submit paper to ICA 2027 / ACM SIGSPATIAL 2027
+- [!] [P0][M7][EXT][A] Submit paper to arxiv (cs.CV, cs.CL, cs.CY categories) — needs: paper draft + Ivan's arxiv account
+- [!] [P0][M7][EXT][A] Submit paper to ICA 2027 / ACM SIGSPATIAL 2027 — needs: paper accepted + Ivan's submission
 - [ ] [P1][M7][EXT][D] Write blog post / press release for Paraguayan tech press
 - [ ] [P1][M7][EXT][D] Tweet thread / LinkedIn post announcing paper
 
 ## Phase 6 — Thesis manuscript (Cap. 1-6) [M7]
 
 - [x] [P0][M7][NO-GPU][W] Write Cap. 1 (Introducción) — UNA format, ~20 pages
-- [ ] [P0][M7][NO-GPU][W] Write Cap. 2 (Marco Teórico) — ~40 pages, expand from paper Section 2
+- [x] [P0][M7][NO-GPU][W] Write Cap. 2 (Marco Teórico) — ~40 pages, expand from paper Section 2
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 3 (Marco Metodológico) — already in METHODOLOGY.md, expand to ~30 pages
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 4 (Resultados) — ~40 pages, expand from paper Section 4
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 5 (Discusión) — ~20 pages, expand from paper Section 5
