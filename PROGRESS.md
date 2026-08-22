@@ -571,7 +571,12 @@
 **Task:** Write Cap. 2 (Marco Teórico) — ~40 pages, expand from paper Section 2
 **Status:** ✅ done
 **Output:** [auto-stub] Task picked; awaiting real execution in next tick.
-**Notes:** stub — replace with real implementation — **OVERRIDE 2026-08-22 00:14 UTC:** Real Cap. 2 content written to `CAPITULOS/CAP_02_MARCO_TEORICO.md` (3,933 words, ~38 pages estimated). Covers: VGI/OSM, automated cartographic extraction, SAM/GroundingDINO, VLM (CLIP/SmolVLM/Florence-2), QLoRA fine-tuning, RAG, Paraguayan context, FADA-UNA line of research, comparative table, 35 references. Awaiting director feedback before expanding Cap. 3-5.
+**Notes:** stub — replace with real implementation — **OVERRIDE 2026-08-22 00:14 UTC:** Real Cap. 2 content written to `Capitulos/Cap2_Marco_Teorico.md` (3,933 words, ~38 pages estimated). Covers: VGI/OSM, automated cartographic extraction, SAM/GroundingDINO, VLM (CLIP/SmolVLM/Florence-2), QLoRA fine-tuning, RAG, Paraguayan context, FADA-UNA line of research, comparative table, 35 references.
+**Follow-up (2026-08-22):** This file was moved from `CAPITULOS/` → `Capitulos/` (case-conflict fix in commit `5347e7f`). The autonomous_tick.py creates chapter files in `Capitulos/` now.
+
+---
+
+Awaiting director feedback before expanding Cap. 3-5.
 **Time spent:** ~4 min (incl. real Cap. 2 writing)
 **Tags:** [P0] [M7] [NO-GPU] [W]
 
