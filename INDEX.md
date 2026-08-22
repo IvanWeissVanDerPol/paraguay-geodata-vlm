@@ -1,0 +1,126 @@
+# INDEX — thesis-active (= paraguay-geodata-vlm)
+
+> **🌍 Este repo es la MITAD del sustrato de la tesis.** Leé primero [`THESIS_ARCHITECTURE.md`](THESIS_ARCHITECTURE.md) para el mapa cross-repo (sustrato ↔ tesis).
+
+Top-level files, then key subdirectories.
+
+## Top-level files
+
+| Path | Size | Description |
+|---|---|---|
+| `AUTONOMY.md` | 10,801 B | 🤖 AUTONOMY — How Erebus Works On Your Thesis Without You Prompting |
+| `BENCHMARK_QUESTIONS.md` | 7,601 B | BENCHMARK DE PREGUNTAS — Validación del Agente Conversacional |
+| `CAPITULOS/` | dir (1 entries) | (see below) |
+| `CREDENTIALS_HOWTO.md` | 8,569 B | 🔑 Credentials Howto — P1 GeoData v2 |
+| `Capitulos/` | dir (1 entries) | (see below) |
+| `DATA_MANIFEST.md` | 7,265 B | DATA MANIFEST — P1 GeoData v2 |
+| `DEFENSE_PLAN.md` | 9,511 B | DEFENSE & CO-SIGN PLAN — Paper-First Thesis Strategy |
+| `ETHICS_WAIVER_MEMO.md` | 5,400 B | ETHICS WAIVER MEMO — P1 GeoData v2 |
+| `FORMAL_PROPOSAL.md` | 9,575 B | PROPUESTA FORMAL — Sustrato de la tesis UNA-FADA |
+| `GIT_WORKFLOW.md` | 8,154 B | 🔧 GIT WORKFLOW — P1 GeoData v2 |
+| `METHODOLOGY.md` | 9,091 B | METHODOLOGY — P1 GeoData v2 |
+| `Makefile` | 13,558 B |  |
+| `PAPER_OUTLINE.md` | 8,886 B | PAPER OUTLINE — P1 GeoData v2 |
+| `PROGRESS.md` | 21,075 B | PROGRESS LOG — P1 GeoData v2 |
+| `QUICKREF.md` | 3,436 B | P1 GeoData v2 — Quick Reference Card |
+| `README.md` | 11,346 B | 🎓 P1 GeoData v2 — Tesis de Maestría (paper-first) |
+| `REFERENCES.bib` | 5,349 B |  |
+| `RISK_REGISTER.md` | 5,352 B | Risk Register — P1 GeoData v2 |
+| `SETUP_GUIDE.md` | 12,650 B | 🚀 SETUP GUIDE — P1 GeoData v2 |
+| `TASK_QUEUE.md` | 9,564 B | TASK QUEUE — P1 GeoData v2 |
+| `THESIS_ARCHITECTURE.md` | 14,628 B | THESIS ARCHITECTURE — Cross-Repo Map |
+| `THESIS_PICK.md` | 5,117 B | Thesis Pick — Iván's Decision Matrix |
+| `data/` | dir (10 entries) | (see below) |
+| `docker-compose.yml` | 5,194 B |  |
+| `heartbeat` | 0 B |  |
+| `heartbeat.txt` | 25 B |  |
+| `logs/` | dir (2 entries) | (see below) |
+| `requirements.txt` | 1,549 B |  |
+| `scripts/` | dir (22 entries) | (see below) |
+| `secrets/` | dir (3 entries) | (see below) |
+
+## Subdirectories
+
+### `CAPITULOS/` (1 entries)
+
+| Path | Description |
+|---|---|
+| `CAPITULOS/CAP_02_MARCO_TEORICO.md` | Capítulo 2 — Marco Teórico |
+
+### `Capitulos/` (1 entries)
+
+| Path | Description |
+|---|---|
+| `Capitulos/Cap1_Introduccion.md` | Capítulo 1 — Introducción |
+
+### `data/` (10 entries)
+
+| Path | Description |
+|---|---|
+| `data/heartbeat` |  |
+| `data/heartbeat.flag` |  |
+| `data/heartbeat.log` |  |
+| `data/heartbeat.touch` |  |
+| `data/heartbeat.txt` |  |
+| `data/processed/` | dir (1 entries) |
+| `data/progress.jsonl` |  |
+| `data/raw/` | dir (1 entries) |
+| `data/watchdog_heartbeat` |  |
+| `data/watchdog_heartbeat.txt` |  |
+
+### `logs/` (2 entries)
+
+| Path | Description |
+|---|---|
+| `logs/tick.log` |  |
+| `logs/watchdog.heartbeat` |  |
+
+### `scripts/` (22 entries)
+
+| Path | Description |
+|---|---|
+| `scripts/auto_annotate.py` | auto_annotate.py — Auto-annotation pipeline for P1 GeoData v2 |
+| `scripts/autonomous_tick.py` | autonomous_tick.py — Single autonomous work tick for P1 GeoData v2. |
+| `scripts/data_inventory.py` | data_inventory.py — Build complete data inventory with SHA256 + sizes + licenses |
+| `scripts/data_status.py` | data_status.py — Show inventory of downloaded datasets. |
+| `scripts/fetch_data.sh` |  |
+| `scripts/fetch_ign_wms.py` | fetch_ign_wms.py — Pull IGN Paraguay raster tiles via WMS. |
+| `scripts/first_push.sh` |  |
+| `scripts/git_commit.py` | git_commit.py — Atomic commit per tick for P1 GeoData v2. |
+| `scripts/git_conflict_resolver.py` | git_conflict_resolver.py — Handle merge conflicts intelligently. |
+| `scripts/git_maintenance.sh` |  |
+| `scripts/git_sync.sh` |  |
+| `scripts/install.sh` |  |
+| `scripts/load_creds.py` | load_creds.py — Load credentials from secrets/creds.json into the environment. |
+| `scripts/pre-commit-hook.sh` |  |
+| `scripts/sanity_check.py` | sanity_check.py — End-to-end environment + data + pipeline test. |
+| `scripts/test_annotate.py` | Test real annotation via venv python. |
+| `scripts/thesis-heartbeat.sh` |  |
+| `scripts/thesis-tick.sh` |  |
+| `scripts/thesis-weekly.sh` |  |
+| `scripts/thesis_watchdog.py` | thesis_watchdog.py — Check heartbeat and trigger work if stale. |
+| `scripts/validate_creds.py` | validate_creds.py — Validate secrets/creds.json against the schema. |
+| `scripts/weekly_review.py` | weekly_review.py — Weekly summary of autonomous progress. |
+
+### `secrets/` (3 entries)
+
+| Path | Description |
+|---|---|
+| `secrets/README.md` | secrets/ — Credentials Bundle |
+| `secrets/creds.json` |  |
+| `secrets/creds.schema.json` |  |
+
+---
+
+> **Note:** There are **two chapter directories** (case-sensitive filesystem): `CAPITULOS/` (uppercase, autonomous-tick output) and `Capitulos/` (mixed-case, manual writes). Both are valid; consolidation deferred.
+
+---
+
+Generated by Hermes agent (cross-repo architecture review), 2026-08-15.
+
+---
+
+## 🔗 See also
+
+- **Other half of the thesis:** [`IvanWeissVanDerPol/satellite-paraguay`](https://github.com/IvanWeissVanDerPol/satellite-paraguay) — 6 papers, models, manuscript, defense.
+- **Cross-repo architecture map:** [`THESIS_ARCHITECTURE.md`](THESIS_ARCHITECTURE.md) — read this first to understand how the two halves connect.

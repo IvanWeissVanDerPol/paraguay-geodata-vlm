@@ -24,21 +24,24 @@ Si `make status` muestra tasks en progreso o completados, Erebus ya está trabaj
 
 | # | Documento | Tiempo | Para qué |
 |---|---|---|---|
-| 1 | **`AUTONOMY.md`** | 5 min | Cómo Erebus trabaja 24/7 sin prompting |
-| 2 | **`QUICKREF.md`** | 2 min | Cheat sheet, comandos diarios |
-| 3 | **`SETUP_GUIDE.md`** | 15 min | Instalación + credenciales |
-| 4 | **`TASK_QUEUE.md`** | 10 min | Las 87 tasks que Erebus ejecuta |
-| 5 | **`PROGRESS.md`** | 5 min | Log de lo que ya se hizo |
-| 6 | **`THESIS_PICK.md`** | 10 min | Por qué P1 GeoData v2 |
-| 7 | **`FORMAL_PROPOSAL.md`** | 15 min | Pregunta + hipótesis + objetivos |
-| 8 | **`ETHICS_WAIVER_MEMO.md`** | 5 min | Sin IRB justificado |
-| 9 | **`DATA_MANIFEST.md`** | 10 min | 9 datasets + licencias |
-| 10 | **`METHODOLOGY.md`** | 30 min | Cap. 3 metodología |
-| 11 | **`PAPER_OUTLINE.md`** | 20 min | Paper ICA/SIGSPATIAL |
-| 12 | **`BENCHMARK_QUESTIONS.md`** | 15 min | 100 preguntas validación |
-| 13 | **`DEFENSE_PLAN.md`** | 20 min | Defensa + advisor strategy |
-| 14 | **`RISK_REGISTER.md`** | 10 min | 35 riesgos categorizados |
-| 15 | **`REFERENCES.bib`** | — | BibTeX starter |
+| 1 | **`THESIS_ARCHITECTURE.md`** | 5 min | **Leé esto primero.** Mapa cross-repo (este repo = sustrato; satellite-paraguay = tesis). |
+| 2 | **`AUTONOMY.md`** | 5 min | Cómo Erebus trabaja 24/7 sin prompting |
+| 3 | **`QUICKREF.md`** | 2 min | Cheat sheet, comandos diarios |
+| 4 | **`SETUP_GUIDE.md`** | 15 min | Instalación + credenciales |
+| 5 | **`TASK_QUEUE.md`** | 10 min | Las 87 tasks que Erebus ejecuta |
+| 6 | **`PROGRESS.md`** | 5 min | Log de lo que ya se hizo |
+| 7 | **`THESIS_PICK.md`** | 10 min | Por qué P1 GeoData v2 (contexto histórico) |
+| 8 | **`FORMAL_PROPOSAL.md`** | 15 min | Pregunta + hipótesis + objetivos |
+| 9 | **`ETHICS_WAIVER_MEMO.md`** | 5 min | Sin IRB justificado |
+| 10 | **`DATA_MANIFEST.md`** | 10 min | 9 datasets + licencias |
+| 11 | **`METHODOLOGY.md`** | 30 min | Cap. 3 metodología |
+| 12 | **`PAPER_OUTLINE.md`** | 20 min | Paper ICA/SIGSPATIAL |
+| 13 | **`BENCHMARK_QUESTIONS.md`** | 15 min | 100 preguntas validación |
+| 14 | **`DEFENSE_PLAN.md`** | 20 min | Defensa + advisor strategy |
+| 15 | **`RISK_REGISTER.md`** | 10 min | 35 riesgos categorizados |
+| 16 | **`REFERENCES.bib`** | — | BibTeX starter |
+
+> 📌 Si venís de satellite-paraguay: THESIS_ARCHITECTURE.md explica cómo se conecta con la otra mitad. Si te interesa la mitad "papel/modelo", andá a `IvanWeissVanDerPol/satellite-paraguay`.
 
 ---
 
@@ -251,3 +254,22 @@ Ver `secrets/README.md` para detalles completos.
 **Working dir:** `cd /opt/data/thesis-active && source .venv/bin/activate`
 **Quick check:** `make sanity`
 **Need help?** Read `SETUP_GUIDE.md` or message Erebus.
+
+---
+
+## 🌍 Esto es la MITAD de una tesis — no la tesis completa
+
+Este repo (`P1 GeoData v2`, sustrato + corredor autónomo) **es una mitad** de la tesis de Iván en FADA. La otra mitad — los papers, los modelos entrenados, los findings medidos, el manuscrito — vive en
+[`IvanWeissVanDerPol/satellite-paraguay`](https://github.com/IvanWeissVanDerPol/satellite-paraguay) (local en `/opt/data/work/satellite-paraguay`).
+
+**👉 Leé primero [`THESIS_ARCHITECTURE.md`](THESIS_ARCHITECTURE.md)** — ahí está el mapa cross-repo: flujo de datos, archivos de estado sincron, anti-patrones. En una sola vista entendés cómo las dos mitades se conectan.
+
+| | Este repo (sustrato) | satellite-paraguay (tesis) |
+|---|---|---|
+| **Qué vive acá** | Descarga de OSM/IGN/Sentinel, pipeline SAM/GroundingDINO, web app, 87-task queue | 6 papers, modelos entrenados, manuscrito CH1-CH11, defensa |
+| **Cron principal** | `thesis-daily-tick` (06:00 UTC) | (sin cron propio — usa el CI del repo) |
+| **Título oficial** | (no es la tesis — es el sustrato) | *"Multi-Temporal Satellite Computer Vision for Paraguay"* |
+| **Autor** | Iván | Iván |
+| **Director propuesto** | (no necesita — corre autónomo) | Prof. Dr. Juan Carlos Cristaldo (FADA, pendiente) |
+
+Los dos repos comparten infraestructura vía `~/.hermes/scripts/` (cron) y la skill `thesis-active-autonomy`. El flujo de valor va **substrate → thesis**: este repo descarga y anota; satellite-paraguay analiza y publica.

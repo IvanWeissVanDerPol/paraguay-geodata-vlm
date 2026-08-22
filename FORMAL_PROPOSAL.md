@@ -1,4 +1,8 @@
-# PROPUESTA FORMAL DE TESIS — UNA-FP-UNA / FADA
+# PROPUESTA FORMAL — Sustrato de la tesis UNA-FADA
+
+> **🌍 Contexto cross-repo (2026-08-15):** Este doc fue escrito originalmente como propuesta para la tesis "P1 GeoData v2" (standalone). Tras revisión, **este repo es el sustrato de la tesis** — la tesis en sí vive en [`IvanWeissVanDerPol/satellite-paraguay`](https://github.com/IvanWeissVanDerPol/satellite-paraguay), titulada *"Multi-Temporal Satellite Computer Vision for Paraguay"*. Ver [`THESIS_ARCHITECTURE.md`](THESIS_ARCHITECTURE.md) para el mapa cross-repo.
+
+**Subtítulo de este doc:** Propuesta del lado sustrato — adquisición de datos + anotación + web app.
 
 **Title (Spanish):** *Anotación semiautomática con modelos multimodales del corpus cartográfico abierto de Paraguay y prototipo de interfaz conversacional para la reflexión territorial sudamericana*
 

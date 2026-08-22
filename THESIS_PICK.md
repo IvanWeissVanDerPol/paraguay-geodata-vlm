@@ -1,6 +1,8 @@
 # Thesis Pick — Iván's Decision Matrix
 
-**Strategy:** Solo, paper-first, no advisor gate, no bureaucracy.
+> **🌍 Update (2026-08-15):** This doc originally framed P1 GeoData v2 as a standalone thesis. After review, we treat this repo as the **data substrate + autonomous infrastructure** that feeds the main thesis at [`IvanWeissVanDerPol/satellite-paraguay`](https://github.com/IvanWeissVanDerPol/satellite-paraguay). See [`THESIS_ARCHITECTURE.md`](THESIS_ARCHITECTURE.md) for the cross-repo map.
+
+**Strategy:** Solo, paper-first, no advisor gate, no burocracia.
 **Date:** 2026-08-10
 **Author:** Erebus (Hermes agent)
 
