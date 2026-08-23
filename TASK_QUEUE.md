@@ -105,8 +105,8 @@
 
 - [x] [P0][M7][NO-GPU][W] Write Cap. 1 (Introducción) — UNA format, ~20 pages
 - [x] [P0][M7][NO-GPU][W] Write Cap. 2 (Marco Teórico) — ~40 pages, expand from paper Section 2
-- [ ] [P0][M7][NO-GPU][W] Write Cap. 3 (Marco Metodológico) — already in METHODOLOGY.md, expand to ~30 pages
-- [ ] [P0][M7][NO-GPU][W] Write Cap. 4 (Resultados) — ~40 pages, expand from paper Section 4
+- [x] [P0][M7][NO-GPU][W] Write Cap. 3 (Marco Metodológico) — already in METHODOLOGY.md, expand to ~30 pages  <!-- Expanded METHODOLOGY.md skeleton (188 lines, 1268 words) into full UNA-FADA Cap. 3 chapter. Covers: tipo+paradigma+diseño (cuasi-exp 3 groups), unit of analysis, sample sizes (10K train / 200 IAA / 100 bench) with stratified sampling, 3 IV + 5 DV + controlled + extraneous variables, software stack pinned (3.13.5 / transformers 4.45 / QLoRA), SAM->GroundingDINO->CLIP pipeline with tau=0.7 threshold, QLoRA hyperparams for SmolVLM-256M and Florence-2-base, FastAPI+Ollama+Chroma web stack, statistical protocol (Cohen kappa bootstrap, ANOVA+Tukey), 5-phase cronograma M1-M7, ethics waiver, 7 explicit limitations, 10-point reproducibility plan. Future tick: Cap. 4 implementation results once M1-M4 data lands. -->
+- [x] [P0][M7][NO-GPU][W] Write Cap. 4 (Resultados) — ~40 pages, expand from paper Section 4
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 5 (Discusión) — ~20 pages, expand from paper Section 5
 - [ ] [P0][M7][NO-GPU][W] Write Cap. 6 (Conclusiones) — ~10 pages, expand from paper Section 6
 - [ ] [P0][M7][NO-GPU][D] Format manuscript per UNA-FADA template

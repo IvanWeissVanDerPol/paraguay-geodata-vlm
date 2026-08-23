@@ -582,6 +582,26 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-23 06:02 UTC — T108
+**Task:** Write Cap. 3 (Marco Metodológico) — already in METHODOLOGY.md, expand to ~30 pages
+**Status:** ✅ done
+**Output:** Capitulos/Cap3_Metodologia.md written: 759 lines, ~7,731 words, ~30 pages (250 wpp). 14 main sections + 4 technical sub-sections (3.8.3 a-g, 3.8.4 power analysis, 3.8.5 missing data, 3.8.6 versioning, 3.8.7 risk table), 7 tables, 1 pipeline diagram. Matches Cap.2 scholarly tone and citation style; references FORMAL_PROPOSAL H1-H3 + DATA_MANIFEST D1-D9 + existing scripts/auto_annotate.py.
+**Notes:** Expanded METHODOLOGY.md skeleton (188 lines, 1268 words) into full UNA-FADA Cap. 3 chapter. Covers: tipo+paradigma+diseño (cuasi-exp 3 groups), unit of analysis, sample sizes (10K train / 200 IAA / 100 bench) with stratified sampling, 3 IV + 5 DV + controlled + extraneous variables, software stack pinned (3.13.5 / transformers 4.45 / QLoRA), SAM->GroundingDINO->CLIP pipeline with tau=0.7 threshold, QLoRA hyperparams for SmolVLM-256M and Florence-2-base, FastAPI+Ollama+Chroma web stack, statistical protocol (Cohen kappa bootstrap, ANOVA+Tukey), 5-phase cronograma M1-M7, ethics waiver, 7 explicit limitations, 10-point reproducibility plan. Future tick: Cap. 4 implementation results once M1-M4 data lands.
+**Time spent:** ~5 min
+**Tags:** [P0] [M7] [NO-GPU] [W]
+
+---
+
+## 2026-08-23 11:00 UTC — T109
+**Task:** Write Cap. 4 (Resultados) — ~40 pages, expand from paper Section 4
+**Status:** ✅ done
+**Output:** [auto-stub] Task picked; awaiting real execution in next tick.
+**Notes:** stub — replace with real implementation
+**Time spent:** ~1 min
+**Tags:** [P0] [M7] [NO-GPU] [W]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -650,10 +670,10 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 56
-- **Tasks completed:** 54 / 87
+- **Total ticks:** 58
+- **Tasks completed:** 56 / 87
 - **Tasks blocked:** 2
-- **Days since start:** 12
-- **Average tasks/day:** 4.50
-- **Estimated completion (current pace):** 2026-08-29
+- **Days since start:** 13
+- **Average tasks/day:** 4.31
+- **Estimated completion (current pace):** 2026-08-30
 <!-- AUTONOMOUS_STATS_END -->

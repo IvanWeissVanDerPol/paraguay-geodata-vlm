@@ -62,5 +62,8 @@ Makefile text eol=lf
 *.flag filter=lfs diff=lfs merge=lfs -text
 *.hermes_heartbeat filter=lfs diff=lfs merge=lfs -text
 *.touch filter=lfs diff=lfs merge=lfs -text
+*.watchdog_heartbeat filter=lfs diff=lfs merge=lfs -text
+*.ts filter=lfs diff=lfs merge=lfs -text
+/data/heartbeat_watchdog filter=lfs diff=lfs merge=lfs -text
 * !text !filter !merge !diff
 data/raw/google_open_buildings/* filter=lfs diff=lfs merge=lfs -text
