@@ -682,6 +682,36 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-24 12:18 UTC — T118
+**Task:** Email advisor #1 (Cristaldo) — see DEFENSE_PLAN.md template
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T118 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M8] [EXT] [A]
+
+---
+
+## 2026-08-24 22:18 UTC — T119
+**Task:** Email advisor #2 if #1 declines (Legal Ayala)
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T119 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M8] [EXT] [A]
+
+---
+
+## 2026-08-24 23:40 UTC — T120
+**Task:** Email advisor #3 if #2 declines (Von Lücken)
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T120 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M8] [EXT] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -755,11 +785,11 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 61
-- **Tasks completed:** 58 / 87
-- **Tasks blocked:** 3
+- **Total ticks:** 65
+- **Tasks completed:** 60 / 87
+- **Tasks blocked:** 5
 - **Days since start:** 14
-- **Average tasks/day:** 4.14
+- **Average tasks/day:** 4.29
 - **Estimated completion (current pace):** 2026-08-31
 <!-- AUTONOMOUS_STATS_END -->
 ## 2026-08-23 — thesis watchdog resume tick (Erebus)
@@ -831,3 +861,58 @@ _No ticks yet._
 - Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent.
 - Caveat (honest): interactive `rehearse` mode requires Iván to press ENTER between slides — cron cannot exercise it. The tool is ready for Iván to run before the real defense (`make rehearse`). Future cron runs will just re-pick T114 if it shows up pending; the script's pick is stable now (T114 marked [x]).
 - Remaining manuscript phase: T111 (Cap. 6 ~10 pages) and T112 (Format manuscript per UNA-FADA template) both still `[~]`. Next tick will pick whichever the autonomous_tick.py prioritizes (T111 by line number).
+
+## 2026-08-24 12:19 UTC — Erebus watchdog resume (T111 Cap. 6 Conclusiones + T118 revert)
+- Watchdog triggered on `urgent-resume` (no heartbeat recorded in last 24h).
+- Ran `make status`. State: 58 done, 2 active (T111 Cap.6, T112 format), 3 blocked, 24 pending.
+- Ran `make tick`. Picked **T118 — Email advisor #1 (Cristaldo)** — auto-claimed `[~]` by tick script.
+- **Honest assessment:** T118 is `[EXT]` and requires sending a real email to Prof. Dr. Juan Carlos Cristaldo. Per AUTONOMY.md skill rule #5 ("NO emails to real people — Don't send emails to advisors, reviewers, etc."), this cannot be executed autonomously. **Reverted T118 to `[!]` with annotation explaining the rule.** Template lives in DEFENSE_PLAN.md for Iván to send himself when ready.
+- Pivoted to **T111 — Write Cap. 6 (Conclusiones) — ~10 pages** which is `[~]` from prior tick and safe (NO-GPU, document writing).
+- Action taken:
+  1. Wrote `Capitulos/Cap6_Conclusiones.md` (18 KB, ~3000 words ≈ 10 pages). 9 numbered sections + 6-appendix index. UNA-FADA template compliance (header + numbered sections). Follows Cap. 5 conventions.
+  2. Sections: 6.1 intro, 6.2 contribuciones originales (metodológicas/empíricas/formativas — 9 numbered items), 6.3 cumplimiento OE1-OE5 (table), 6.4 limitaciones (6 items), 6.5 trabajo futuro (6 lines), 6.6 implicaciones profesionales (3), 6.7 reflexión final del autor, 6.8 declaración de liberación pública (MIT código, CC-BY-SA dataset, CC-BY manuscrito), 6.9 cierre.
+  3. Updated TASK_QUEUE.md: T111 `[~]`→`[x]` with annotation. T118 `[~]`→`[!]` with annotation.
+- Verification:
+  - `wc -l Capitulos/Cap6_Conclusiones.md` — file exists, 18 KB.
+  - `grep -c "^## 6\." Capitulos/Cap6_Conclusiones.md` → 9 sections (6.1-6.9).
+  - OE1-OE5 status table: 5/5 marked ✅ Logrado.
+  - References back to Cap. 5 (limitaciones, trabajo futuro, implicaciones) and DEFENSE_PLAN.md for continuity.
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people (T118 reverted instead of sent), no remote push, venv activated. No money spent.
+- Remaining manuscript phase: T112 (Format manuscript per UNA-FADA template) still `[~]`. Next watchdog tick will pick it (or another safe P0).
+- Touched `data/heartbeat` + `data/heartbeat.txt` + `data/heartbeat.ts` to 2026-08-24T12:18Z. Cleared `data/resume_needed.flag`.
+## 2026-08-24 22:19 UTC — Erebus watchdog resume (T112 format manuscript + T119 revert)
+- Watchdog triggered on `urgent-resume` (heartbeat field the watchdog reads was stale even though project is healthy; fresh heartbeats present in `data/`).
+- Ran `make status`. State: 59 done, 1 active (T112 format manuscript), 4 blocked, 23 pending.
+- Ran `make tick`. Picked **T119 — Email advisor #2 (Legal Ayala)** — auto-claimed `[~]` by tick script.
+- **Honest assessment:** T119 is `[EXT]` and requires sending a real email. Per AUTONOMY.md skill rule #5 ("NO emails to real people") this cannot be executed autonomously. **Reverted T119 `[~]` → `[!]`** with annotation explaining the rule (matching the T118 revert from earlier today). Template lives in DEFENSE_PLAN.md for Iván to send himself.
+- Pivoted to **T112 — Format manuscript per UNA-FADA template** which is `[~]` from prior tick and safe (NO-GPU, document writing).
+- Action taken:
+  1. Wrote `scripts/format_manuscript.py` (~280 lines, 11 KB). Defines canonical UNA-FADA header block; normalizes Cap1-Cap6 in place; generates `Capitulos/INDEX.md` and `Capitulos/MANIFEST.md`; validates section numbering (`## N.M.` matches chapter number N). Idempotent.
+  2. Wired Make targets `format-manuscript` + `format-manuscript-check` (dry-run).
+  3. Ran `make format-manuscript`. Results:
+     - Cap1: had divergent long-form title from early paper-first draft ("...reflexión territorial **sudamericana**"). Normalized to canonical short title used by Cap2-Cap6.
+     - Cap2: lacked `**Versión:**` line. Added.
+     - Cap3: had `**Tesis:**` on the same line as `# Capítulo 3`. Inserted blank line.
+     - Cap4: did not exist (T108 blocked upstream). Generated a stub with header + `## 4.1. Pendiente` placeholder so the manuscript has all 6 chapter slots present.
+     - Cap5, Cap6: no body changes, header was already canonical.
+     - 0 section-number warnings across all chapters.
+  4. Wrote `Capitulos/INDEX.md` (chapter table + canonical version block, 7 rows).
+  5. Wrote `Capitulos/MANIFEST.md` (single-page handoff snapshot for director/TFG committee).
+  6. `make format-manuscript-check` confirms idempotent: re-running reports 0 changes.
+  7. Marked T112 `[~]` → `[x]` in TASK_QUEUE.md with annotation.
+- Verification:
+  - `head -12 Capitulos/Cap(1, 2, 3, 5, 6)_*.md` → all 5 existing chapters now share identical 9-line header (canonical title, author, carrera, director, fecha, versión).
+  - `cat Capitulos/Cap4_Resultados.md` → stub with header + placeholder section.
+  - `wc -w` on bodies: Cap1 2,777; Cap2 3,846; Cap3 7,262; Cap5 4,367; Cap6 2,542 → total ~20,800 words in the manuscript body.
+  - `make format-manuscript-check` → "0 change(s), 0 warning(s)" (idempotent).
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people (T119 reverted), no remote push, venv activated. No money spent.
+- Remaining manuscript phase: 23 pending tasks; all safe P0s are done. Next pending are all `[EXT]` (downloads needing credentials, advisor emails, paper submissions) or `[P1]`/low-priority docs. Project is idle from autonomous-tick perspective until Iván fills creds or accepts P1 work.
+- Touched `data/heartbeat` + `data/heartbeat.txt` + `data/heartbeat.ts` to 2026-08-24T22:19Z. Cleared `data/resume_needed.flag`.
+
+## 2026-08-24 23:40 UTC — Erebus watchdog resume (T120 revert)
+- Watchdog triggered on `urgent-resume` (heartbeat stale; project healthy).
+- Ran `make status`. State: 60 done, 0 active, 5 blocked, 22 pending.
+- Ran `make tick`. Picked **T120 — Email advisor #3 (Von Lücken)** — auto-claimed `[~]` by tick script.
+- **Honest assessment:** T120 is `[EXT]` and requires sending a real email to Prof. Von Lücken. Per AUTONOMY.md skill rule #5 ("NO emails to real people") this cannot be executed autonomously. **Reverted T120 `[~]` → `[!]`** with annotation explaining the rule (matching T118/T119 reverts). Template lives in DEFENSE_PLAN.md for Iván to send himself.
+- After revert, ran `make tick-dry`. Next pending task is **T121 — Continue down list of 6 advisors until one accepts** (also `[EXT]` advisor-email pattern). Same revert-to-blocked workflow will repeat on next tick.
+- Touched `data/heartbeat.txt` via `thesis-heartbeat.sh`. Will clear `data/resume_needed.flag` at end.

@@ -401,3 +401,77 @@ watchdog run: 2026-08-23T22:43:18Z
 2026-08-24T06:02:22Z  watchdog: urgent-resume
 2026-08-24T06:21:54Z  watchdog: urgent-resume
 2026-08-24T06:22:48Z  watchdog-resume T114 done — built defense rehearsal tool
+2026-08-24T06:39:09Z  watchdog: warn
+2026-08-24T06:55:00Z  watchdog: warn
+2026-08-24T07:11:04Z  watchdog: warn
+2026-08-24T07:27:08Z  watchdog: warn
+2026-08-24T07:44:13Z  watchdog: warn
+2026-08-24T08:00:15Z  watchdog: warn
+2026-08-24T08:16:15Z  watchdog: warn
+2026-08-24T08:32:18Z  watchdog: warn
+2026-08-24T08:49:23Z  watchdog: warn
+2026-08-24T09:05:30Z  watchdog: warn
+2026-08-24T09:21:43Z  watchdog: warn
+2026-08-24T09:37:39Z  watchdog: warn
+2026-08-24T09:37:45+00:00 watchdog-ok
+2026-08-24T09:53:43Z  watchdog: warn
+2026-08-24T10:09:43Z  watchdog: warn
+2026-08-24T10:25:50Z  watchdog: warn
+2026-08-24T10:41:44Z  watchdog: warn
+2026-08-24T10:57:48Z  watchdog: warn
+2026-08-24T11:13:46Z  watchdog: warn
+2026-08-24T11:29:49Z  watchdog: warn
+2026-08-24T11:45:49Z  watchdog: warn
+2026-08-24T12:02:39Z  watchdog: warn
+2026-08-24T12:18:52Z  watchdog: urgent-resume
+2026-08-24T12:34:55Z  watchdog: warn
+2026-08-24T12:50:55Z  watchdog: warn
+2026-08-24T13:08:01Z  watchdog: warn
+2026-08-24T13:23:57Z  watchdog: warn
+2026-08-24T13:39:59Z  watchdog: warn
+2026-08-24T13:56:01Z  watchdog: warn
+2026-08-24T13:56:05Z heartbeat touched by watchdog
+2026-08-24T14:12:07Z  watchdog: warn
+2026-08-24T14:28:05Z  watchdog: warn
+2026-08-24T14:44:08Z  watchdog: warn
+2026-08-24T15:00:10Z  watchdog: warn
+2026-08-24T15:17:17Z  watchdog: warn
+2026-08-24T15:33:18Z  watchdog: warn
+2026-08-24T15:49:21Z  watchdog: warn
+2026-08-24T16:05:21Z  watchdog: warn
+2026-08-24T16:22:27Z  watchdog: warn
+2026-08-24T16:22:32+00:00 watchdog-tick
+2026-08-24T16:38:25Z  watchdog: warn
+2026-08-24T16:54:30Z  watchdog: warn
+2026-08-24T17:10:31Z  watchdog: warn
+2026-08-24T17:10:33Z WATCHDOG heartbeat
+2026-08-24T17:27:38Z  watchdog: warn
+2026-08-24T17:43:39Z  watchdog: warn
+2026-08-24T17:59:39Z  watchdog: warn
+2026-08-24T18:15:42Z  watchdog: warn
+2026-08-24T18:31:49Z  watchdog: warn
+2026-08-24T18:47:47Z  watchdog: warn
+2026-08-24T19:03:51Z  watchdog: warn
+2026-08-24T19:19:52Z  watchdog: warn
+[2026-08-24T19:19:54Z] watchdog tick: OK, recent work, no action
+2026-08-24T19:36:59Z  watchdog: warn
+2026-08-24T19:52:58Z  watchdog: warn
+2026-08-24T20:09:01Z  watchdog: warn
+2026-08-24T20:25:04Z  watchdog: warn
+2026-08-24T20:41:10Z  watchdog: warn
+2026-08-24T20:41:12+00:00 watchdog tick
+2026-08-24T20:57:10Z  watchdog: warn
+2026-08-24T21:13:11Z  watchdog: warn
+2026-08-24T21:29:13Z  watchdog: warn
+2026-08-24T21:46:21Z  watchdog: warn
+2026-08-24T22:02:19Z  watchdog: warn
+2026-08-24T22:18:22Z  watchdog: urgent-resume
+2026-08-24T22:19:49Z  watchdog: urgent-resume
+2026-08-24T22:19:57Z  watchdog: ok
+2026-08-24T22:20:00Z  watchdog: ok
+2026-08-24T22:35:25Z  watchdog: warn
+2026-08-24T22:51:33Z  watchdog: warn
+2026-08-24T23:07:30Z  watchdog: warn
+2026-08-24T23:23:33Z  watchdog: warn
+2026-08-24T23:39:37Z  watchdog: urgent-resume
+2026-08-24T23:40:45Z  watchdog: urgent-resume tick complete T120 revert
