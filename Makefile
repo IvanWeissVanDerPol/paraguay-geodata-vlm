@@ -219,6 +219,18 @@ tick-blocked:  ## Mark a task blocked
 weekly:  ## Run weekly review (stats + recommendations)
 	. .venv/bin/activate && python3 scripts/weekly_review.py
 
+.PHONY: rehearse
+rehearse:  ## Interactive defense rehearsal (timer + per-slide prompts)
+	. .venv/bin/activate && python3 scripts/rehearse_defense.py rehearse
+
+.PHONY: rehearse-dry
+rehearse-dry:  ## Print defense rehearsal structure + time budgets (no run)
+	. .venv/bin/activate && python3 scripts/rehearse_defense.py dry
+
+.PHONY: rehearse-report
+rehearse-report:  ## Summarize past defense rehearsals
+	. .venv/bin/activate && python3 scripts/rehearse_defense.py report
+
 .PHONY: status
 status:  ## Show current project status (progress + blockers + tasks)
 	@echo "=== TASK QUEUE ==="

@@ -393,3 +393,11 @@ watchdog run: 2026-08-23T22:43:18Z
 2026-08-24T03:51:55Z  watchdog: warn
 2026-08-24T04:07:58Z  watchdog: warn
 2026-08-24T04:24:09Z  watchdog: warn
+2026-08-24T04:40:09Z  watchdog: warn
+2026-08-24T04:56:17Z  watchdog: warn
+2026-08-24T05:13:24Z  watchdog: warn
+2026-08-24T05:29:25Z  watchdog: warn
+2026-08-24T05:45:50Z  watchdog: warn
+2026-08-24T06:02:22Z  watchdog: urgent-resume
+2026-08-24T06:21:54Z  watchdog: urgent-resume
+2026-08-24T06:22:48Z  watchdog-resume T114 done — built defense rehearsal tool

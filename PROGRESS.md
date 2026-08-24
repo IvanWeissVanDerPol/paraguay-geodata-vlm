@@ -642,6 +642,46 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-24 06:01 UTC — T112
+**Task:** Format manuscript per UNA-FADA template
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T112 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M7] [NO-GPU] [D]
+
+---
+
+## 2026-08-24 06:02 UTC — T113
+**Task:** Build defense slides (45 min + 15 Q&A) — see DEFENSE_PLAN.md
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T113 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M7] [NO-GPU] [D]
+
+---
+
+## 2026-08-24 06:21 UTC — T114
+**Task:** Rehearse defense with cron timer
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T114 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M7] [NO-GPU] [D]
+
+---
+
+## 2026-08-24 06:22 UTC — T114
+**Task:** Rehearse defense with cron timer
+**Status:** ✅ done
+**Output:** Built scripts/rehearse_defense.py + Make targets rehearse/rehearse-dry/rehearse-report. Walks 21-slide Defensa/slides.html structure with per-block timer (45 min presentation + 15 min Q&A), per-slide must-hit checkpoints from DEFENSE_PLAN.md, logs each session to data/rehearsal_log.jsonl. NO-GPU, no money spent, no destructive ops.
+**Notes:** Self-test (dry): prints 6 bloques / 21 slides / 45+15 min correctly. Interactive mode is human-driven (Ivan presses ENTER); cron cannot exercise it but the structure is ready for Ivan to run before the real defense.
+**Time spent:** ~6 min
+**Tags:** [P0] [M7] [NO-GPU] [D]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -715,12 +755,12 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 59
-- **Tasks completed:** 56 / 87
+- **Total ticks:** 61
+- **Tasks completed:** 58 / 87
 - **Tasks blocked:** 3
-- **Days since start:** 13
-- **Average tasks/day:** 4.31
-- **Estimated completion (current pace):** 2026-08-30
+- **Days since start:** 14
+- **Average tasks/day:** 4.14
+- **Estimated completion (current pace):** 2026-08-31
 <!-- AUTONOMOUS_STATS_END -->
 ## 2026-08-23 — thesis watchdog resume tick (Erebus)
 - Watchdog set `data/resume_needed.flag` (urgent-resume: no heartbeat ever).
@@ -741,3 +781,53 @@ _No ticks yet._
 - Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated.
 - Remaining manuscript phase: T111 Cap. 6 (Conclusiones ~10 pages) is now the next real P0. After that: format manuscript, build defense slides, rehearse.
 - Touched `data/heartbeat`, cleared `data/resume_needed.flag`.
+
+## 2026-08-24 06:02 UTC — Erebus incident fix: thesis-daily-tick path-guard
+- **Symptom:** Cron `thesis-daily-tick` (id `135a7c018ccb`) failed with `Blocked: script path resolves outside the scripts directory (/opt/data/scripts): '/opt/data/thesis-active/scripts/thesis-tick.sh'`. Last error recorded in jobs.json.
+- **Root cause:** Lifecycle guard in `cron/scheduler.py:_run_job_script` (line ~2244) requires every cron `script` field to resolve under `HERMES_HOME/scripts/` (`/opt/data/scripts/`). Job config had `script: /opt/data/thesis-active/scripts/thesis-tick.sh` — outside the allowed dir.
+- **Fix applied (AUTONOMY.md option 1 + 2):**
+  1. Wrapper at `/opt/data/scripts/thesis-tick.sh` (already exists since 2026-08-10) now used as the cron `script`. Wrapper `cd`s into `/opt/data/thesis-active` then `exec`s the real `scripts/thesis-tick.sh`.
+  2. `workdir` set to `/opt/data/thesis-active` in `cron/jobs.json` for belt-and-suspenders resolution if wrapper is ever absent.
+- **Verification:**
+  - jobs.json updated, backup at `/opt/data/cron/jobs.json.pre-fix-20260824.bak`.
+  - `python3 -c json.load` confirms `script=/opt/data/scripts/thesis-tick.sh`, `workdir=/opt/data/thesis-active`.
+  - Manually invoked `bash /opt/data/scripts/thesis-tick.sh` — tick ran end-to-end: picked T112 (Format manuscript per UNA-FADA template), claimed as `[~]`, no path-guard error.
+  - last_status still `ok` from prior successful run; last_error nulled.
+- **No secrets touched.** No remote pushes. No destructive ops.
+- **Files modified:** `/opt/data/cron/jobs.json` (atomic write via Python + os.replace).
+- **Next tick:** 2026-08-25 06:00 UTC. Should claim T112 (P0 M7) without path-guard error.
+
+## 2026-08-24 06:02 UTC — Erebus watchdog resume tick (T113 defense slides)
+- Watchdog re-triggered: `data/resume_needed.flag` set; `python3 scripts/thesis_watchdog.py` reported "urgent-resume: no heartbeat ever recorded" (the script reads an older field that wasn't being touched by recent fix-ticks; project is otherwise healthy — fresh heartbeat + log files visible in `data/`).
+- Ran `make status`. State: 56 done, 2 active (Cap. 6, Format manuscript), 3 blocked, 26 pending.
+- Ran `make tick`. Picked **T113 — Build defense slides (45 min + 15 Q&A) — see DEFENSE_PLAN.md**.
+- Honest assessment: DEFENSE_PLAN.md has the full slide structure (21 numbered slides across 6 blocks). Task is a `D` (document) NO-GPU — safe to execute. Output is presentation HTML, not just markdown.
+- Action taken:
+  1. Created `Defensa/` directory.
+  2. Wrote `Defensa/slides.html` (417 lines, 22 KB, Reveal.js 5.1.0 via CDN). 21 sections = cover + 20 numbered slides + 1 backup slide. Sober Paraguayan-academic styling (paper background, py-blue/py-red accent, monokai code blocks). Projector-tuned (1600×900). PDF-exportable via `?print-pdf` query string. No money spent: Reveal.js CDN is free, no PowerPoint license, no Tailwind Pro.
+  3. Wrote `Defensa/DEFENSE_QA_PREP.md` (~14 KB). Extends DEFENSE_PLAN.md Q10→Q30 with anticipated tribunal questions. Each answer is anchored in a specific Cap./Sec. for instant reference. Includes 5 "frases de cierre" templates for when Iván doesn't have the exact answer.
+  4. Wrote `Defensa/qa_log.md` (stub) — bitácora viva para anotar preguntas NO anticipadas durante la defensa real.
+  5. Updated TASK_QUEUE.md: T113 [~]→[x] with annotation. T111 (Cap. 6) and T112 (Format manuscript) remain [~] from prior ticks.
+- Verification:
+  - `grep -c "<section>" Defensa/slides.html` → 21 (matches plan).
+  - `python3` sanity-check: all 6 bloques presentes (context/marco/metodología/resultados/discusión/cierre), FADA-UNA referenced 27×, Cohen's κ = 0,87 visible, 100-preguntas benchmark referenced.
+  - DEFENSE_PLAN.md cross-check: slides 5-7 = Bloque 1 (4 slides incl. cover), 8-10 = Bloque 2, 11-13 = Bloque 3, 14-17 = Bloque 4, 18-20 = Bloque 5, 21+appendix = Bloque 6. Mapping verified.
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent (Reveal.js CDN + JSDelivr free tier).
+- Remaining manuscript phase: T111 (Cap. 6 ~10 pages) and T112 (Format manuscript per UNA-FADA template) both `[~]`. Next tick will pick whichever the autonomous_tick.py prioritizes.
+- Touched `data/heartbeat`, cleared `data/resume_needed.flag`, appended entry to `data/progress.jsonl`.
+
+## 2026-08-24 06:22 UTC — Erebus watchdog resume (T114 defense rehearsal)
+- Watchdog re-triggered on `urgent-resume` (no heartbeat recorded in last 24h).
+- Ran `make status`. State: 57 done, 2 active (Cap. 6, Format manuscript), 3 blocked, 25 pending.
+- Ran `make tick`. Picked **T114 — Rehearse defense with cron timer**. The autonomous_tick.py auto-claimed it as `[~]` (cron-execution contract stub), so I executed the real work this watchdog tick.
+- Honest assessment: DEFENSE_PLAN.md defines 6 bloques / 21 slides / 45+15 min target. The rehearsal tool = a cron-driven timer + per-slide must-hit prompts + structured self-grading. D NO-GPU — safe to execute in sandbox.
+- Action taken:
+  1. Built `scripts/rehearse_defense.py` (9 KB, 254 lines). Three modes: `dry` (print structure), `rehearse` (interactive timed walkthrough), `report` (summarize past rehearsals from JSONL log). Per-slide timer between ENTER presses; per-block time budget check; over/under target warnings; logs each session to `data/rehearsal_log.jsonl`.
+  2. Wired Make targets `rehearse` / `rehearse-dry` / `rehearse-report` (3 new entries in Makefile).
+  3. Self-test (dry mode): 21 slides across 6 bloques, 45 min presentation + 15 min Q&A target, all must-hit checkpoints from DEFENSE_PLAN.md anchored.
+  4. Marked T114 `[~]` → `[x]` in TASK_QUEUE.md with annotation. Appended to PROGRESS.md + data/progress.jsonl.
+  5. Touched `data/heartbeat` + `data/heartbeat.txt` to 2026-08-24T06:22Z.
+  6. Cleared `data/resume_needed.flag`.
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent.
+- Caveat (honest): interactive `rehearse` mode requires Iván to press ENTER between slides — cron cannot exercise it. The tool is ready for Iván to run before the real defense (`make rehearse`). Future cron runs will just re-pick T114 if it shows up pending; the script's pick is stable now (T114 marked [x]).
+- Remaining manuscript phase: T111 (Cap. 6 ~10 pages) and T112 (Format manuscript per UNA-FADA template) both still `[~]`. Next tick will pick whichever the autonomous_tick.py prioritizes (T111 by line number).
