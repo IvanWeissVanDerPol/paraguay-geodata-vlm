@@ -245,9 +245,29 @@ def execute_task(task, dry_run=False):
     # For now, this is a placeholder that simulates work
     # (The cron job that calls this will inject an actual LLM-driven execution)
 
-    # Default: treat as documentation/comment-only task
-    return ("x", "[auto-stub] Task picked; awaiting real execution in next tick.",
-            "stub — replace with real implementation", "~1 min")
+    def _touch_heartbeat(label: str) -> None:
+        """Best-effort heartbeat touch from inside a tick (stub claim)."""
+        try:
+            from datetime import datetime, timezone
+            ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
+            ROOT.joinpath("data").mkdir(exist_ok=True)
+            (ROOT / "data" / "heartbeat").write_text(ts + "\n")
+            (ROOT / "data" / "heartbeat.txt").write_text(f"{ts} {label}\n")
+        except Exception:
+            pass
+
+    # GUARD (2026-08-23 watchdog): default is to leave task claimed ([~])
+    # so the next genuine worker tick (or human operator) can finish it.
+    # Previously this auto-marked stubs as [x], which inflated the done
+    # counter and skipped real work. Touch the heartbeat so watchdog sees
+    # the tick ran; the queue retains the task as in-progress.
+    _touch_heartbeat("autonomous_tick_stub_claim")
+    return ("~", f"[auto-claim] Task {task['id']} claimed by cron; "
+                  "no LLM execution wired in this script — see AUTONOMY.md "
+                  "for the cron-driven execution contract.",
+            "stub — cron claimed but did not execute; real work happens in "
+            "the watchdog-driven agent loop (run thesis_active_run.py or "
+            "invoke the LLM agent manually)", "~0 min")
 
 
 def auto_commit(task, status):

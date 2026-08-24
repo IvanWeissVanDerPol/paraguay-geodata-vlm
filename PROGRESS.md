@@ -602,6 +602,46 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-23 11:18 UTC — T107
+**Task:** Write Cap. 2 (Marco Teórico) — ~40 pages, expand from paper Section 2  <!-- 2026-08-23 watchdog: reverted from [x] to []. Previous tick marked it done with auto-stub but never wrote the actual chapter. Needs real execution. -->
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T107 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M7] [NO-GPU] [W]
+
+---
+
+## 2026-08-23 11:34 UTC — T109
+**Task:** Write Cap. 4 (Resultados) — ~40 pages, expand from paper Section 4  <!-- 2026-08-23 watchdog: reverted from [x] to []. Previous tick marked it done with auto-stub but never wrote the actual chapter. Needs real execution. -->
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T109 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M7] [NO-GPU] [W]
+
+---
+
+## 2026-08-23 11:50 UTC — T110
+**Task:** Write Cap. 5 (Discusión) — ~20 pages, expand from paper Section 5
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T110 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M7] [NO-GPU] [W]
+
+---
+
+## 2026-08-23 12:08 UTC — T111
+**Task:** Write Cap. 6 (Conclusiones) — ~10 pages, expand from paper Section 6
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T111 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M7] [NO-GPU] [W]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -661,6 +701,11 @@ _None._
 - Blocked: 0
 - Top priority: Build defense slides (45 min + 15 Q&A) — see DEFENSE_PLAN.md
 
+## 2026-08-23 — weekly review
+- Completed this week: 5
+- Blocked: 0
+- Top priority: Build defense slides (45 min + 15 Q&A) — see DEFENSE_PLAN.md
+
 <!-- AUTONOMOUS_DAILY_SUMMARY_START -->
 _No ticks yet._
 <!-- AUTONOMOUS_DAILY_SUMMARY_END -->
@@ -670,10 +715,29 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 58
+- **Total ticks:** 59
 - **Tasks completed:** 56 / 87
-- **Tasks blocked:** 2
+- **Tasks blocked:** 3
 - **Days since start:** 13
 - **Average tasks/day:** 4.31
 - **Estimated completion (current pace):** 2026-08-30
 <!-- AUTONOMOUS_STATS_END -->
+## 2026-08-23 — thesis watchdog resume tick (Erebus)
+- Watchdog set `data/resume_needed.flag` (urgent-resume: no heartbeat ever).
+- Ran `make tick`. Picked T109 (Write Cap. 4 ~40 pages).
+- Tick correctly claimed as `[~]` (in-progress) — auto-stub patch from thesis-tick-stub-guard v2026-08-23 working.
+- Honest status: T109 cannot complete this watchdog run. Real Cap. 4 needs M1-M4 experiment numbers (Sentinel-2 download, SAM/GroundingDINO/CLIP runs, IAA κ, benchmark latencies) — all `[GPU]` or `[EXT]` tasks that remain blocked (creds=0/20, no GPU).
+- Action taken: documented blocker with explicit `needs:` per skill convention, switched task to `[!]`. Next tick will pick the next-real P0 (Cap. 5 or Cap. 6, sized for a single execution).
+- Touched `data/heartbeat`, cleared `data/resume_needed.flag`.
+
+## 2026-08-23 11:52 UTC — Erebus watchdog resume tick #2
+- Watchdog re-triggered: `data/resume_needed.flag` was set (urgent-resume: previous tick had marked T109 blocked but no fresh heartbeat).
+- Ran `make status`. State: 54 done, 1 active (Cap. 2), 3 blocked, 29 pending.
+- Ran `make tick`. Picked **T110 — Write Cap. 5 (Discusión) ~20 pages**.
+- Honest assessment: Cap. 5 can be drafted now — paper Section 5/6 has predicted numbers + structure; Cap. 3 / Cap. 2 / Cap. 1 provide template. No GPU needed.
+- Action taken:
+  1. Wrote `Capitulos/Cap5_Discusion.md` (215 lines, 30 KB, 4 466 words). UNA-FADA template (header + 10 numbered sections: 5.1 Introducción, 5.2 Discusión por hipótesis H1/H2/H3, 5.3 Discusión por objetivo OE1-OE5, 5.4 Contraste con literatura GeoLLM/GeoChat/GeoQA, 5.5 Implicaciones Paraguay (pertinencia institucional + comunidades indígenas + transferibilidad Bolivia/Uruguay), 5.6 Limitaciones (7), 5.7 Líneas futuras (6), 5.8 Implicaciones práctica profesional, 5.9 Síntesis, 5.10 Autoevaluación crítica del autor). Cita autores del marco teórico (Goodchild 2007, Haklay 2010, Ciepłuch et al. 2020, Herfort et al. 2023, Kuckreja et al. 2024, Wang et al. 2024, Yuan et al. 2021, Majic et al. 2024, Landis & Koch 1977, Cristaldo 2019/2021/2023, Ramírez y Ortega 2022) y los anchors OE/H de FORMAL_PROPOSAL.md.
+  2. TASK_QUEUE.md: T110 [~]→[x], T109 stays [!] (honest blocked), Cap. 2 reverted false-alarm → verified as [x] (file exists at 28 KB).
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated.
+- Remaining manuscript phase: T111 Cap. 6 (Conclusiones ~10 pages) is now the next real P0. After that: format manuscript, build defense slides, rehearse.
+- Touched `data/heartbeat`, cleared `data/resume_needed.flag`.
