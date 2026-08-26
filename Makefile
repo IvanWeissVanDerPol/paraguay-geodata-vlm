@@ -351,6 +351,14 @@ git-install-hooks:  ## Install pre-commit hook
 lint:  ## Run ruff + black check
 	. .venv/bin/activate && ruff check . && black --check .
 
+.PHONY: format-manuscript
+format-manuscript:  ## Normalize all Cap*.md headers per UNA-FADA template; regenerate INDEX.md + MANIFEST.md
+	. .venv/bin/activate && python3 scripts/format_manuscript.py
+
+.PHONY: format-manuscript-check
+format-manuscript-check:  ## Validate manuscript headers without writing (dry-run)
+	. .venv/bin/activate && python3 scripts/format_manuscript.py --dry-run
+
 .PHONY: test
 test:  ## Run pytest
 	. .venv/bin/activate && pytest tests/ -v

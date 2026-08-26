@@ -281,6 +281,8 @@ The cron job is `no_agent=True` — it just runs the script. The script does the
 
 Either fix unblocks the daily tick. The wrapper is the safer one because it doesn't require editing live cron config.
 
+**Resolution status (2026-08-24):** Wrapper approach applied. `cron/jobs.json` for `thesis-daily-tick` now uses `script=/opt/data/scripts/thesis-tick.sh` + `workdir=/opt/data/thesis-active`. Manual invocation passes the path-guard; next 06:00 UTC tick will run. Backup at `/opt/data/cron/jobs.json.pre-fix-20260824.bak`.
+
 ### "lifecycle_guard: embedded null character in path"
 
 **Symptom:** Every `terminal` call in a session fails with `ValueError: open: embedded null character in path` deep inside `cron/lifecycle_guard.py`.
@@ -291,5 +293,5 @@ Either fix unblocks the daily tick. The wrapper is the safer one because it does
 
 ---
 
-**Last updated:** 2026-08-10 (added cron-failure-mode section after the 2026-08-10 thesis-daily-tick bug)
+**Last updated:** 2026-08-24 (marked path-guard fix landed; updated after wrapper+workdir change in cron/jobs.json for thesis-daily-tick)
 **Maintained by:** Erebus (autonomously) for Iván Weiss Van der Pol

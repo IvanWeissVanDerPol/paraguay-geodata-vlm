@@ -1,12 +1,11 @@
 # Capítulo 1 — Introducción
 
-**Tesis:** *Anotación semiautomática con modelos multimodales del corpus cartográfico abierto de Paraguay y prototipo de interfaz conversacional para la reflexión territorial sudamericana*
-
+**Tesis:** *Anotación semiautomática del corpus cartográfico abierto de Paraguay con modelos multimodales fundacionales y una interfaz conversacional para la reflexión territorial*
 **Autor:** Iván Weiss Van der Pol
-**Tutora/or propuesta:** por definir (estrategia paper-first; ver Cap. 6 y `DEFENSE_PLAN.md`)
-**Institución:** Facultad de Arquitectura, Diseño y Arte (FADA) — Universidad Nacional de Asunción (UNA), con co-afiliación a la Facultad Politécnica (FP-UNA), Ing. Informática
-**Fecha de redacción inicial:** agosto de 2026
-**Estado:** Borrador completo, listo para revisión interna y posterior co-firma del director
+**Carrera:** Maestría en Tecnología de la Arquitectura, FADA-UNA (co-afiliación FP-UNA)
+**Director (TBD):** Prof. Dr. Juan Carlos Cristaldo (FADA-UNA)
+**Fecha:** Agosto 2026
+**Versión:** 1.0 — borrador
 
 ---
 

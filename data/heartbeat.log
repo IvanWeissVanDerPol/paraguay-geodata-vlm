@@ -475,3 +475,147 @@ watchdog run: 2026-08-23T22:43:18Z
 2026-08-24T23:23:33Z  watchdog: warn
 2026-08-24T23:39:37Z  watchdog: urgent-resume
 2026-08-24T23:40:45Z  watchdog: urgent-resume tick complete T120 revert
+2026-08-24T23:56:44Z  watchdog: warn
+2026-08-25T00:12:54Z  watchdog: warn
+2026-08-25T00:12:59Z  manual heartbeat
+2026-08-25T00:28:45Z  watchdog: warn
+2026-08-25T00:44:48Z  watchdog: warn
+2026-08-25T01:01:55Z  watchdog: warn
+2026-08-25T01:17:53Z  watchdog: warn
+2026-08-25T01:33:55Z  watchdog: warn
+2026-08-25T01:49:57Z  watchdog: warn
+2026-08-25T02:07:04Z  watchdog: warn
+2026-08-25T02:07:11Z
+2026-08-25T02:23:06Z  watchdog: warn
+2026-08-25T02:39:05Z  watchdog: warn
+2026-08-25T02:55:12Z  watchdog: warn
+2026-08-25T03:12:18Z  watchdog: warn
+2026-08-25T03:28:14Z  watchdog: warn
+2026-08-25T03:28:20Z watchdog tick — OK, recent work, no action
+2026-08-25T03:44:16Z  watchdog: warn
+2026-08-25T04:00:19Z  watchdog: warn
+2026-08-25T04:17:24Z  watchdog: warn
+2026-08-25T04:33:26Z  watchdog: warn
+2026-08-25T04:49:26Z  watchdog: warn
+2026-08-25T05:05:29Z  watchdog: warn
+2026-08-25T05:22:36Z  watchdog: warn
+2026-08-25T05:38:50Z  watchdog: warn
+2026-08-25T05:54:37Z  watchdog: warn
+2026-08-25T06:11:05Z  watchdog: ok
+2026-08-25T06:11:09+00:00 heartbeat by watchdog
+2026-08-25T06:27:49Z  watchdog: warn
+HEARTBEAT 2026-08-25T06:27:59Z watchdog=erebus
+2026-08-25T06:43:50Z  watchdog: warn
+2026-08-25T06:59:46Z  watchdog: warn
+2026-08-25T07:15:51Z  watchdog: warn
+2026-08-25T07:31:59Z  watchdog: warn
+2026-08-25T07:47:54Z  watchdog: warn
+2026-08-25T08:03:57Z  watchdog: warn
+2026-08-25T08:19:58Z  watchdog: warn
+2026-08-25T08:37:30Z  watchdog: warn
+2026-08-25T08:53:08Z  watchdog: warn
+2026-08-25T09:09:35Z  watchdog: warn
+2026-08-25T09:25:10Z  watchdog: warn
+2026-08-25T09:42:16Z  watchdog: warn
+2026-08-25T09:58:26Z  watchdog: warn
+2026-08-25T10:14:17Z  watchdog: warn
+2026-08-25T10:30:19Z  watchdog: warn
+2026-08-25T10:47:25Z  watchdog: warn
+2026-08-25T11:03:25Z  watchdog: warn
+2026-08-25T11:19:29Z  watchdog: warn
+2026-08-25T11:35:29Z  watchdog: warn
+2026-08-25T11:52:35Z  watchdog: warn
+2026-08-25T12:08:38Z  watchdog: urgent-resume
+2026-08-25T12:09:37Z watchdog-resume
+2026-08-25T12:25:37Z  watchdog: urgent-resume
+2026-08-25T12:26:18Z  watchdog: ok
+2026-08-25T12:26:40Z  watchdog: ok
+2026-08-25T12:43:43Z  watchdog: warn
+2026-08-25T12:59:42Z  watchdog: warn
+2026-08-25T13:15:45Z  watchdog: warn
+2026-08-25T13:31:47Z  watchdog: warn
+2026-08-25T13:48:55Z  watchdog: warn
+2026-08-25T14:05:07Z  watchdog: warn
+2026-08-25T14:20:55Z  watchdog: warn
+2026-08-25T14:36:57Z  watchdog: warn
+2026-08-25T14:54:05Z  watchdog: warn
+2026-08-25T15:10:02Z  watchdog: warn
+2026-08-25T15:26:10Z  watchdog: warn
+2026-08-25T15:42:09Z  watchdog: warn
+2026-08-25T15:59:20Z  watchdog: warn
+2026-08-25T16:15:13Z  watchdog: warn
+2026-08-25T16:31:17Z  watchdog: warn
+2026-08-25T16:47:20Z  watchdog: warn
+2026-08-25T17:04:30Z  watchdog: warn
+2026-08-25T17:20:28Z  watchdog: warn
+2026-08-25T17:36:29Z  watchdog: warn
+2026-08-25T17:52:31Z  watchdog: warn
+2026-08-25T18:08:41Z  watchdog: warn
+2026-08-25T18:24:38Z  watchdog: warn
+2026-08-25T18:40:45Z  watchdog: warn
+WATCHDOG-RUN: 2026-08-25T18:40:51Z
+2026-08-25T18:56:42Z  watchdog: warn
+2026-08-25T19:13:50Z  watchdog: warn
+2026-08-25T19:13:52+00:00 heartbeat touched by watchdog
+2026-08-25T19:29:45Z  watchdog: warn
+2026-08-25T19:45:50Z  watchdog: warn
+2026-08-25T20:01:55Z  watchdog: warn
+2026-08-25T20:18:58Z  watchdog: warn
+2026-08-25T20:34:52Z  watchdog: warn
+2026-08-25T20:50:55Z  watchdog: warn
+2026-08-25T21:06:59Z  watchdog: warn
+2026-08-25T21:24:02Z  watchdog: warn
+2026-08-25T21:39:59Z  watchdog: warn
+2026-08-25T21:55:59Z  watchdog: warn
+2026-08-25T22:12:01Z  watchdog: warn
+2026-08-25T22:28:08Z  watchdog: warn
+2026-08-25T22:44:03Z  watchdog: warn
+2026-08-25T23:00:08Z  watchdog: warn
+2026-08-25T23:00:11Z
+2026-08-25T23:16:07Z  watchdog: warn
+2026-08-25T23:33:16Z  watchdog: warn
+2026-08-25T23:49:11Z  watchdog: warn
+2026-08-26T00:05:17Z  watchdog: warn
+2026-08-26T00:21:16Z  watchdog: warn
+2026-08-26T00:38:22Z  watchdog: warn
+2026-08-26T00:54:18Z  watchdog: warn
+Wed Aug 26 00:54:25 UTC 2026
+watchdog tick
+2026-08-26T01:10:22Z  watchdog: warn
+Wed Aug 26 01:10:26 UTC 2026
+watchdog tick ok
+2026-08-26T01:26:22Z  watchdog: warn
+Watchdog tick: 2026-08-26T01:26:29Z
+2026-08-26T01:43:30Z  watchdog: warn
+2026-08-26T01:59:25Z  watchdog: warn
+2026-08-26T02:15:28Z  watchdog: warn
+Wed Aug 26 02:15:30 UTC 2026
+watchdog tick 2026-08-26T02:15:30Z
+2026-08-26T02:31:29Z  watchdog: warn
+2026-08-26T02:31:36Z
+2026-08-26T02:48:34Z  watchdog: warn
+2026-08-26T03:04:46Z  watchdog: warn
+2026-08-26T03:21:46Z  watchdog: warn
+2026-08-26T03:38:45Z  watchdog: warn
+2026-08-26T03:54:45Z  watchdog: warn
+2026-08-26T04:10:50Z  watchdog: warn
+2026-08-26T04:26:50Z  watchdog: warn
+2026-08-26T04:43:55Z  watchdog: warn
+2026-08-26T04:59:54Z  watchdog: warn
+2026-08-26T05:15:56Z  watchdog: warn
+2026-08-26T05:31:58Z  watchdog: warn
+2026-08-26T05:48:05Z  watchdog: warn
+2026-08-26T06:08:26Z  T125+T126 reverted [~]->[!] per AUTONOMY.md rule #5 institutional actions
+2026-08-26T06:09:03Z  watchdog: ok
+2026-08-26T06:25:08Z  watchdog: warn
+2026-08-26T06:42:14Z  watchdog: warn
+2026-08-26T06:58:13Z  watchdog: warn
+2026-08-26T06:58:37+00:00 watchdog heartbeat
+2026-08-26T07:14:17Z  watchdog: warn
+2026-08-26T07:30:22Z  watchdog: warn
+2026-08-26T07:47:28Z  watchdog: warn
+2026-08-26T08:03:31Z  watchdog: warn
+2026-08-26T08:19:29Z  watchdog: warn
+2026-08-26T08:35:30Z  watchdog: warn
+2026-08-26T08:52:36Z  watchdog: warn
+2026-08-26T09:08:38Z  watchdog: urgent-resume

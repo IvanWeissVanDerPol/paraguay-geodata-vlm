@@ -742,6 +742,46 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-26 06:01 UTC — T125
+**Task:** Public defense scheduling
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T125 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M11] [NO-GPU] [D]
+
+---
+
+## 2026-08-26 06:07 UTC — T126
+**Task:** Public defense (45 min + Q&A)
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T126 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M12] [NO-GPU] [D]
+
+---
+
+## 2026-08-26 06:08 UTC — Erebus watchdog resume (T125 revert + T126 revert)
+- Watchdog triggered on `urgent-resume` (heartbeat stale; project healthy).
+- Ran `make status`. State at session start: 61 done, 0 active, 9 blocked, 16 pending.
+- Ran `make tick`. Auto-claimed **T125 — Public defense scheduling** `[P0][M11][NO-GPU][D]` first.
+- **Honest assessment:** T125 (defense scheduling) is an institutional action Ivan performs at UNA-FADA with the committee. Per AUTONOMY.md skill rule #5 ("NO emails to real people / no institutional actions on his behalf") and the T118-T124 revert precedent, this cannot be executed autonomously. **Reverted T125 `[~]` → `[!]`** matching the established pattern. The submission packet from T122 (Capitulos/FADA_TFG_SUBMISSION_PACKET.md) is what Ivan carries into the defense-scheduling meeting; agent cannot book the room or coordinate with the committee.
+- After revert, `make tick` re-ran and auto-claimed **T126 — Public defense (45 min + Q&A)** `[P0][M12][NO-GPU][D]`.
+- **Honest assessment:** T126 (the actual 45-min defense + Q&A in front of the committee) is an institutional event Ivan delivers in person at UNA-FADA. Per AUTONOMY.md skill rule #5 and the T118-T125 revert precedent, this cannot be executed autonomously. **Reverted T126 `[~]` → `[!]`** matching the established pattern. The defense-prep substrate is already produced: Defensa/slides.html, Defensa/DEFENSE_QA_PREP.md, Defensa/qa_log.md, Defensa/DEFENSE_PLAN.md, scripts/rehearse_defense.py (via T114). Ivan runs `make rehearse` before the defense date to drill the Q&A bank interactively.
+- **Pre-annotated T127 — Final paper submission to Q1/Q2 journal** with inline comment explaining it's deferred until defense completes (defense revisions may force paper edits) and that the agent cannot submit on Ivan's behalf anyway.
+- Action taken:
+  1. TASK_QUEUE.md: T125 `[~]` → `[!]` with annotation. T126 `[~]` → `[!]` with annotation. T127 `[ ]` augmented with pre-empt annotation.
+  2. `make status` confirmed: 61 done, 0 active, 11 blocked, 15 pending.
+- Verification:
+  - `grep "^\- \[" TASK_QUEUE.md` shows 11 `[!]` rows (T118-T126 plus the Cap.4 blocker).
+  - `make tick-dry` returns T127 next, but the pre-annotation comment flags it as no-op until Ivan reports defense outcome.
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people (T125 + T126 reverted), no remote push, venv activated, no money spent.
+- Queue status: all P0 institutional-phase tasks (T118-T127) are now either `[!]` or pre-annotated. **No autonomously-actionable P0 work remains.** Project is idle from autonomous-tick perspective until Ivan (a) fills Copernicus/HF/GH credentials (0/20 in secrets/creds.json), (b) accepts P1 maintenance work, or (c) walks FADA packet into UNA. This is the expected Month-1-end state per THESIS_PICK.md.
+- Touched `data/heartbeat` + `data/heartbeat.txt` + root heartbeats to 2026-08-26T06:08Z. Cleared `data/resume_needed.flag`. Appended to `data/progress.jsonl`.
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -815,12 +855,12 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 69
+- **Total ticks:** 71
 - **Tasks completed:** 61 / 87
-- **Tasks blocked:** 8
-- **Days since start:** 15
-- **Average tasks/day:** 4.07
-- **Estimated completion (current pace):** 2026-08-31
+- **Tasks blocked:** 10
+- **Days since start:** 16
+- **Average tasks/day:** 3.81
+- **Estimated completion (current pace):** 2026-09-02
 <!-- AUTONOMOUS_STATS_END -->
 ## 2026-08-23 — thesis watchdog resume tick (Erebus)
 - Watchdog set `data/resume_needed.flag` (urgent-resume: no heartbeat ever).
@@ -986,3 +1026,20 @@ _No ticks yet._
 - Queue state: 19 pending, 14 [EXT] (creds/downloads/emails), 5 [M9-M12] institutional. **No autonomously-actionable P0 work remains** -- substrate complete, awaiting either (a) Copernicus/HF/GH credentials Ivan fills, or (b) Ivan walks FADA packet into UNA.
 - Touched heartbeat. Watchdog next 15-min check will see fresh heartbeat -> no flag -> silent exit.
 - Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent.
+
+## 2026-08-26 09:08 UTC — Erebus watchdog resume (T135 RISK_REGISTER weekly review)
+
+- Watchdog triggered on `urgent-resume` (no heartbeat ever recorded on canonical path `data/heartbeat.txt`; the 2026-08-25 12:26 last tick did touch it but the watchdog's `Last work: NEVER` message still fires because it checks `data/heartbeat` symlink/file first — see new risk E6 mitigation: always touch all 3 heartbeat paths).
+- Ran `make status`. State at session start: 61 done, 0 active, 11 blocked, 15 pending.
+- Ran `make tick-dry`. Next pick = T127 — Final paper submission to Q1/Q2 journal `[P0][M12][EXT][D]`. Pre-annotated in TASK_QUEUE.md line 128 to stay `[ ]` until T126 (defense) completes. Tick script respects the annotation — would still auto-claim `[~]` and revert, but skipping the dance.
+- Picked autonomous-actionable P0 cadence task instead: **T135 — Weekly update RISK_REGISTER.md**.
+- Edits to RISK_REGISTER.md:
+  - **T6** Label Studio complexity → `mitigated (2026-08-26 — no human annotation in pipeline; paper-first + advisor-loop means Label Studio not needed for thesis deliverable)`.
+  - **E5** (new) Autonomous tick loops on institutional tasks → mitigated via T118-T126 revert precedent (auto-claim + revert dance documented; cadence `[CONT]` tasks used as substitute work).
+  - **E6** (new) Watchdog false-positive on heartbeat path → mitigated by always touching `data/heartbeat` + `data/heartbeat.txt` + `data/heartbeat.ts`.
+  - **S6** (new) FADA TFG rejection of international-venue paper framing → open; mitigation is T122 packet's "manuscrito terminado adaptado a formato UNA" framing.
+  - **S7** (new) All 6 advisor candidates decline → open; mitigation is DEFENSE_PLAN.md list + pivot to direct UNA-FADA contact or external co-advisor (Politécnica, UC).
+- TASK_QUEUE.md: T135 `[ ]` → `[x]` with inline annotation summarizing the review.
+- Touched `data/heartbeat` + `data/heartbeat.txt` + root heartbeats to 2026-08-26T09:08Z. Cleared `data/resume_needed.flag`.
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent.
+- Next watchdog check (15 min) will see fresh heartbeat on all 3 paths → no flag → silent exit.

@@ -5,7 +5,7 @@
 **Carrera:** Maestría en Tecnología de la Arquitectura, FADA-UNA (co-afiliación FP-UNA)
 **Director (TBD):** Prof. Dr. Juan Carlos Cristaldo (FADA-UNA)
 **Fecha:** Agosto 2026
-**Versión:** 1.0 — borrador expandido
+**Versión:** 1.0 — borrador
 
 ---
 

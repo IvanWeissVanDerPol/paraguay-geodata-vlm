@@ -1,11 +1,11 @@
 # Capítulo 2 — Marco Teórico
 
 **Tesis:** *Anotación semiautomática del corpus cartográfico abierto de Paraguay con modelos multimodales fundacionales y una interfaz conversacional para la reflexión territorial*
-
 **Autor:** Iván Weiss Van der Pol
-**Carrera:** Ingeniería en Ciencias Geográficas (FP-UNA) / Maestría, FADA-UNA
-**Director (TBD):** Prof. Dr. Cristaldo (FADA-UNA)
+**Carrera:** Maestría en Tecnología de la Arquitectura, FADA-UNA (co-afiliación FP-UNA)
+**Director (TBD):** Prof. Dr. Juan Carlos Cristaldo (FADA-UNA)
 **Fecha:** Agosto 2026
+**Versión:** 1.0 — borrador
 
 ---
 

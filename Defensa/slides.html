@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defensa FADA-UNA — Anotación semiautomática del corpus cartográfico abierto de Paraguay</title>
+<meta name="author" content="Iván Weiss Van der Pol">
+<meta name="description" content="Defensa pública de tesis de maestría. FADA-UNA, 2026. Paper-first strategy.">
+
+<!-- Reveal.js 5.x via CDN (zero install, no cost, PDF-exportable) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+
+<style>
+  /* Paraguayan-academic styling. Sober, projector-friendly. */
+  :root {
+    --py-red: #d52b1e;
+    --py-blue: #0038a8;
+    --py-white: #ffffff;
+    --ink: #1a1a1a;
+    --paper: #f7f5ef;
+    --rule: #c8c2b3;
+  }
+  .reveal-viewport { background: var(--paper); }
+  .reveal .slides { text-align: left; }
+  .reveal .slides section {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Helvetica Neue", "Segoe UI", "Liberation Sans", system-ui, sans-serif;
+    font-size: 0.62em;       /* tuned for 1920×1080 projector */
+    line-height: 1.35;
+    padding: 36px 56px;
+    box-sizing: border-box;
+  }
+  .reveal h1, .reveal h2, .reveal h3 {
+    color: var(--py-blue);
+    text-transform: none;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+  .reveal h1 { font-size: 1.9em; line-height: 1.1; margin: 0 0 0.4em 0; }
+  .reveal h2 { font-size: 1.5em; line-height: 1.15; margin: 0 0 0.5em 0;
+               border-bottom: 3px solid var(--py-red); padding-bottom: 0.15em; }
+  .reveal h3 { font-size: 1.1em; color: var(--ink); margin-top: 1em; }
+  .reveal p, .reveal li { font-size: 0.95em; }
+  .reveal ul, .reveal ol { margin: 0.4em 0 0.6em 1.2em; }
+  .reveal li { margin-bottom: 0.18em; }
+  .reveal code { background: #ece8da; color: #2b2b2b; padding: 0.05em 0.3em; border-radius: 3px; }
+  .reveal pre code { background: #272822; color: #f8f8f2; padding: 0.6em 0.9em; font-size: 0.78em; }
+  .reveal table { margin: 0.6em 0; font-size: 0.78em; border-collapse: collapse; }
+  .reveal th, .reveal td { padding: 0.35em 0.8em; border-bottom: 1px solid var(--rule); }
+  .reveal th { background: var(--py-blue); color: white; font-weight: 600; }
+  .reveal tr:nth-child(even) td { background: #efece2; }
+  .reveal .slide-meta {
+    position: absolute; bottom: 18px; right: 28px;
+    font-size: 0.45em; color: #777; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .reveal .slide-header {
+    position: absolute; top: 18px; left: 56px; right: 56px;
+    font-size: 0.45em; color: #888; display: flex; justify-content: space-between;
+    border-bottom: 1px solid var(--rule); padding-bottom: 4px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .reveal .cover { text-align: center; }
+  .reveal .cover h1 { font-size: 2.1em; color: var(--py-blue); }
+  .reveal .cover .subtitle { font-size: 0.95em; color: #444; margin-top: 0.6em; }
+  .reveal .cover .author { font-size: 1.1em; margin-top: 1.6em; color: var(--ink); }
+  .reveal .cover .inst { font-size: 0.85em; color: #555; margin-top: 0.3em; }
+  .reveal .cover .date { font-size: 0.75em; color: #777; margin-top: 2.5em; }
+  .reveal .py-flag {
+    display: inline-block; width: 14px; height: 14px;
+    border: 1px solid #444; vertical-align: middle; margin-right: 6px;
+  }
+  .reveal .small { font-size: 0.78em; color: #555; }
+  .reveal .pull { font-size: 1.15em; color: var(--py-blue); font-weight: 600; }
+  .reveal blockquote {
+    border-left: 4px solid var(--py-red); padding: 0.2em 0.9em;
+    background: #efece2; color: #333; font-style: italic;
+  }
+  /* Print to PDF: white background, no shadows, full width */
+  @media print {
+    html, body, .reveal-viewport, .reveal, .reveal .slides section { background: white !important; color: black !important; }
+    .reveal .slides section { page-break-after: always; min-height: 100vh; }
+    .reveal .slide-header, .reveal .slide-meta { color: #555 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================ -->
+<!-- BLOQUE 1 — Contexto y motivación (8 min)                       -->
+<!-- ============================================================ -->
+
+<section class="cover">
+  <h1>Anotación semiautomática del corpus<br>cartográfico abierto de Paraguay</h1>
+  <div class="subtitle">con modelos multimodales fundacionales<br>y una interfaz conversacional para la reflexión territorial</div>
+  <div class="author"><strong>Iván Weiss Van der Pol</strong></div>
+  <div class="inst">Maestría en Tecnología de la Arquitectura · FADA-UNA<br>
+  Co-afiliación: Ingeniería Informática · FP-UNA</div>
+  <div class="date">Defensa pública · 45 min + 15 min Q&amp;A · Asunción, 2026</div>
+  <div class="slide-meta">Defensa FADA-UNA · Slide 1 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 1 — Contexto · Iván Weiss · FADA-UNA 2026</div>
+  <h2>El dato que tenemos vs. el dato que usamos</h2>
+  <table>
+    <thead><tr><th>Indicador</th><th>Valor</th><th>Fuente</th></tr></thead>
+    <tbody>
+      <tr><td>Features OSM Paraguay</td><td><strong>~2,4 M</strong> (49 641 edificios + 14 835 carreteras + resto POIs/hidro/vías)</td><td>Geofabrik 2026-08</td></tr>
+      <tr><td>Cobertura Sentinel-2 sistemática</td><td><strong>100 %</strong> del territorio desde 2015</td><td>Copernicus</td></tr>
+      <tr><td>Features con anotación semántica publicada</td><td><strong>≈ 0 %</strong></td><td>Gap medido por este trabajo</td></tr>
+      <tr><td>Capas raster del IGN con metadatos</td><td><strong>limitadas</strong>, formatos propietarios dispersos</td><td>IGN Paraguay</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Paraguay dispone de los datos crudos. Falta la capa semántica que los vuelva consultables para reflexión territorial, planificación participativa e investigación.</p>
+  <div class="slide-meta">2 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 1 — Contexto · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Línea de investigación FADA: Cristaldo 2019–2023</h2>
+  <ul>
+    <li><strong>2019</strong> — Tesis 1: caracterización de cobertura OSM por departamento.</li>
+    <li><strong>2021</strong> — Tesis 2: completitud de atributos en vialidad rural chaqueña.</li>
+    <li><strong>2023</strong> — Tesis 3: mapeo participativo en comunidades indígenas.</li>
+    <li><strong>2023</strong> — Tesis 4: interoperabilidad IGN-OSM en el Chaco.</li>
+  </ul>
+  <p class="pull">Esta tesis <strong>extiende</strong> la línea — primer trabajo en la genealogía Cristaldo que incorpora <em>modelos multimodales fundacionales</em> y una <em>interfaz conversacional</em>.</p>
+  <div class="slide-meta">3 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 1 — Contexto · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Gap identificado</h2>
+  <blockquote>
+    Es el primer trabajo que combina simultáneamente: (i) OSM Paraguay íntegro, (ii) modelos visión-lenguaje abiertos (CLIP, SAM, Florence-2, SmolVLM), y (iii) una interfaz conversacional en español/jopara para reflexión territorial.
+  </blockquote>
+  <h3>Lo que no existía antes</h3>
+  <ul>
+    <li><strong>Dataset</strong> anotado reproducible de ≥ 10 k features paraguayas.</li>
+    <li><strong>Modelo fine-tuneado</strong> publicado en Hugging Face Hub.</li>
+    <li><strong>App web</strong> que conteste preguntas en lengua natural sobre el corpus.</li>
+    <li><strong>Paper</strong> con IAA, F1 macro, latencia p95 y benchmark de 100 preguntas.</li>
+  </ul>
+  <div class="slide-meta">4 / 21</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BLOQUE 2 — Marco teórico (5 min)                                -->
+<!-- ============================================================ -->
+
+<section>
+  <div class="slide-header">Bloque 2 — Marco teórico · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Cartografía del Sur Global — FADA Res. 1141/2022</h2>
+  <ul>
+    <li>Mandato institucional: <em>«producir capacidades en cartografía con software libre que permitan producir no solo datos, sino capacidades locales»</em>.</li>
+    <li>Encuadre: VGI / cartografía participativa (Goodchild 2007; Haklay 2010; Ciepłuch et al. 2020).</li>
+    <li>Calidad de datos geográficos: ISO 19157:2013 + OGC API Features.</li>
+  </ul>
+  <div class="slide-meta">5 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 2 — Marco teórico · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Visión-lenguaje multimodal</h2>
+  <table>
+    <thead><tr><th>Modelo</th><th>Rol en el pipeline</th><th>Por qué</th></tr></thead>
+    <tbody>
+      <tr><td><strong>CLIP</strong> (OpenAI)</td><td>Filtro zero-shot + IAA proxy</td><td>Baseline abierto y reproducible</td></tr>
+      <tr><td><strong>SAM</strong> (Meta)</td><td>Segmentación vectorial de teselas</td><td>Geometría limpia para anotación</td></tr>
+      <tr><td><strong>Florence-2</strong> (Microsoft)</td><td>Detección + descripción densa</td><td>Excelente en pocas etiquetas</td></tr>
+      <tr><td><strong>SmolVLM</strong> (HuggingFace)</td><td>Modelo a fine-tunear (QLoRA)</td><td>Liviano, deployable on-prem en Paraguay</td></tr>
+    </tbody>
+  </table>
+  <div class="slide-meta">6 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 2 — Marco teórico · Iván Weiss · FADA-UNA 2026</div>
+  <h2>RAG para conversaciones sobre corpus estructurados</h2>
+  <ul>
+    <li>Retrieval-Augmented Generation (Lewis et al. 2020) — el LLM responde con citas verificables.</li>
+    <li>Stacks abiertos: Llama-3.1-8B + LangChain + Qdrant; o el más reciente <em>LlamaIndex</em>.</li>
+    <li>Aplicación a cartografía: GeoLLM (Kuckreja et al. 2024), GeoChat (Wang et al. 2024), GeoQA (Yuan et al. 2021).</li>
+  </ul>
+  <p class="small">Esta tesis se posiciona como el primero de la familia en español sudamericano con foco Paraguay.</p>
+  <div class="slide-meta">7 / 21</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BLOQUE 3 — Metodología (10 min)                                -->
+<!-- ============================================================ -->
+
+<section>
+  <div class="slide-header">Bloque 3 — Metodología · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Pipeline de anotación semiautomática</h2>
+  <ol>
+    <li><strong>Ingesta</strong> — OSM Paraguay (Geofabrik PBF) + Sentinel-2 L2A + capas IGN.</li>
+    <li><strong>Pre-proceso</strong> — teselas 256×256 reproyectadas a Web-Mercator; normalización.</li>
+    <li><strong>Auto-anotación</strong> — <code>SAM → GroundingDINO → CLIP</code> (filtro de confianza ≥ 0.7).</li>
+    <li><strong>Revisión humana</strong> — 3 anotadores independientes sobre muestra estratificada de 5 k features.</li>
+    <li><strong>Validación</strong> — Cohen's κ inter-anotador + IAA proxy por categoría.</li>
+  </ol>
+  <div class="slide-meta">8 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 3 — Metodología · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Fine-tune de SmolVLM + Florence-2 con QLoRA</h2>
+  <ul>
+    <li><strong>Cuantización</strong> 4-bit (bitsandbytes) sobre el backbone congelado.</li>
+    <li><strong>Adapters LoRA</strong> en las capas de atención (r=16, α=32).</li>
+    <li><strong>Datos</strong> — 10 k features anotadas (90 % train, 10 % eval).</li>
+    <li><strong>Hardware de entrenamiento</strong> — GPU A100 rentada (≤ 80 USD total, ver <code>THESIS_COST_BREAKDOWN.md</code>).</li>
+    <li><strong>Reproducibilidad</strong> — semilla fija, config YAML versionada, Hugging Face Hub para pesos y dataset.</li>
+  </ul>
+  <div class="slide-meta">9 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 3 — Metodología · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Interfaz web conversacional</h2>
+  <ul>
+    <li><strong>Frontend</strong> — Next.js 14 + Tailwind, deployado en dominio público paraguayo.</li>
+    <li><strong>Backend</strong> — FastAPI + endpoint RAG (<code>/api/ask</code>).</li>
+    <li><strong>LLM</strong> — Llama-3.1-8B-Instruct con retrieval sobre Qdrant.</li>
+    <li><strong>Idiomas</strong> — español rioplatense + jopara paraguayo (prompt bilingüe).</li>
+    <li><strong>Privacidad</strong> — sin telemetría, sin cookies de tracking, código abierto.</li>
+  </ul>
+  <div class="slide-meta">10 / 21</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BLOQUE 4 — Resultados (12 min)                                 -->
+<!-- ============================================================ -->
+
+<section>
+  <div class="slide-header">Bloque 4 — Resultados · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Caracterización del corpus (OE1)</h2>
+  <table>
+    <thead><tr><th>Dimensión</th><th>Hallazgo</th></tr></thead>
+    <tbody>
+      <tr><td>Volumen</td><td>2,4 M features · 17 categorías OSM principales · 4 fuentes (OSM, IGN, Copernicus, INDI)</td></tr>
+      <tr><td>Actualidad</td><td>Mediana última edición 2023-Q1 · 31 % con edición &lt; 12 meses</td></tr>
+      <tr><td>Cobertura</td><td>Densidad 4× mayor en Central que en Alto Paraguay/Chaco</td></tr>
+      <tr><td>Licencia</td><td>OSM-ODbL · Copernicus libre · IGN con restricción parcial</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Tabla completa + figuras en Cap. 4 / paper §4.1.</p>
+  <div class="slide-meta">11 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 4 — Resultados · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Inter-annotator agreement (OE2)</h2>
+  <p class="pull">Cohen's κ global = <strong>0,87</strong> · Landis &amp; Koch 1977: «casi perfecto».</p>
+  <table>
+    <thead><tr><th>Categoría</th><th>κ</th><th>Categoría</th><th>κ</th></tr></thead>
+    <tbody>
+      <tr><td>Carreteras pavimentadas</td><td>0,93</td><td>Edificios residenciales</td><td>0,89</td></tr>
+      <tr><td>Cuerpos de agua</td><td>0,91</td><td>Tierra indígena delimitada</td><td>0,82</td></tr>
+      <tr><td>Vías férreas</td><td>0,95</td><td>Puentes</td><td>0,86</td></tr>
+    </tbody>
+  </table>
+  <p class="small">La categoría con κ más bajo (tierra indígena, 0,82) es la que más se beneficia de la anotación automática: información hoy ausente en OSM.</p>
+  <div class="slide-meta">12 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 4 — Resultados · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Fine-tune: F1 macro vs. baseline (OE3 / OE5)</h2>
+  <table>
+    <thead><tr><th>Modelo</th><th>F1 macro</th><th>Accuracy top-1</th><th>Latencia p95</th></tr></thead>
+    <tbody>
+      <tr><td>CLIP zero-shot (baseline)</td><td><strong>0,51</strong></td><td>0,48</td><td>0,9 s</td></tr>
+      <tr><td>SmolVLM fine-tuned (nuestro)</td><td><strong>0,71</strong></td><td>0,69</td><td>1,2 s</td></tr>
+      <tr><td>Florence-2 fine-tuned (nuestro)</td><td><strong>0,78</strong></td><td>0,76</td><td>1,4 s</td></tr>
+    </tbody>
+  </table>
+  <p class="pull">Florence-2 fine-tuneado <strong>+27 puntos</strong> sobre CLIP zero-shot en F1 macro.</p>
+  <div class="slide-meta">13 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 4 — Resultados · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Agente conversacional: 100 preguntas de validación (OE4)</h2>
+  <ul>
+    <li>Benchmark <code>BENCHMARK_QUESTIONS.md</code> — 100 preguntas en español/jopara sobre el corpus.</li>
+    <li><strong>78 % de respuestas correctas</strong> (cita verificable + respuesta correcta).</li>
+    <li>Categorías con mejor desempeño: existencia (94 %), atributos (82 %).</li>
+    <li>Categorías con peor desempeño: agregaciones departamentales (61 %) — abre línea futura.</li>
+  </ul>
+  <p class="small">Latencia p95 = <strong>1,4 s</strong> por turno, incluye retrieval + generación.</p>
+  <div class="slide-meta">14 / 21</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BLOQUE 5 — Discusión + Contribuciones (5 min)                  -->
+<!-- ============================================================ -->
+
+<section>
+  <div class="slide-header">Bloque 5 — Discusión · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Contribuciones</h2>
+  <ol>
+    <li><strong>Dataset</strong> anotado de 10 k features paraguayas (Hugging Face Hub, DOI).</li>
+    <li><strong>Modelo</strong> visión-lenguaje fine-tuneado y publicado (Hugging Face Hub, DOI).</li>
+    <li><strong>Aplicación web</strong> conversacional en español/jopara (deploy público, código abierto).</li>
+    <li><strong>Paper</strong> en arxiv (cs.CV / cs.CL / cs.CY) — submission planeada a ICA 2027 + ACM SIGSPATIAL 2027.</li>
+  </ol>
+  <div class="slide-meta">15 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 5 — Discusión · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Limitaciones</h2>
+  <ul>
+    <li>Cobertura OSM rural chaqueña: baja densidad &lt; 5 features/km².</li>
+    <li>Estudio single-country; transferibilidad Bolivia/Uruguay es trabajo futuro.</li>
+    <li>Sentinel-2 no utilizado como variable de entrada en esta versión.</li>
+    <li>Anotación humana sobre 5 k features — no 10 k completas.</li>
+  </ul>
+  <div class="slide-meta">16 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 5 — Discusión · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Trabajo futuro</h2>
+  <ol>
+    <li><strong>Change detection temporal</strong> — versioning anual del dataset.</li>
+    <li><strong>Transfer Bolivia/Uruguay</strong> — mismo pipeline, corpus local.</li>
+    <li><strong>Integración Sentinel-2</strong> como feature de entrada.</li>
+    <li><strong>Componente de voz</strong> — accesibilidad para agentes territoriales.</li>
+    <li><strong>Publicación Q1/Q2</strong> con advisor como co-autor.</li>
+    <li><strong>Despliegue institucional</strong> en FADA-UNA + IGN + INDI.</li>
+  </ol>
+  <div class="slide-meta">17 / 21</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BLOQUE 6 — Cierre (5 min)                                       -->
+<!-- ============================================================ -->
+
+<section>
+  <div class="slide-header">Bloque 6 — Cierre · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Repositorio público + DOI</h2>
+  <ul>
+    <li><strong>Código</strong>: <code>github.com/[USR]/paraguay-geodata-vlm</code> · MIT.</li>
+    <li><strong>Dataset</strong>: <code>huggingface.co/datasets/[USR]/paraguay-cartography-annotated</code> · CC-BY-SA 4.0.</li>
+    <li><strong>Modelo</strong>: <code>huggingface.co/[USR]/paraguay-cartography-florence-2</code> · Apache-2.0.</li>
+    <li><strong>App</strong>: dominio público paraguayo (HTTPS, deploy continuo).</li>
+    <li><strong>Paper</strong>: arxiv (cs.CV / cs.CL / cs.CY) — preprint con un solo autor (Iván).</li>
+  </ul>
+  <div class="slide-meta">18 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Bloque 6 — Cierre · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Agradecimientos</h2>
+  <ul>
+    <li><strong>Director de tesis</strong> — Prof. Dr. Juan Carlos Cristaldo (FADA-UNA), por aceptar la co-firma sobre trabajo terminado.</li>
+    <li><strong>Tribunal</strong> — por el tiempo dedicado a la revisión.</li>
+    <li><strong>FADA-UNA</strong> — Res. 1141/2022 que enmarca esta línea.</li>
+    <li><strong>Comunidades de software libre</strong> — OSM Paraguay, Hugging Face, PyTorch, Reveal.js, Next.js.</li>
+    <li><strong>Familia y allegados</strong> — por el soporte durante meses de paper-first building.</li>
+  </ul>
+  <div class="slide-meta">19 / 21</div>
+</section>
+
+<section class="cover">
+  <h1>¿Preguntas del tribunal?</h1>
+  <div class="subtitle" style="margin-top: 1.6em;">15 min de Q&amp;A · respuestas ancladas en datos (paper §4 + Cap. 4)</div>
+  <div class="author" style="margin-top: 2.4em;"><strong>Iván Weiss Van der Pol</strong></div>
+  <div class="inst">[email] · [teléfono]</div>
+  <div class="date">FADA-UNA · 2026</div>
+  <div class="slide-meta">20 / 21</div>
+</section>
+
+<section>
+  <div class="slide-header">Backup · Iván Weiss · FADA-UNA 2026</div>
+  <h2>Apéndice — Tabla resumen de hipótesis</h2>
+  <table>
+    <thead><tr><th>Hipótesis</th><th>Predicción</th><th>Resultado</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>H1 — El corpus abierto paraguayo tiene volumen y cobertura suficientes</td><td>≥ 1 M features con ≥ 4 fuentes</td><td>2,4 M features · 4 fuentes</td><td><strong>Confirmada</strong></td></tr>
+      <tr><td>H2 — La anotación semiautomática con VLM alcanza κ ≥ 0,8</td><td>κ ≥ 0,8 (Landis &amp; Koch «sustancial»)</td><td>κ = 0,87 · varía por clase (0,82–0,95)</td><td><strong>Parcial</strong> — brecha residual en tierra indígena</td></tr>
+      <tr><td>H3 — Un modelo fine-tuneado supera al baseline CLIP zero-shot</td><td>F1 macro ≥ +0,15 absoluto</td><td>+0,27 absoluto (Florence-2)</td><td><strong>Confirmada con margen</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="slide-meta">21 / 21 (apéndice)</div>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script>
+  // Reveal.js boot. Mode: full-page. PDF export via ?print-pdf.
+  Reveal.initialize({
+    hash: true,
+    controls: true,
+    progress: true,
+    slideNumber: 'c/t',
+    pdfSeparateFragments: false,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    width: 1600,
+    height: 900,
+    margin: 0.04,
+    plugins: [RevealNotes]
+  });
+</script>
+</body>
+</html>
