@@ -812,6 +812,46 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-27 08:38 UTC — T042
+**Task:** Download WorldPop Paraguay 2020 UN-adjusted (~50 MB)
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T042 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P1] [M1] [EXT] [R]
+
+---
+
+## 2026-08-27 08:53 UTC — T043
+**Task:** Download CHIRPS daily precipitation 2024-2026 (~200 MB/year)
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T043 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P1] [M2] [EXT] [R]
+
+---
+
+## 2026-08-27 09:11 UTC — T044
+**Task:** Download Google Open Buildings v3 for Paraguay tiles (~100 MB)
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T044 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P1] [M2] [EXT] [R]
+
+---
+
+## 2026-08-27 10:10 UTC — T045
+**Task:** Download INDI indigenous territories GeoJSON (UN-Habitat mirror)
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T045 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P1] [M2] [EXT] [R]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -886,6 +926,11 @@ _None._
 - Blocked: 2
 - Top priority: Final paper submission to Q1/Q2 journal
 
+## 2026-08-27 — weekly review
+- Completed this week: 9
+- Blocked: 3
+- Top priority: Download CHIRPS daily precipitation 2024-2026 (~200 MB/year)
+
 <!-- AUTONOMOUS_DAILY_SUMMARY_START -->
 
 ---
@@ -934,12 +979,12 @@ _The agent will keep clearing `[CONT]` cadence tasks (weekly review, RISK_REGIST
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 75
-- **Tasks completed:** 63 / 87
-- **Tasks blocked:** 12
+- **Total ticks:** 80
+- **Tasks completed:** 66 / 87
+- **Tasks blocked:** 14
 - **Days since start:** 17
-- **Average tasks/day:** 3.71
-- **Estimated completion (current pace):** 2026-09-02
+- **Average tasks/day:** 3.88
+- **Estimated completion (current pace):** 2026-09-01
 <!-- AUTONOMOUS_STATS_END -->
 ## 2026-08-23 — thesis watchdog resume tick (Erebus)
 - Watchdog set `data/resume_needed.flag` (urgent-resume: no heartbeat ever).
@@ -1159,3 +1204,17 @@ _The agent will keep clearing `[CONT]` cadence tasks (weekly review, RISK_REGIST
 - Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent. No fabrication: sanity_check output is real (verified via terminal output above); cost figures are all cross-referenced to manuscript prose.
 - Queue state at session close: 66 done / 0 active / 12 blocked / 7 pending. All 7 pending are `[EXT]` (T042-T046 downloads, T101/T102 social media) — pure Iván-side. Project is at the "awaiting Iván" plateau documented across 2026-08-23/25/26 watchdog ticks.
 - Next watchdog check (~15 min) will see fresh heartbeat on all paths → no flag → silent exit.
+
+## 2026-08-27 10:10 UTC — Erebus watchdog resume (T042-T045 download revert batch)
+
+- Watchdog: `urgent-resume` (no canonical `data/heartbeat` file detected despite repeated touches — E6 watchdog false-positive remains).
+- `make status`: 66 done / 0 active / 13 blocked / 3 pending at session start. All pending + active were `[EXT]` (no autonomously-actionable P0 work).
+- `make tick-dry` picked T045 (INDI indigenous territories GeoJSON). Ran `make tick`; script auto-claimed T045 `[~]`.
+- TASK_QUEUE.md reverted 4 stale `[~]` claims → `[!]` per T118-T127 precedent:
+  - **T042** (WorldPop Paraguay 2020, ~50 MB) `[~]` → `[!]`
+  - **T043** (CHIRPS precipitation 2024-2026, ~200 MB) `[~]` → `[!]`
+  - **T044** (Google Open Buildings v3, ~100 MB) `[~]` → `[!]`
+  - **T045** (INDI indigenous territories GeoJSON, UN-Habitat mirror) `[~]` → `[!]`
+  - Each reverted with inline annotation citing T118-T127 precedent (agent cannot burn Iván's bandwidth/creds decisions on `[EXT]` downloads).
+- Queue state at session close: 66 done / 0 active / 17 blocked / 3 pending. The 3 pending (`!`-counted together: MOPC drone filing T046, Paraguayan tech press post T138-equiv, social media post T139-equiv) are all `[EXT]` months M2/M7 institutional/social — pure Iván-side.
+- Verdict: project unchanged at substrate level. All autonomously-actionable work saturated (Cap.1-3 + 5-6 + paper + packet + defense slides + Q&A bank + RISK_REGISTER weekly cadence + cost review done). Velocity bottleneck remains Iván-side: credentials, FADA walk-in, social channels. Next watchdog tick in 15 min.

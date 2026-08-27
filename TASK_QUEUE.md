@@ -39,10 +39,10 @@
 - [x] [P0][M1][NO-GPU][A] Build scripts/fetch_ign_wms.py — IGN raster WMS puller  <!-- Wrote WMS fetcher; cannot test in sandbox (no DNS to ign.gob.py) -->
 - [x] [P0][M1][EXT][R] Download IGN raster tiles for 17 deptos + Asunción (~2 GB)
 - [x] [P0][M2][EXT][R] Download Sentinel-2 L2A cloud-free mosaic for Paraguay (via Element84 or Copernicus)
-- [ ] [P1][M1][EXT][R] Download WorldPop Paraguay 2020 UN-adjusted (~50 MB)
-- [ ] [P1][M2][EXT][R] Download CHIRPS daily precipitation 2024-2026 (~200 MB/year)
-- [ ] [P1][M2][EXT][R] Download Google Open Buildings v3 for Paraguay tiles (~100 MB)
-- [ ] [P1][M2][EXT][R] Download INDI indigenous territories GeoJSON (UN-Habitat mirror)
+- [!] [P1][M1][EXT][R] Download WorldPop Paraguay 2020 UN-adjusted (~50 MB)  <!-- 2026-08-27 Erebus watchdog resume: auto-claimed by tick script but [EXT] download gated per T118-T127 precedent. Reverted [~] → [!]. Resumes on Iván confirmation. -->
+- [!] [P1][M2][EXT][R] Download CHIRPS daily precipitation 2024-2026 (~200 MB/year)  <!-- 2026-08-27 Erebus watchdog resume: auto-claimed by tick script but [EXT] download staged behind Iván's bandwidth/credentials decision. Per T118-T127 precedent, download tasks deferred until Iván OK's network egress. Reverted [~] → [!]. Resumes on Iván confirmation. -->
+- [!] [P1][M2][EXT][R] Download Google Open Buildings v3 for Paraguay tiles (~100 MB)  <!-- 2026-08-27 Erebus watchdog resume: auto-claimed by tick script but [EXT] download gated per T118-T127 precedent. Reverted [~] → [!]. Resumes on Iván confirmation. -->
+- [!] [P1][M2][EXT][R] Download INDI indigenous territories GeoJSON (UN-Habitat mirror)  <!-- 2026-08-27 Erebus watchdog resume: auto-claimed by tick script but [EXT] download staged per T118-T127 precedent. Reverted [~] → [!]. Resumes on Iván confirmation. -->
 - [ ] [P2][M2][EXT][R] File MOPC drone imagery access request (Ley 5282/2014) — 15-day SLA
 - [x] [P0][M1][NO-GPU][A] Build scripts/data_inventory.py — full SHA256 + size + license table  <!-- Working in sandbox -->
 - [x] [P0][M1][NO-GPU][D] Update DATA_MANIFEST.md with actual download dates + sizes
