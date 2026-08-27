@@ -782,6 +782,36 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-27 03:41 UTC — T127
+**Task:** Final paper submission to Q1/Q2 journal
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T127 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P0] [M12] [EXT] [D]
+
+---
+
+## 2026-08-27 06:14 UTC — T037
+**Task:** Register AWS free tier (alt to Copernicus) — link emailed
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T037 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P1] [M1] [EXT] [A]
+
+---
+
+## 2026-08-27 06:15 UTC — T038
+**Task:** Register Google Cloud + activate Cloud Storage API — link emailed
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T038 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P1] [M1] [EXT] [A]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -846,8 +876,57 @@ _None._
 - Blocked: 0
 - Top priority: Build defense slides (45 min + 15 Q&A) — see DEFENSE_PLAN.md
 
+## 2026-08-26 — weekly review
+- Completed this week: 5
+- Blocked: 2
+- Top priority: Final paper submission to Q1/Q2 journal
+
+## 2026-08-26 — weekly review
+- Completed this week: 6
+- Blocked: 2
+- Top priority: Final paper submission to Q1/Q2 journal
+
 <!-- AUTONOMOUS_DAILY_SUMMARY_START -->
-_No ticks yet._
+
+---
+
+## Weekly summary — 2026-08-26 (Sun 20:43 UTC) — Erebus weekly review
+
+**Queue state:** 87 tasks · 62 done (71%) · 11 blocked · 0 in-progress · 14 pending.
+**Burndown:** 0.31 tasks/day over last 7d (5 completed, 2 newly blocked, 23 ticks). ETA on remaining 14 = ~45 days.
+**Verdict:** ⚠️ **Behind** on substance, **ahead** on substrate. The substrate is essentially complete (manuscript chapters, FADA submission packet, defense slides + Q&A bank, RISK_REGISTER, skill files). What's left is **institution-mediated** and cannot be ticked autonomously.
+
+### What got done this week (2026-08-20 → 2026-08-26)
+- **T108** Cap. 4 results skeleton + Cap6 conclusion OE1-OE5 ✅ (rebranded to P0 `Cap6_Conclusiones.md`)
+- **T112** Manuscript formatter (`scripts/format_manuscript.py`) — canonical UNA-FADA header block across Cap1-Cap6, `Capitulos/INDEX.md`, `Capitulos/MANIFEST.md` ✅
+- **T122** `Capitulos/FADA_TFG_SUBMISSION_PACKET.md` (14.5 KB, 11 secciones, 21.693 palabras verified) — printable artifact Iván walks into FADA ✅
+- **T135** RISK_REGISTER weekly review — closed T6, added E5/E6/S6/S7 ✅
+- **Patched `scripts/weekly_review.py`:** defensive JSON-parser + watchdog-schema filter so the review tool actually runs (was crashing on line 75 of `data/progress.jsonl` — a malformed watchdog log entry).
+- **T118-T126** (institutional loop) — auto-claimed + reverted to `[!]` 6 times this week, all matching the established "no emails / no institutional actions on your behalf" pattern.
+
+### What's blocked + what Iván needs to do
+11 `[!]` blockers, all human-action at UNA-FADA:
+1. **T118** Email advisor #1 (Cristaldo) · **T119** #2 (Legal Ayala) · **T120** #3 (Von Lücken) · **T121** continue list of 6 — **what's needed:** Iván sends one of the 3 emails (templates in `DEFENSE_PLAN.md`); agent then unblocks the rest of the chain.
+2. **T122-T123** FADA submission + tesista enrollment — **what's needed:** Iván prints `Capitulos/FADA_TFG_SUBMISSION_PACKET.md`, fills the `[LLENAR]` fields, walks it to UNA-FADA. Reopens enrollment task on confirmation.
+3. **T124** Committee review · **T125** Defense scheduling · **T126** Public defense — sequential after T122/T123.
+4. **T115** Submit paper to arxiv · **T116** ICA 2027 / ACM SIGSPATIAL · **T127** Final journal submission — paper draft blocks these. Agent can drive the drafts autonomously now; submission is Iván's move.
+5. **T110** Write Cap. 4 (Resultados) — was reverted to `[!]` because needs actual experiment numbers (Sentinel-2 download, SAM/GroundingDINO/CLIP runs, 5K IAA, fine-tune metrics, 100-question benchmark). All upstream tasks are `[GPU]` or `[EXT]` and blocked on **0/20 credentials filled + no GPU in sandbox**. See top-priority item below.
+
+### Top 3 priorities for next week
+1. **Fill 20-credential `secrets/creds.json`** (Copernicus dataspace, HF write token, GitHub PAT, etc.). Until 0/20 → 1/20, **no data downloads can run** — that is the single dependency gating all 14 pending tasks.
+2. **Send the advisor email.** Pick one of Cristaldo / Legal Ayala / Von Lücken, fire the DEFENSE_PLAN.md template yourself, reply with outcome. Unblocks 5 `[!]`s the same day.
+3. **Walk the FADA packet into UNA.** Take `Capitulos/FADA_TFG_SUBMISSION_PACKET.md` to FADA TFG office. The packet already has the 9-point checklist for printing; the only `[LLENAR]` fields are your specifics (date, advisor picked, etc.).
+
+### Risks to escalate
+- **S6 — FADA TFG rejects paper-first format because paper targets international venues (cs.CV/ICA), not UNA-FADA scope.** Mitigation in T122 packet ("manuscrito terminado adaptado a formato UNA") + Cohen FADA precedent. **Open — escalate the moment Iván walks the packet in.** Decision needed: is the framing sufficient, or do we need an extra Cap. 4 "implementación local" section?
+- **S7 — All 6 advisor candidates decline.** Already-mitigated pivot plan exists (DEFENSE_PLAN.md → Politécnica / UC / direct FADA教研室). **If Iván sends 3 emails this week and all decline**, escalate to the pivot path before month 4.
+- **E3 — Copernicus Hub account not approved in time.** Open. If credentials not filled within 7 days, the M2-M4 experiment timeline slips; agent should email-prep (NOT send) the registration sequence.
+
+### Burndown verdict — BEHIND on velocity, ON TRACK on substrate
+71% tasks done is strong, but **the remaining 14 are external or institutional** and the agent cannot move them on its own. Real velocity over M2-M3 depends entirely on: (a) you filling creds, (b) you sending the advisor email, (c) you walking the FADA packet in. **Earliest unblock date = ~3-5 days after creds arrive.** Runway is tight but no slip yet.
+
+_The agent will keep clearing `[CONT]` cadence tasks (weekly review, RISK_REGISTER monthly) and small `[NO-GPU]` refinements until either creds arrive or you confirm institutional steps._
+
 <!-- AUTONOMOUS_DAILY_SUMMARY_END -->
 
 ---
@@ -855,11 +934,11 @@ _No ticks yet._
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 71
-- **Tasks completed:** 61 / 87
-- **Tasks blocked:** 10
-- **Days since start:** 16
-- **Average tasks/day:** 3.81
+- **Total ticks:** 75
+- **Tasks completed:** 63 / 87
+- **Tasks blocked:** 12
+- **Days since start:** 17
+- **Average tasks/day:** 3.71
 - **Estimated completion (current pace):** 2026-09-02
 <!-- AUTONOMOUS_STATS_END -->
 ## 2026-08-23 — thesis watchdog resume tick (Erebus)
@@ -1043,3 +1122,24 @@ _No ticks yet._
 - Touched `data/heartbeat` + `data/heartbeat.txt` + root heartbeats to 2026-08-26T09:08Z. Cleared `data/resume_needed.flag`.
 - Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent.
 - Next watchdog check (15 min) will see fresh heartbeat on all 3 paths → no flag → silent exit.
+
+## 2026-08-27 03:41 UTC — Erebus watchdog resume (T127 revert)
+
+- Watchdog: `urgent-resume` (no heartbeat ever recorded on this deployment).
+- `make status`: 63 done / 0 active / 11 blocked / 13 pending. 11 blockers are all UNA-FADA institutional actions (T118-T126 + T127) that require Iván's in-person work — none actionable from sandbox per AUTONOMY.md rule #5.
+- `make tick-dry` picked T127 (final Q1/Q2 journal submission). Ran `make tick`; script auto-claimed T127 `[~]` then no-op'd.
+- TASK_QUEUE.md: T127 `[~]` → `[!]` per T118-T126 precedent (defense-completed + Ivan journal choice + submission account required before any agent action; see Defensa/qa_log.md for journal-target list).
+- Touched `data/heartbeat` + `data/heartbeat.txt` + `data/heartbeat.ts` to 2026-08-27T03:41Z. Cleared `data/resume_needed.flag` (watchdog will set it again if next 15-min tick sees stale heartbeat).
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent.
+- Verdict: project is healthy at substrate level (Cap.1-3 + 5-6 written, defense slides + Q&A bank built, submission packet ready). Velocity bottleneck is UNA-FADA institutional cadence + 0/20 credentials filled — both Ivan-side. Next watchdog tick in 15 min.
+
+## 2026-08-27 06:15 UTC — Erebus watchdog resume (T038 revert)
+
+- Watchdog: `urgent-resume` (no heartbeat on canonical path detected by fresh heartbeat-checker logic in this deployment).
+- `make status`: 63 done / 0 active / 12 blocked (was 11; T038 newly blocked) / 10 pending.
+- `make tick-dry` picked T038 (Register Google Cloud + activate Cloud Storage API). Ran `make tick`; script auto-claimed T038 `[~]`.
+- TASK_QUEUE.md: T038 `[~]` → `[!]` per T118-T127 revert precedent — `[EXT]` account-creation requires Iván's email + billing setup, cannot be executed from sandbox.
+- Verdict: queue state unchanged in substance. All 10 remaining pending tasks are either `[EXT]` (data downloads, advisor emails, journal submissions) or `[CONT]` cadence (weekly commit, monthly cost review). Project is at the "awaiting Ivan" plateau documented in 2026-08-25/26 watchdog ticks.
+- Touched all 3 heartbeat paths (`data/heartbeat`, `data/heartbeat.txt`, `data/heartbeat.ts`) to 2026-08-27T06:15Z. Cleared `data/resume_needed.flag`.
+- Constraints respected: NO-GPU only, no destructive ops, no email to real people, no remote push, venv activated. No money spent.
+- Next watchdog check (~15 min) will see fresh heartbeat on all paths → no flag → silent exit.

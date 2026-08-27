@@ -30,9 +30,18 @@ def load_records():
         return []
     records = []
     for line in PROGRESS_JSONL.read_text().splitlines():
-        if line.strip():
-            records.append(json.loads(line))
-    return records
+        s = line.strip()
+        if not s:
+            continue
+        # Skip non-JSON log lines (e.g. watchdog notices, partial writes).
+        # Defensive: don't let one malformed entry crash the weekly review.
+        try:
+            records.append(json.loads(s))
+        except json.JSONDecodeError:
+            continue
+    # Only keep tick-style records (have ts + status + task_id); skip
+    # watchdog summary entries that use alternate schemas.
+    return [r for r in records if {"ts", "status", "task_id"} <= r.keys()]
 
 
 def parse_tasks():

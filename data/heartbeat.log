@@ -619,3 +619,80 @@ watchdog tick 2026-08-26T02:15:30Z
 2026-08-26T08:35:30Z  watchdog: warn
 2026-08-26T08:52:36Z  watchdog: warn
 2026-08-26T09:08:38Z  watchdog: urgent-resume
+2026-08-26T09:10:17Z  watchdog: ok
+2026-08-26T09:25:40Z  watchdog: warn
+2026-08-26T09:41:42Z  watchdog: warn
+2026-08-26T09:57:49Z  watchdog: warn
+2026-08-26T10:13:47Z  watchdog: warn
+2026-08-26T10:29:51Z  watchdog: warn
+Wed Aug 26 10:29:55 UTC 2026
+watchdog tick OK no-op
+2026-08-26T10:45:59Z  watchdog: warn
+2026-08-26T11:02:35Z  watchdog: warn
+2026-08-26T11:17:59Z  watchdog: warn
+2026-08-26T11:34:00Z  watchdog: warn
+2026-08-26T11:50:03Z  watchdog: warn
+2026-08-26T12:07:09Z  watchdog: warn
+2026-08-26T12:23:08Z  watchdog: warn
+2026-08-26T12:38:14Z  watchdog: warn
+2026-08-26T12:54:17Z  watchdog: warn
+2026-08-26T13:27:19Z  watchdog: warn
+2026-08-26T13:43:24Z  watchdog: warn
+2026-08-26T13:59:25Z  watchdog: warn
+Wed Aug 26 13:59:31 UTC 2026 watchdog tick — no resume (16m stale, under 6h threshold)
+2026-08-26T14:15:42Z  watchdog: warn
+2026-08-26T14:31:34Z  watchdog: warn
+2026-08-26T14:47:34Z  watchdog: warn
+2026-08-26T15:03:40Z  watchdog: warn
+2026-08-26T15:20:47Z  watchdog: warn
+2026-08-26T15:36:44Z  watchdog: warn
+2026-08-26T15:52:46Z  watchdog: warn
+2026-08-26T16:08:47Z  watchdog: warn
+2026-08-26T16:24:55Z  watchdog: warn
+2026-08-26T16:40:52Z  watchdog: warn
+2026-08-26T16:56:57Z  watchdog: warn
+2026-08-26T17:14:00Z  watchdog: warn
+2026-08-26T17:30:02Z  watchdog: warn
+2026-08-26T17:46:03Z  watchdog: warn
+2026-08-26T18:01:27Z  watchdog: warn
+2026-08-26T18:17:15Z  watchdog: warn
+2026-08-26T18:33:20Z  watchdog: warn
+2026-08-26T18:49:18Z  watchdog: warn
+2026-08-26T19:05:21Z  watchdog: warn
+2026-08-26T19:21:22Z  watchdog: warn
+2026-08-26T19:38:29Z  watchdog: warn
+2026-08-26T19:54:33Z  watchdog: warn
+2026-08-26T20:10:30Z  watchdog: warn
+2026-08-26T20:42:05Z  watchdog: warn
+2026-08-26T21:00:25Z  watchdog: warn
+2026-08-26T21:16:29Z  watchdog: warn
+2026-08-26T21:31:57Z  watchdog: warn
+2026-08-26T21:47:57Z  watchdog: warn
+heartbeat touched at 2026-08-26T21:47:59+00:00
+2026-08-26T22:08:50Z  watchdog: warn
+2026-08-27T00:01:24Z  watchdog: warn
+2026-08-27T00:17:50Z  watchdog: warn
+2026-08-27T00:33:25Z  watchdog: warn
+2026-08-27T00:50:12Z  watchdog: warn
+2026-08-27T01:05:57Z  watchdog: warn
+2026-08-27T01:22:29Z  watchdog: warn
+2026-08-27T01:39:30Z  watchdog: warn
+2026-08-27T01:56:41Z  watchdog: warn
+2026-08-27T02:14:13Z  watchdog: warn
+2026-08-27T02:30:16Z  watchdog: warn
+2026-08-27T02:48:25Z  watchdog: warn
+2026-08-27T03:08:23Z  watchdog: warn
+2026-08-27T03:25:11Z  watchdog: warn
+2026-08-27T03:40:52Z  watchdog: urgent-resume
+2026-08-27T03:58:08Z  watchdog: warn
+2026-08-27T04:14:16Z  watchdog: warn
+Thu Aug 27 04:14:19 UTC 2026
+2026-08-27T04:30:17Z  watchdog: warn
+2026-08-27T04:49:04Z  watchdog: warn
+2026-08-27T05:09:57Z  watchdog: warn
+2026-08-27T05:10:03Z
+2026-08-27T05:26:51Z  watchdog: warn
+2026-08-27T05:42:40Z  watchdog: warn
+2026-08-27T05:58:31Z  watchdog: warn
+2026-08-27T05:58:50+00:00
+2026-08-27T06:14:59Z  watchdog: urgent-resume
