@@ -62,6 +62,7 @@ thesis-active/
 ├── DEFENSE_PLAN.md            ← defensa + advisor
 ├── RISK_REGISTER.md           ← riesgos
 ├── REFERENCES.bib             ← BibTeX
+├── THESIS_COST_BREAKDOWN.md   ← USD budgeted / projected / actual + auth gate
 ├── Makefile                   ← 30+ comandos
 ├── docker-compose.yml         ← full stack
 ├── requirements.txt           ← Python deps
