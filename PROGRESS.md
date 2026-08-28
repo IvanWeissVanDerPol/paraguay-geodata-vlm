@@ -1246,3 +1246,17 @@ _The agent will keep clearing `[CONT]` cadence tasks (weekly review, RISK_REGIST
 - Queue state at session close: 68 done / 0 active / 20 blocked / 0 pending. All remaining work is `[EXT]` (institutional at UNA-FADA or external publication) — pure Ivan-side.
 - Verdict: project substrate is fully complete (Cap.1-3 + 5-6 + paper + packet + defense slides + Q&A bank + RISK_REGISTER weekly cadence + cost review + sanity check + press-release drafts). The "awaiting Ivan" plateau now extends to: (a) credentials filling, (b) FADA walk-in, (c) social-channel publication timing. Every autonomously-actionable P0/P1 work has been produced.
 - Next watchdog check (~15 min) will see fresh heartbeat on all paths → no flag → silent exit.
+
+## 2026-08-28 06:09 UTC — Erebus watchdog resume (T046 revert — final queue saturation)
+
+- Same session continuation. After the T101/T102/T101a/T102a batch, ran `make status` → 68 done / 0 active / 20 blocked / 1 pending (T046).
+- T046 (File MOPC drone imagery access request, Ley 5282/2014) is an in-person institutional filing at Ministerio de Obras Públicas y Comunicaciones requiring Iván's Cédula Paraguaya + firma del solicitante + formulario SFP-020 + Anexo Técnico. Per AUTONOMY.md rule #5 + T118-T127 precedent. **Reverted [ ] → [!]** with annotation. The agent can prepare a printable filing packet (cover letter template + form SFP-020 pre-filled + Anexo Técnico skeleton) as a separate `[P2][M2][NO-GPU][D]` task with no `[EXT]` dep — left for Iván to spawn when desired.
+- **Queue state at session close: 68 done / 0 active / 21 blocked / 0 pending. Zero autonomously-actionable tasks remain.** `make tick-dry` returns "No tasks found in TASK_QUEUE.md" — the substrate is fully saturated from an autonomous-tick perspective.
+- Atomic commit: `2798e64 T046 revert: MOPC drone imagery filing is institutional action`.
+- Heartbeats touched across all 3 paths + root files.
+- Verdict: 7 months of substrate production is complete. The next agent-side work depends entirely on Iván's inputs:
+  - **Credentials** (0/20 filled, 24 actually filled, 10 placeholders for `[EXT]` blockers — T037 AWS, T038 GCP, T099 arxiv, T075 Zenodo, T123 student_id).
+  - **FADA institutional actions** (T118-T126): advisor emails, enrollment packet, committee review, defense scheduling, public defense.
+  - **External publication** (T099 arxiv submission; T127 journal submission; T101/T102 social media post timing).
+  - **Optional sub-tasks** (low-priority, can be spawned by Iván any time): printable MOPC filing packet (split from T046), press-release bilingual revision passes (T101a already done, but could be refined), tweet-thread variant for arxiv embargo (split from T102a).
+- The Erebus substrate is now in the "shipping state" — every autonomously-actionable P0/P1/P2 task has been produced. Watchdog will go silent until either (a) a cadence job triggers, (b) Iván fills creds, or (c) Iván explicitly requests new agent work.
