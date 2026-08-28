@@ -852,6 +852,16 @@ Awaiting director feedback before expanding Cap. 3-5.
 
 ---
 
+## 2026-08-28 06:05 UTC — T101
+**Task:** Write blog post / press release for Paraguayan tech press
+**Status:** ⏸️ in-progress
+**Output:** [auto-claim] Task T101 claimed by cron; no LLM execution wired in this script — see AUTONOMY.md for the cron-driven execution contract.
+**Notes:** stub — cron claimed but did not execute; real work happens in the watchdog-driven agent loop (run thesis_active_run.py or invoke the LLM agent manually)
+**Time spent:** ~0 min
+**Tags:** [P1] [M7] [EXT] [D]
+
+---
+
 <!-- AUTONOMOUS_TICK_HISTORY_END -->
 
 ---
@@ -979,12 +989,12 @@ _The agent will keep clearing `[CONT]` cadence tasks (weekly review, RISK_REGIST
 ## Cumulative stats
 
 <!-- AUTONOMOUS_STATS_START -->
-- **Total ticks:** 80
+- **Total ticks:** 84
 - **Tasks completed:** 66 / 87
-- **Tasks blocked:** 14
-- **Days since start:** 17
-- **Average tasks/day:** 3.88
-- **Estimated completion (current pace):** 2026-09-01
+- **Tasks blocked:** 18
+- **Days since start:** 18
+- **Average tasks/day:** 3.67
+- **Estimated completion (current pace):** 2026-09-02
 <!-- AUTONOMOUS_STATS_END -->
 ## 2026-08-23 — thesis watchdog resume tick (Erebus)
 - Watchdog set `data/resume_needed.flag` (urgent-resume: no heartbeat ever).
@@ -1218,3 +1228,21 @@ _The agent will keep clearing `[CONT]` cadence tasks (weekly review, RISK_REGIST
   - Each reverted with inline annotation citing T118-T127 precedent (agent cannot burn Iván's bandwidth/creds decisions on `[EXT]` downloads).
 - Queue state at session close: 66 done / 0 active / 17 blocked / 3 pending. The 3 pending (`!`-counted together: MOPC drone filing T046, Paraguayan tech press post T138-equiv, social media post T139-equiv) are all `[EXT]` months M2/M7 institutional/social — pure Iván-side.
 - Verdict: project unchanged at substrate level. All autonomously-actionable work saturated (Cap.1-3 + 5-6 + paper + packet + defense slides + Q&A bank + RISK_REGISTER weekly cadence + cost review done). Velocity bottleneck remains Iván-side: credentials, FADA walk-in, social channels. Next watchdog tick in 15 min.
+
+## 2026-08-28 06:06 UTC — Erebus watchdog resume (T101/T102 revert + T101a/T102a press + social drafts)
+
+- Watchdog: `urgent-resume` (heartbeat stale on canonical path; project healthy otherwise).
+- `make status` at session start: 66 done / 1 active (T101) / 18 blocked / 2 pending.
+- `make tick-dry` picked T102 (Tweet thread / LinkedIn post). Both T101 (active `[~]`) and T102 (pending `[ ]`) are `[EXT]` social-media publication actions that cannot be executed autonomously — same pattern as T118-T127.
+- **Honest assessment per T118-T127 precedent:** posting to paraguaytech.com.py / MITIC press desk / CISO Paraguay / LinkedIn / X-Twitter requires Iván's accounts + brand voice + editorial contact list. The DRAFT (artifact Ivan copy-pastes) is autonomously actionable; the PUBLISH action is not. Split into two sub-tasks per file:
+  - **T101 reverted `[~]` → `[!]`** with annotation citing rule #5 spirit + T118-T127 precedent.
+  - **T102 reverted `[ ]` → `[!]`** with same annotation pattern.
+  - **T101a added `[ ]` → `[x]`:** Draft press release (Defensa/PR_DRAFT.md, 14582 bytes, ES+EN bilingual, 5W inverted pyramid, embargo block, Sobre el autor + Sobre UNA-FADA + Sobre el proyecto, 5-point usage instructions).
+  - **T102a added `[ ]` → `[x]`:** Draft tweet thread + LinkedIn (Defensa/SOCIAL_DRAFT.md, 11347 bytes; 10-post X thread ES + 10-post EN; LinkedIn long-form ES + EN; Mastodon optional variant; 1200×675 image suggestion; 5-point usage instructions).
+- Constraints respected: NO-GPU only, no destructive ops, no email/POST sent to real people or external accounts (T101/T102 reverted; T101a/T102a = draft artifacts only, never published), no remote push, venv activated. No money spent.
+- Cifras placeholder en los borradores (49.641 edificios, 14.835 carreteras, κ=0,87, 38 h A100, USD 76, baseline 0,51) extraídas de Cap.1+Cap.4 y verificadas con `grep`. Iván debe re-verificarlas contra la versión final del paper antes de publicar.
+- Créditos: Iván Weiss Van der Pol figura como autor único de la nota de prensa. Erebus mencionado transparentemente en las instrucciones de uso como asistente del borrador (bajo licencia MIT) — refuerza el ángulo "research tooling" sin apropiación.
+- Touched `data/heartbeat` + `data/heartbeat.txt` + `data/heartbeat.ts` + root heartbeats to 2026-08-28T06:06Z. Cleared `data/resume_needed.flag`.
+- Queue state at session close: 68 done / 0 active / 20 blocked / 0 pending. All remaining work is `[EXT]` (institutional at UNA-FADA or external publication) — pure Ivan-side.
+- Verdict: project substrate is fully complete (Cap.1-3 + 5-6 + paper + packet + defense slides + Q&A bank + RISK_REGISTER weekly cadence + cost review + sanity check + press-release drafts). The "awaiting Ivan" plateau now extends to: (a) credentials filling, (b) FADA walk-in, (c) social-channel publication timing. Every autonomously-actionable P0/P1 work has been produced.
+- Next watchdog check (~15 min) will see fresh heartbeat on all paths → no flag → silent exit.
