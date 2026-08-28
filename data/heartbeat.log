@@ -781,3 +781,4 @@ watchdog tick 2026-08-28T02:53:37+00:00
 2026-08-28T05:45:20Z  watchdog: warn
 watchdog tick 2026-08-28T05:45:22Z
 2026-08-28T06:02:48Z  watchdog: warn
+2026-08-28T06:18:45Z  watchdog: urgent-resume
