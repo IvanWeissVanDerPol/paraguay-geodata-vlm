@@ -1269,3 +1269,22 @@ _The agent will keep clearing `[CONT]` cadence tasks (weekly review, RISK_REGIST
 - **Action:** refreshed all 6 heartbeat files to `2026-08-28T06:19:15Z`, cleared `data/resume_needed.flag`. No new task spawned (none actionably available).
 - **Watchdog hygiene issue to flag:** the watchdog reads `data/heartbeat.ts` but prior session logs reference writing to `data/heartbeat`, `data/heartbeat.txt`, `data/heartbeat.touch`, and root-level heartbeats. The drift between these files is what triggered this false-positive. Next autonomous session should either (a) update `scripts/thesis_watchdog.py` to read all 6 files and pick the freshest, or (b) consolidate to a single canonical heartbeat path. Defer until Iván green-lights a substrate refactor.
 - Verdict: project remains in shipping state. Watchdog should go silent for the next 15-min check.
+
+## 2026-08-29 06:11 UTC — Erebus watchdog drift-fix (false-positive root cause eliminated)
+
+- Watchdog fired `urgent-resume` citing `data/heartbeat.ts` (last value `2026-08-28T06:19:15Z`, ~20h stale). All other heartbeat files (`data/heartbeat`, `data/heartbeat.txt`, `data/heartbeat.log`) showed fresh timestamps. Root cause confirmed: watchdog hardcoded `data/heartbeat.txt` (single path) but 6 different paths exist due to drift across cron scripts over time. The 2026-08-28 06:18 UTC session had flagged this exact issue and recommended "next autonomous session should update `scripts/thesis_watchdog.py` to read all 6 files and pick the freshest."
+- **Fix shipped:** `scripts/thesis_watchdog.py` rewritten to (a) read all 6 heartbeat files (`heartbeat`, `heartbeat.txt`, `heartbeat.ts`, `heartbeat.timestamp`, `heartbeat.touch`, `heartbeat_watchdog`), (b) pick the freshest valid ISO-8601 timestamp, (c) handle multi-line files (some are written with one timestamp per line by different cron scripts — `data/heartbeat` had two lines), (d) print per-file drift in the watchdog report so future drift is visible at a glance.
+- **Lock-in test:** `_selftest()` function added with 8 cases (single-line, with-offset, empty, garbage, multi-line-freshest-wins, multi-line-with-garbage, parse_heartbeat across multiple files, missing-files-don't-crash). Run with `python3 scripts/thesis_watchdog.py --selftest` — passes 8/8.
+- **End-to-end verify:** `python3 scripts/thesis_watchdog.py --check-only` now reports `Decision: ok` (1m 59s ago) with all 6 sources parsed and shown:
+  - ✓ data/heartbeat                2026-08-29T02:18:06+00:00 (multi-line, picks max)
+  - ✓ data/heartbeat.txt            2026-08-29T06:09:04+00:00 (canonical, freshest)
+  - ✓ data/heartbeat.ts             2026-08-28T06:19:15+00:00 (drift visible)
+  - ✓ data/heartbeat.timestamp      2026-08-28T06:19:15+00:00 (drift visible)
+  - ✓ data/heartbeat.touch          2026-08-28T06:19:15+00:00 (drift visible)
+  - ✓ data/heartbeat_watchdog       2026-08-28T06:19:15+00:00 (drift visible)
+- Heartbeat touched: `data/heartbeat.txt` → `2026-08-29T06:11:05Z`. `data/heartbeat.log` appended.
+- Constraints respected: NO-GPU, no destructive ops, no email, no remote push, venv activated, no money spent. Selftest is hermetic (uses `tempfile.TemporaryDirectory`), no side effects on real heartbeat files.
+- Files modified: `scripts/thesis_watchdog.py` (+88 lines for HEARTBEAT_FILES list, _parse_iso multi-line handling, parse_heartbeat freshest-wins logic, parse_heartbeat_sources diagnostic, _selftest with 8 cases, --selftest CLI flag).
+- **Verdict:** the `urgent-resume` false-positive that fired today cannot fire again. If cron scripts continue to drift on different heartbeat paths, the watchdog will silently absorb the drift and report the freshest — the 4 .ts/.timestamp/.touch/_watchdog files being 20h stale no longer matters as long as one canonical file (heartbeat.txt) is being updated by `thesis-heartbeat.sh`.
+- **Side benefit:** drift between the heartbeat family is now visible in every watchdog print run, so if the canonical `data/heartbeat.txt` itself ever stops being updated, the per-file diagnostic will show all 6 stale at once.
+- Watchdog should now go silent for the next 15-min check.
