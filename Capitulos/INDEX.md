@@ -1,18 +1,17 @@
 # Índice del Manuscrito — UNA-FADA
 
-> **Generado automáticamente por `scripts/format_manuscript.py` el 2026-08-24 22:19 UTC**
+> **Generado automáticamente por `scripts/format_manuscript.py` el 2026-08-31 06:24 UTC**
 
 Tabla de capítulos del manuscrito con conteo de palabras y secciones. Re-correr con `make format-manuscript` para regenerar.
 
 | # | Capítulo | Archivo | Palabras (cuerpo) | Estado |
 |---|---|---|---|---|
-| 1 | Introducción | `Cap1_Introduccion.md` | 2,856 | ✅ presente |
-| 2 | Marco Teórico | `Cap2_Marco_Teorico.md` | 3,940 | ✅ presente |
-| 3 | Marco Metodológico | `Cap3_Metodologia.md` | 7,734 | ✅ presente |
-| 4 | Resultados | `Cap4_Resultados.md` | 86 | ⚠️ stub |
-| 5 | Discusión | `Cap5_Discusion.md` | 4,465 | ✅ presente |
-| 6 | Conclusiones | `Cap6_Conclusiones.md` | 2,612 | ✅ presente |
-| — | **Paquete FADA TFG** | `FADA_TFG_SUBMISSION_PACKET.md` | — | ✅ presente |
+| 1 | Introducción | `Cap1_Introduccion.md` | 2,777 | ✅ presente |
+| 2 | Marco Teórico | `Cap2_Marco_Teorico.md` | 3,846 | ✅ presente |
+| 3 | Marco Metodológico | `Cap3_Metodologia.md` | 7,262 | ✅ presente |
+| 4 | Resultados | `Cap4_Resultados.md` | 5,507 | ✅ presente |
+| 5 | Discusión | `Cap5_Discusion.md` | 4,367 | ✅ presente |
+| 6 | Conclusiones | `Cap6_Conclusiones.md` | 2,542 | ✅ presente |
 
 ## Versión canónica
 

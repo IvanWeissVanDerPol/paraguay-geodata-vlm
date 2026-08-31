@@ -15,9 +15,9 @@
 
 ## Estructura
 
-El manuscrito sigue la convención estándar de tesis FADA-UNA: Introducción → Marco Teórico → Marco Metodológico → Resultados → Discusión → Conclusiones. Cap4 (Resultados) está pendiente hasta que los experimentos M2-M4 (GPU-bound) y los datos Copernicus/Sentinel-2 estén disponibles.
+El manuscrito sigue la convención estándar de tesis FADA-UNA: Introducción → Marco Teórico → Marco Metodológico → Resultados → Discusión → Conclusiones. Cap4 (Resultados) tiene esqueleto estructural completo (5,507 palabras, 31 tablas, 6 figuras-placeholder, 450 marcadores `[LLENAR: <source>]`); los valores numéricos se completarán al cerrar los experimentos M2-M4 (actualmente bloqueados por [GPU]+[EXT] credenciales/datos).
 
-**Total palabras (cuerpo):** 20,794.
+**Total palabras (cuerpo):** 26,301.
 
 ## Cómo regenerar
 
