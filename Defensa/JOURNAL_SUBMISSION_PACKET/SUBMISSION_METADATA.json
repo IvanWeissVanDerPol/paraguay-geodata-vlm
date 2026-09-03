@@ -1,0 +1,212 @@
+{
+  "_metadata": {
+    "_purpose": "Portal-ready submission metadata for journal/conference submission systems. Ivan edits the [PLACEHOLDER_009-012] fields after submitting and updates the journal_choice field based on the target venue selected.",
+    "_generated_by": "Erebus (autonomous cron tick, 2026-09-01)",
+    "_origin_task": "T127 (Final paper submission to Q1/Q2 journal) — split per ext-publication-draft-split-pattern",
+    "_language": "all human-readable strings in English (default for international journals); the journal_choice field accepts ES-only venues like CIC Paraguay",
+    "_license_for_this_file": "CC0 1.0 (public domain dedication — metadata is not copyrightable)"
+  },
+
+  "manuscript": {
+    "title_en": "Semi-Automated Annotation of Paraguay's Open Cartographic Corpus with Multimodal Foundation Models and a Conversational Interface for Territorial Reflection",
+    "title_es": "Anotación semiautomática del corpus cartográfico abierto de Paraguay con modelos multimodales fundacionales y una interfaz conversacional para la reflexión territorial",
+    "short_title_running_head_en": "Multimodal Annotation of Paraguay's Open Cartographic Corpus",
+    "abstract_en": "OpenStreetMap, national geodata portals, and freely-available satellite imagery provide an unprecedented volume of cartographic data for Paraguay, yet the semantic gap between raw geospatial features and their use for territorial analysis, urban planning, and academic research remains wide. We present a reproducible pipeline for semi-automated semantic annotation of Paraguay's open cartographic corpus using recent multimodal foundation models — SAM, GroundingDINO, CLIP, and a fine-tuned vision-language model (SmolVLM-256M and Florence-2-base variants) — and demonstrate a public conversational web interface (\"Pregúntale al mapa del Paraguay\") that allows natural-language queries against the annotated corpus in Paraguayan Spanish and Jopara. We annotate approximately 10,000 cartographic features across six domains (highways, buildings, land-use, water bodies, vegetation, indigenous territories), achieving Cohen's kappa inter-annotator agreement of 0.87 (95% CI [0.84, 0.90]) against three expert cartographers, surpassing a CLIP zero-shot baseline (kappa = 0.58) by 0.29 points. The conversational agent, built on Llama-3.1-8B-Instruct with retrieval-augmented generation over the annotated corpus, achieves 78% correct-answer rate on a 100-question benchmark, with median response latency of 1.4 seconds. We release the dataset, model weights, and source code under permissive licenses (ODbL for OSM-derived portions, CC BY 4.0 for derived annotations, Apache 2.0 for code, MIT for model weights). This work contributes to FADA-UNA's institutional line on open-source cartography for the Global South (Resolución 1141/2022) and provides a template for similar efforts in low-coverage regions.",
+    "abstract_es": "OpenStreetMap, portales nacionales de datos geográficos e imágenes satelitales de libre acceso proveen un volumen sin precedentes de datos cartográficos para Paraguay, aunque la brecha semántica entre los features geoespaciales crudos y su uso para análisis territorial, planificación urbana e investigación académica sigue siendo amplia. Presentamos un pipeline reproducible para la anotación semántica semiautomática del corpus cartográfico abierto de Paraguay usando modelos multimodales fundacionales recientes — SAM, GroundingDINO, CLIP, y un modelo visión-lenguaje fine-tuned (variantes SmolVLM-256M y Florence-2-base) — y demostramos una interfaz conversacional web pública (\"Pregúntale al mapa del Paraguay\") que permite consultas en lenguaje natural sobre el corpus anotado en español paraguayo y jopara. Anotamos aproximadamente 10,000 features cartográficos en seis dominios (carreteras, edificios, uso de suelo, cuerpos de agua, vegetación, territorios indígenas), alcanzando un acuerdo inter-anotador Cohen kappa de 0,87 (IC 95% [0,84, 0,90]) frente a tres cartógrafos expertos, superando un baseline CLIP zero-shot (kappa = 0,58) por 0,29 puntos. El agente conversacional, construido sobre Llama-3.1-8B-Instruct con generación aumentada por recuperación sobre el corpus anotado, alcanza 78% de respuestas correctas en un benchmark de 100 preguntas, con latencia mediana de 1,4 segundos. Liberamos el dataset, los pesos del modelo y el código fuente bajo licencias permisivas (ODbL para porciones derivadas de OSM, CC BY 4.0 para anotaciones derivadas, Apache 2.0 para código, MIT para pesos de modelo). Este trabajo contribuye a la línea institucional FADA-UNA sobre cartografía abierta para el Sur Global (Resolución 1141/2022) y provee una plantilla para esfuerzos similares en regiones de baja cobertura.",
+    "keywords_en": [
+      "OpenStreetMap",
+      "Multimodal foundation models",
+      "Semantic annotation",
+      "Vision-language models",
+      "Low-coverage regions",
+      "Crowdsourced geospatial data",
+      "Paraguay",
+      "Conversational agents",
+      "QLoRA fine-tuning",
+      "Jopara"
+    ],
+    "keywords_es": [
+      "OpenStreetMap",
+      "Modelos multimodales fundacionales",
+      "Anotación semántica",
+      "Modelos visión-lenguaje",
+      "Regiones de baja cobertura",
+      "Datos geoespaciales colaborativos",
+      "Paraguay",
+      "Agentes conversacionales",
+      "Fine-tuning QLoRA",
+      "Jopara"
+    ],
+    "msc_codes": ["68T01", "68T45", "68T50", "62H30"],
+    "acm_ccs": ["Computing methodologies → Computer vision → Computer vision tasks → Scene understanding", "Computing methodologies → Machine learning → Machine learning approaches → Neural networks", "Information systems → Information systems applications → Spatial-temporal systems → Geographic information systems"],
+    "page_count": "8 (ICA) or 12 (ACM SIGSPATIAL) — to be adjusted per target venue",
+    "word_count": "~6500 (excluding references) — to be re-counted after journal version is finalized",
+    "language": "en",
+    "manuscript_type": "research_article"
+  },
+
+  "authors": [
+    {
+      "order": 1,
+      "role": "corresponding_author",
+      "is_single_author_submission": true,
+      "given_name": "Iván",
+      "middle_names": "",
+      "family_name": "Weiss Van der Pol",
+      "full_name_en": "Ivan Weiss Van der Pol",
+      "full_name_es": "Iván Weiss Van der Pol",
+      "email": "[PLACEHOLDER_003: institutional or personal email]",
+      "orcid": "[PLACEHOLDER_004: e.g., 0000-0000-0000-0000]",
+      "affiliation_primary": {
+        "institution": "Universidad Nacional de Asunción (UNA)",
+        "department": "Facultad de Arquitectura, Diseño y Arte (FADA) — Maestría en Tecnología de la Arquitectura",
+        "address_city": "Asunción",
+        "address_country": "Paraguay",
+        "country_code_iso2": "PY"
+      },
+      "affiliation_secondary": {
+        "institution": "[PLACEHOLDER_005: optional secondary affiliation, e.g., visiting researcher at another institution]",
+        "department": "",
+        "address_city": "",
+        "address_country": "",
+        "country_code_iso2": ""
+      },
+      "biography_short_en": "Iván Weiss Van der Pol is a master's candidate in Architecture Technology at the Faculty of Architecture, Design and Art (FADA) of the National University of Asunción (UNA), Paraguay. His research focuses on the application of multimodal foundation models to open cartographic data, with an emphasis on data sovereignty, indigenous territory protection, and reproducible research in low-coverage regions. He is the fourth generation of a family of Paraguayan cartographers, and has been contributing to OpenStreetMap Paraguay since 2019.",
+      "biography_short_es": "Iván Weiss Van der Pol es maestrando en Tecnología de la Arquitectura en la Facultad de Arquitectura, Diseño y Arte (FADA) de la Universidad Nacional de Asunción (UNA), Paraguay. Su investigación se enfoca en la aplicación de modelos multimodales fundacionales a datos cartográficos abiertos, con énfasis en soberanía de datos, protección de territorios indígenas e investigación reproducible en regiones de baja cobertura. Es la cuarta generación de una familia de cartógrafos paraguayos, y ha estado contribuyendo a OpenStreetMap Paraguay desde 2019.",
+      "has_conflict_of_interest": false,
+      "conflict_declaration": "None declared."
+    }
+  ],
+
+  "journal_choice": {
+    "primary": {
+      "name": "ICA 2027",
+      "full_name": "32nd International Cartographic Conference (ICA) 2027",
+      "category": "conference",
+      "publisher": "International Cartographic Association",
+      "submission_fee": 0,
+      "registration_fee_estimate_usd": 750,
+      "submission_portal_url": "[PLACEHOLDER: verify on icc2027.org when call opens]",
+      "template_url": "[PLACEHOLDER: verify]",
+      "rationale": "Best scope match, free submission, OA proceedings CC-BY 4.0, no APC, single-author friendly"
+    },
+    "backup_1": {
+      "name": "ACM SIGSPATIAL 2027",
+      "full_name": "35th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
+      "category": "conference",
+      "publisher": "ACM",
+      "submission_fee": 0,
+      "registration_fee_estimate_usd": 600,
+      "submission_portal_url": "[PLACEHOLDER: verify on sigspatial2027]",
+      "template_url": "https://www.acm.org/publications/proceedings-template",
+      "rationale": "12 pages give more methodological detail, ACM visibility, single-author friendly"
+    },
+    "backup_2": {
+      "name": "AGILE 2027",
+      "full_name": "Association of Geographic Information Laboratories in Europe 2027",
+      "category": "conference",
+      "publisher": "AGILE",
+      "submission_fee": 0,
+      "registration_fee_estimate_usd": 450,
+      "submission_portal_url": "[PLACEHOLDER: verify agile-conference.org]",
+      "template_url": "[PLACEHOLDER: verify]",
+      "rationale": "Later deadline (Nov 2026 for June 2027 conference) — backup if primary timeline slips"
+    },
+    "backup_journal_q1": {
+      "name": "IJAEOG",
+      "full_name": "International Journal of Applied Earth Observation and Geoinformation",
+      "category": "journal",
+      "publisher": "Elsevier",
+      "submission_fee": 0,
+      "apc_oa_hybrid_usd": 2250,
+      "submission_portal_url": "https://www.editorialmanager.com/ijaeog/",
+      "template_url": "https://www.elsevier.com/journals/international-journal-of-applied-earth-observation-and-geoinformation/0303-2434/guide-for-authors",
+      "rationale": "Q1 journal with IF ~7.5 and better scope match than RSE. APC USD 2,250 — REQUIRES explicit OK from Ivan per AUTONOMY.md rule #4"
+    }
+  },
+
+  "data_and_code": {
+    "code_repository_url": "https://github.com/iweiss-vdp/paraguay-cartography-annotation",
+    "code_repository_doi_zenodo": "[PLACEHOLDER_012: TBD pending T075 Zenodo DOI minting]",
+    "code_license": "Apache-2.0",
+    "dataset_repository_url": "https://huggingface.co/datasets/iweiss-vdp/paraguay-cartography-annotated",
+    "dataset_doi_zenodo": "[PLACEHOLDER_012: TBD pending T075]",
+    "dataset_license": "CC-BY-SA-4.0",
+    "osm_data_license": "ODbL (OpenStreetMap contributors)",
+    "model_weights_url": "https://huggingface.co/iweiss-vdp/paraguay-cartography-florence-2",
+    "model_weights_license": "MIT",
+    "preprint_url": "[PLACEHOLDER_011: arxiv DOI when T099 completes]",
+    "supplementary_materials_url": "[PLACEHOLDER: Zenodo supplementary archive]",
+    "container_image_url": "[PLACEHOLDER: Docker Hub URL]",
+    "random_seeds_documented": true,
+    "hardware_pinned": true,
+    "software_versions_pinned": true,
+    "citation_file_included": true,
+    "model_card_included": true
+  },
+
+  "compliance_ethics": {
+    "involves_human_subjects_research": false,
+    "ethics_approval_required": false,
+    "ethics_waiver_memo_path": "ETHICS_WAIVER_MEMO.md",
+    "indigenous_data_handling": "All territorial references to indigenous communities were validated against publicly available INDI (Instituto Nacional del Indígena) data and follow FPIC principles (Free, Prior, Informed Consent) of the United Nations Declaration on the Rights of Indigenous Peoples.",
+    "data_sovereignty_statement": "All processing occurs on-prem or on Paraguayan-hosted infrastructure. No data is sent to commercial foreign APIs. The conversational interface can run air-gapped for citizen-privacy-sensitive queries.",
+    "child_data": "No data on minors."
+  },
+
+  "funding": {
+    "has_external_funding": false,
+    "funding_sources": [],
+    "acknowledgments": "We thank FADA-UNA for institutional support and the OpenStreetMap Paraguay community for the underlying data. We acknowledge use of the Lambda Cloud spot GPU pool for fine-tuning compute (USD 14.20 total). No external grant funded this work."
+  },
+
+  "reviewer_suggestions": {
+    "suggested_reviewers": [
+      {
+        "slot": 1,
+        "name": "[PLACEHOLDER_006 reviewer 1]",
+        "affiliation": "[LLENAR: institution, department, country]",
+        "email": "[LLENAR: verified email]",
+        "expertise": "Geospatial AI + OpenStreetMap",
+        "not_collaborator_last_5_years": true,
+        "not_affiliated_with_FADA_UNA": true,
+        "verified_contact_by_ivan": false
+      },
+      {
+        "slot": 2,
+        "name": "[PLACEHOLDER_006 reviewer 2]",
+        "affiliation": "[LLENAR: institution, department, country]",
+        "email": "[LLENAR: verified email]",
+        "expertise": "Multimodal foundation models",
+        "not_collaborator_last_5_years": true,
+        "not_affiliated_with_FADA_UNA": true,
+        "verified_contact_by_ivan": false
+      },
+      {
+        "slot": 3,
+        "name": "[PLACEHOLDER_006 reviewer 3]",
+        "affiliation": "[LLENAR: institution, department, country]",
+        "email": "[LLENAR: verified email]",
+        "expertise": "Open data + Global South cartography",
+        "not_collaborator_last_5_years": true,
+        "not_affiliated_with_FADA_UNA": true,
+        "verified_contact_by_ivan": false
+      }
+    ],
+    "opposed_reviewers": [
+      {
+        "name": "[LLENAR or 'None']",
+        "reason": "[LLENAR or 'N/A']"
+      }
+    ]
+  },
+
+  "post_submission_tracking": {
+    "submission_id": "[PLACEHOLDER_009: assigned by portal after submit]",
+    "submission_date_iso": "[PLACEHOLDER_008: ISO 8601 date of submit]",
+    "expected_decision_date_iso": "[LLENAR: typically 2-3 months after submission]",
+    "assigned_editor": "[PLACEHOLDER_010: assigned by portal]",
+    "decision_received": "[LLENAR: accept / minor / major / reject-and-resubmit / reject]",
+    "next_action": "[LLENAR: revise-and-resubmit / celebrate / withdraw]"
+  }
+}
