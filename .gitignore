@@ -61,10 +61,6 @@ secrets/.env
 *.swo
 .DS_Store
 
-# OSM raw data (already versioned via SHA256SUMS)
-# Keep it for reproducibility — only ignore the unpacked extract if huge
-# data/raw/*/extracted/
-
 # Docker
 .docker/
 docker-compose.override.yml
@@ -87,3 +83,31 @@ wandb/
 # OS noise
 Thumbs.db
 .DS_Store
+
+# Heartbeat / watchdog state files (runtime, never commit)
+heartbeat
+heartbeat.txt
+.heartbeat
+.hermes_heartbeat
+.thesis_heartbeat
+.watchdog_heartbeat
+.watchdog-heartbeat
+data/heartbeat
+data/heartbeat.txt
+data/heartbeat.log
+data/heartbeat.timestamp
+data/heartbeat.touch
+data/heartbeat.ts
+data/heartbeat.flag
+data/heartbeat_watchdog
+data/heartbeat_watchdog.log
+data/.heartbeat
+data/.thesis_heartbeat
+data/.watchdog_heartbeat
+data/.watchdog_heartbeat.log
+data/watchdog_heartbeat
+data/watchdog_heartbeat.txt
+.hermes/heartbeat
+.hermes_heartbeat
+.hermes/heartbeat.txt
+.heartbeat.log

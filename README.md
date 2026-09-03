@@ -1,5 +1,7 @@
 # 🎓 P1 GeoData v2 — Tesis de Maestría (paper-first)
 
+> **👨‍🏫 Si sos profesor / comité / revisor externo:** el **deliverable académico de la tesis** (6 papers, manuscrito CH1–CH11, modelos entrenados, hallazgos medidos) está en **[`IvanWeissVanDerPol/satellite-paraguay`](https://github.com/IvanWeissVanDerPol/satellite-paraguay)**. Este repo (`paraguay-geodata-vlm` / `P1 GeoData v2`) es el **sustrato de datos + infraestructura autónoma** que alimenta la tesis — ver [`THESIS_ARCHITECTURE.md`](THESIS_ARCHITECTURE.md) para el mapa cross-repo.
+
 **Author:** Iván Weiss Van der Pol
 **Estrategia:** Paper-first, advisor-last, sin burocracia
 **Status:** Fase 0 (mes 1-7) — construcción sin advisor

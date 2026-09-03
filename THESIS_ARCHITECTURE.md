@@ -5,6 +5,18 @@ If you're a future agent or human reading either repo, **start here.**
 
 ---
 
+## 👨‍🏫 Evaluator / Professor — read the thesis here
+
+**You are on the SUBSTRATE half** (`paraguay-geodata-vlm`). This repo provides the data acquisition + autonomous cron + web demo. The **thesis itself** (6 papers, manuscript, measured findings, LaTeX) lives in:
+
+👉 **[`IvanWeissVanDerPol/satellite-paraguay`](https://github.com/IvanWeissVanDerPol/satellite-paraguay)**
+
+Start there. Open [`THESIS_ARCHITECTURE.md`](https://github.com/IvanWeissVanDerPol/satellite-paraguay/blob/main/THESIS_ARCHITECTURE.md) for the **30-minute professor reading path** (README → ABSTRACT → STATUS → 6 paper chapters → BRUTAL_ROAST).
+
+This substrate repo is referenced for context (data sources, autonomous infrastructure), but it is **not** the thesis deliverable. There is a parallel Spanish draft of introductory chapters in `Capitulos/` from an earlier framing (before 2026-08-15 the substrate was pitched as a standalone thesis); the canonical English thesis title and chapters now live in `satellite-paraguay/`.
+
+---
+
 ## TL;DR
 
 This thesis is a **single research project** spanning **two GitHub repos**:
