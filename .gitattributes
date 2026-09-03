@@ -1,5 +1,4 @@
 # .gitattributes — file handling rules for git
-
 # Auto-detect text files (cross-platform)
 * text=auto
 # Force LF line endings for shell scripts (even on Windows)
@@ -42,6 +41,9 @@ Makefile text eol=lf
 *.pth filter=lfs diff=lfs merge=lfs -text
 *.gguf filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
+data/raw/google_open_buildings/*.csv.gz filter=lfs diff=lfs merge=lfs -text
+data/raw/google_open_buildings/paraguay_buildings.csv filter=lfs diff=lfs merge=lfs -text
+
 /.hermes
 *.example filter=lfs diff=lfs merge=lfs -text
 *.gitignore filter=lfs diff=lfs merge=lfs -text
