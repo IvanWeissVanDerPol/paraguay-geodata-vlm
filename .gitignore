@@ -111,3 +111,8 @@ data/watchdog_heartbeat.txt
 .hermes_heartbeat
 .hermes/heartbeat.txt
 .heartbeat.log
+# Heartbeat churn (2026-09-04): watchdog timestamp refreshes re-committed every cycle
+.hermes/watchdog_heartbeat
+data/heartbeat_watchdog.ts
+data/heartbeat_watchdog.txt
+data/watchdog_heartbeat.ts
