@@ -116,3 +116,7 @@ data/watchdog_heartbeat.txt
 data/heartbeat_watchdog.ts
 data/heartbeat_watchdog.txt
 data/watchdog_heartbeat.ts
+
+# Parallel-session isolation (added 2026-10-07)
+.worktrees/
+.worktrees
