@@ -120,3 +120,8 @@ data/watchdog_heartbeat.ts
 # Parallel-session isolation (added 2026-10-07)
 .worktrees/
 .worktrees
+
+# Third-party advisor drafts (private contacts — never commit to this public repo)
+DRAFTS/
+data/heartbeat.threshold
+watchdog-heartbeat
